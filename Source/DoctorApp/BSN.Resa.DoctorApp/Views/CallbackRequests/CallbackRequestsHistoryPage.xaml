@@ -1,0 +1,62 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.CallbackRequests.CallbackRequestsHistoryPage"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.CallbackRequests;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:CallbackRequestsHistoryPageViewModel"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                IconImageSource="Assets/call_history"
+                                Title="{utilities:Translate CallbackRequestsHistory}"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:callbackRequests="clr-namespace:BSN.Resa.DoctorApp.Views.CallbackRequests;assembly=BSN.Resa.DoctorApp"
+                                BackgroundImageSource="Assets/background.png">
+
+    <customControls:BaseContentPage.Content>
+
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+
+                <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                      BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                    <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                    <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate CallbackRequestsHistory}"
+                           FontSize="Large"
+                           LineBreakMode="TailTruncation"
+                           TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                </Grid>
+
+                <callbackRequests:CallbackRequestsHistoryPageListView
+                                                                       Margin="10, 10, 10, 5"
+                                                                       VerticalOptions="FillAndExpand" />
+
+                <customControls:ResaBottomNavigationBar />
+
+            </StackLayout>
+
+            <Frame AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.75, 75"
+                   IsVisible="{Binding IsCallbackRequestsEmpty, FallbackValue= false}" CornerRadius="10"
+                   BackgroundColor="White" Padding="3">
+
+                <Label Text="{utilities:Translate ThereArentAnyCallbackRequests}" TextColor="Black"
+                       VerticalOptions="Center"
+                       FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            </Frame>
+
+        </AbsoluteLayout>
+
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

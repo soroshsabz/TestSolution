@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+   <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+</PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\SharedAssemblyInfo\Resa.DoctorApp.Global.AssemblyInfo.cs" Link="Properties\Resa.DoctorApp.Global.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BSN.Common.Xam.Plugins.Messaging" Version="5.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\BSN.Resa.Core.Commons\BSN.Resa.Core.Commons.csproj" />
+  </ItemGroup>
+
+</Project>

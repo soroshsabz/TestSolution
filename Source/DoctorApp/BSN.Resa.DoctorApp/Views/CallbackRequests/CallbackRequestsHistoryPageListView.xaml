@@ -1,0 +1,184 @@
+﻿<CollectionView xmlns="http://xamarin.com/schemas/2014/forms"
+                               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                               xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                               xmlns:imageCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                               xmlns:converters="clr-namespace:BSN.Resa.DoctorApp.Views.Converters;assembly=BSN.Resa.DoctorApp"
+                               x:Class="BSN.Resa.DoctorApp.Views.CallbackRequests.CallbackRequestsHistoryPageListView"
+                               xmlns:models="clr-namespace:BSN.Resa.DoctorApp.ViewModels.CallbackRequests;assembly=BSN.Resa.DoctorApp"
+                               FlowDirection="RightToLeft"
+                               ItemsSource="{Binding CallbackRequests}"
+                               Margin="10, 0" SelectionMode="None" BackgroundColor="Transparent"
+                               IsGrouped="True"
+                               ItemTemplate="{StaticResource TemplateSelector}"
+                               VerticalOptions="FillAndExpand">
+    <CollectionView.ItemsLayout>
+        <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+    </CollectionView.ItemsLayout>
+
+    <CollectionView.Resources>
+        <ResourceDictionary>
+
+            <converters:StringDateTimeToFancyPersianConverter x:Key="ToFancyPersianTimeConverter" />
+            <converters:CallbackRequestsHistoryPageCallbackRequestToColorConverter
+                x:Key="CallbackRequestToColorConverter" />
+            <converters:NameToInitialsConverter x:Key="NameToInitialsConverter" />
+
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="5, 5, 10, 5" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Margin" Value="0, 3" />
+                <Setter Property="HasShadow" Value="True" />
+            </Style>
+
+            <Style x:Key="GridStyle" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="ColumnSpacing" Value="5" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="RowSpacing" Value="0" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="LabelStyleLayer2" TargetType="Label" BasedOn="{StaticResource LabelStyle}">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor"
+                        Value="{Binding ., Converter={StaticResource CallbackRequestToColorConverter}}" />
+            </Style>
+
+            <DataTemplate x:Key="WhenCallerHasNameTemplate" x:DataType="models:CallbackRequestBindableObject">
+                <Frame Style="{StaticResource FrameStyle}">
+                        <Grid Style="{StaticResource GridStyle}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="75*" />
+                            </Grid.ColumnDefinitions>
+
+                            <AbsoluteLayout Grid.Column="0">
+                                <imageCircle:CircleImage
+                                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 75, 75"
+                                    FillColor="{Binding ., Converter={StaticResource CallbackRequestToColorConverter}}" />
+                                <Label
+                                    Style="{StaticResource LabelStyle}"
+                                    FontAttributes="Bold" FontSize="25" TextColor="White"
+                                    Text="{Binding CallbackRequest.CallerFullName, Converter={StaticResource NameToInitialsConverter}}"
+                                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 75, 75" />
+                            </AbsoluteLayout>
+
+                            <StackLayout Grid.Column="1" Spacing="0">
+
+                                <Label
+                                    Style="{StaticResource LabelStyleLayer2}"
+                                    FontAttributes="Bold">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="{Binding CallbackRequest.CommunicationAttemptsCount, StringFormat='({0})'}" />
+                                            <Span Text="{Binding CallbackRequest.CallerFullName}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <!-- See the link below to understand why StringFormat section of Text property in below Label
+                                is set this way. Note that final output in Farsi would be "کد بیمار: 12345" and in
+                                English: "Patient ID: 12345" -->
+                                <!-- https://forums.xamarin.com/discussion/67086/using-binding-and-localisation -->
+                                <Label
+                                    Style="{StaticResource LabelStyleLayer2}"
+                                    Text="{Binding CallbackRequest.CallerSubscriberNumber, StringFormat={utilities:Translate PatientIdXamlSpecialVersion}}" />
+
+                                <Label
+                                    Style="{StaticResource LabelStyleLayer2}"
+                                    Text="{Binding CallbackRequest.ConsentGivenAt, Converter={StaticResource ToFancyPersianTimeConverter}}" />
+
+                            </StackLayout>
+
+                        </Grid>
+                    </Frame>
+            </DataTemplate>
+
+            <DataTemplate x:Key="WhenCallerHasNotNameTemplate" x:DataType="models:CallbackRequestBindableObject">
+                <Frame Style="{StaticResource FrameStyle}">
+                        <Grid Style="{StaticResource GridStyle}">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="75*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Source="Assets/patient_profile_placeholder.png" WidthRequest="75"
+                                   HeightRequest="75" />
+
+                            <Grid Grid.Column="1" RowSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.5*" />
+                                    <RowDefinition Height="0.5*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0"
+                                       Style="{StaticResource LabelStyleLayer2}"
+                                       FontAttributes="Bold">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="{Binding CallbackRequest.CommunicationAttemptsCount, StringFormat='({0})'}" />
+                                            <!-- See the link below to understand why StringFormat section of Text property in below Label
+                                                is set this way. Note that final output in Farsi would be "کد بیمار: 12345" and in
+                                                English: "Patient ID: 12345" -->
+                                            <!-- https://forums.xamarin.com/discussion/67086/using-binding-and-localisation -->
+                                            <Span
+                                                Text="{Binding CallbackRequest.CallerSubscriberNumber, StringFormat={utilities:Translate PatientIdXamlSpecialVersion}}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                                <Label Grid.Row="1" Grid.Column="0"
+                                       Style="{StaticResource LabelStyleLayer2}"
+                                       Text="{Binding CallbackRequest.ConsentGivenAt, Converter={StaticResource ToFancyPersianTimeConverter}}" />
+
+                            </Grid>
+
+                        </Grid>
+                    </Frame>
+            </DataTemplate>
+
+            <utilities:CallbackRequestsHistoryPageDataTemplateSelector x:Key="TemplateSelector"
+                                                                       WhenCallerHasNameTemplate="{StaticResource WhenCallerHasNameTemplate}"
+                                                                       WhenCallerHasNotNameTemplate="{StaticResource WhenCallerHasNotNameTemplate}" />
+        </ResourceDictionary>
+    </CollectionView.Resources>
+
+    <CollectionView.GroupHeaderTemplate>
+        <!-- To see why the syntax of x:DataType is like this (particularly using + sign) visit:
+        https://social.msdn.microsoft.com/Forums/SECURITY/en-US/f709a02e-06c1-4b5d-b6c7-948f1dc80927/how-do-i-use-nested-models-inside-xdatatype-in-a-uwp-app
+        -->
+        <DataTemplate x:DataType="models:CallbackRequestsBaseViewModel+CallbackRequestGroupList">
+                <Label HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center" BackgroundColor="Transparent"
+                       Text="{Binding GroupTitle}" FontSize="Medium" FontAttributes="Bold" TextColor="White" />
+        </DataTemplate>
+    </CollectionView.GroupHeaderTemplate>
+
+</CollectionView>

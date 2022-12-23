@@ -1,0 +1,81 @@
+﻿<customControls:BaseContentPage
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="BSN.Resa.DoctorApp.Views.Contacts.AllowedContactsListPage"
+    xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.Contacts;assembly=BSN.Resa.DoctorApp"
+    x:DataType="viewModels:AllowedContactsListPageViewModel"
+    xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+    Style="{StaticResource ContactsListPage}"
+    Title="{utilities:Translate AllowedNumbers}">
+
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary MergedWith="customControls:ContactsListResources">
+            <Style x:Key="ContactsListPage" TargetType="ContentPage">
+                <Setter Property="BackgroundImage" Value="Assets/background.png" />
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+
+    <customControls:BaseContentPage.Content>
+
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="35" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                <customControls:ResaToolbarItem Grid.Row="0" Grid.Column="2"
+                                                Icon="{StaticResource AddToolbarItemIcon}"
+                                                Command="{Binding AddContactCommand}"
+                                                IsVisible="{Binding IsSearchMode, Converter={StaticResource Not}}" />
+
+                <customControls:ResaToolbarItem Grid.Row="0" Grid.Column="3"
+                                                Icon="{StaticResource StartSearchToolbarItemIcon}"
+                                                Command="{Binding StartSearchCommand}"
+                                                IsVisible="{Binding IsSearchMode, Converter={StaticResource Not}}" />
+
+                <customControls:ResaToolbarItem Grid.Row="0" Grid.Column="3"
+                                                Icon="{StaticResource CancelSearchToolbarItemIcon}"
+                                                Command="{Binding CancelSearchCommand}"
+                                                IsVisible="{Binding IsSearchMode}" />
+
+                <Label Grid.Row="0" Grid.Column="4" Text="{utilities:Translate AllowedNumbers}" FontSize="Large"
+                       LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+            </Grid>
+
+            <customControls:ContactsListControl 
+                                                Grid.Row="1"
+                                                VerticalOptions="FillAndExpand"
+                                                SearchingPhoneNumber="{Binding SearchingPhoneNumber, Mode=TwoWay}"
+                                                IsSearchMode="{Binding IsSearchMode}"
+                                                Contacts="{Binding VisibleContacts}"/>
+
+            <customControls:ResaBottomNavigationBar Grid.Row="2"/>
+
+        </Grid>
+
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

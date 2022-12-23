@@ -1,0 +1,92 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.AppSettingsAdvancedPage"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:AppSettingsAdvancedPageViewModel"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp">
+    <customControls:BaseContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate DoctorAppSettingsAdvanced}" FontSize="Large"
+                       LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            </Grid>
+
+            <Frame Padding="10, 10, 10, 5" CornerRadius="5" BackgroundColor="Transparent" Margin="20"
+                   BorderColor="White">
+                <StackLayout>
+
+                    <StackLayout>
+                        <Label Text="{utilities:Translate DoctorAppPatientsCallBlockerService}" FontSize="Medium" />
+                    
+                        <Switch x:Name="BlockerSwitch" OnColor="White" BackgroundColor="Transparent" HorizontalOptions="Start" 
+                                IsToggled="{Binding IsBlockerServiceToggled, Mode=TwoWay}" />
+
+                    </StackLayout>
+
+                    <Frame Padding="10, 10, 10, 5" CornerRadius="5" BackgroundColor="Transparent" Margin="20"
+                           BorderColor="White">
+
+                        <Frame.Triggers> 
+                            <DataTrigger TargetType="Frame" 
+                                         Binding="{Binding Source={x:Reference BlockerSwitch},Path=IsToggled}" 
+                                         Value="False"> 
+                                <Setter Property="IsEnabled" Value="False" /> 
+                                <Setter Property="Opacity" Value="0.4" /> 
+                            </DataTrigger> 
+                            <DataTrigger TargetType="Frame" 
+                                         Binding="{Binding Source={x:Reference BlockerSwitch},Path=IsToggled}" 
+                                         Value="True"> 
+                                <Setter Property="IsEnabled" Value="True" /> 
+                                <Setter Property="Opacity" Value="1" /> 
+                            </DataTrigger> 
+                        </Frame.Triggers> 
+
+                        <StackLayout IsEnabled="False">
+                            <StackLayout.Triggers> 
+                                <DataTrigger TargetType="StackLayout" 
+                                             Binding="{Binding Source={x:Reference BlockerSwitch},Path=IsToggled}" 
+                                             Value="False"> 
+                                    <Setter Property="IsEnabled" Value="False" />
+                                </DataTrigger> 
+                                <DataTrigger TargetType="StackLayout" 
+                                             Binding="{Binding Source={x:Reference BlockerSwitch},Path=IsToggled}" 
+                                             Value="True"> 
+                                    <Setter Property="IsEnabled" Value="True" />
+                                </DataTrigger> 
+                            </StackLayout.Triggers> 
+
+                            <Label Text="{utilities:Translate DoctorAppAppSettingsImproveBgBlockerService}" FontSize="Medium" />
+                    
+                            <Switch OnColor="White" BackgroundColor="Transparent" HorizontalOptions="Start" 
+                                    IsToggled="{Binding IsForegroundModeToggled, Mode=TwoWay}" />
+
+                            <ImageButton Source="Assets/info.png" WidthRequest="25" HeightRequest="25" BackgroundColor="Transparent"
+                                         HorizontalOptions="End" Command="{Binding ShowForegroundServiceInfoCommand}" />
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+
+            <customControls:ResaBottomNavigationBar />
+
+        </StackLayout>
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

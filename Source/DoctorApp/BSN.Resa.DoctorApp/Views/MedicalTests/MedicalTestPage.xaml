@@ -1,0 +1,328 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.MedicalTests.MedicalTestPage"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+                                xmlns:cardViewControls="clr-namespace:PanCardView.Controls;assembly=PanCardView"
+                                xmlns:cardView="clr-namespace:PanCardView;assembly=PanCardView"
+                                xmlns:ffImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.MedicalTests;assembly=BSN.Resa.DoctorApp"
+                                BackgroundImageSource="Assets/background.png">
+
+     <customControls:BaseContentPage.Resources> 
+         <ResourceDictionary> 
+             <Style x:Key="ActiveIndicator" TargetType="cardViewControls:IndicatorsControl"> 
+                 <Setter Property="BackgroundColor" Value="Red" /> 
+             </Style> 
+             <Style x:Key="InactiveIndicator" TargetType="cardViewControls:IndicatorsControl"> 
+                 <Setter Property="BackgroundColor" Value="White" /> 
+             </Style> 
+         </ResourceDictionary> 
+     </customControls:BaseContentPage.Resources> 
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+         <Grid Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0" 
+               BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0"> 
+             <Grid.RowDefinitions> 
+                 <RowDefinition Height="50" /> 
+             </Grid.RowDefinitions> 
+             <Grid.ColumnDefinitions> 
+                 <ColumnDefinition Width="Auto" /> 
+                 <ColumnDefinition Width="Auto" /> 
+                 <ColumnDefinition Width="*" /> 
+             </Grid.ColumnDefinitions> 
+         
+             <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" /> 
+         
+             <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" /> 
+         
+             <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate DoctorAppMedicalTest}" FontSize="Large" 
+                    LineBreakMode="TailTruncation" 
+                    TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" /> 
+         
+         </Grid> 
+         
+         <ScrollView Grid.Row="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start" 
+                     HorizontalScrollBarVisibility="Never" FlowDirection="RightToLeft" Margin="0, 5, 0, 0"> 
+             <StackLayout Orientation="Horizontal" VerticalOptions="Start" BackgroundColor="#dbfafa"> 
+         
+                 <Label HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="Black" FontAttributes="Bold"> 
+                     <Label.FormattedText> 
+                         <FormattedString> 
+                             <Span Text="{utilities:Translate Patient, StringFormat='{0}:'}" /> 
+                             <Span Text="{Binding MedicalTest.PatientPhone, StringFormat=' {0}'}" /> 
+                         </FormattedString> 
+                     </Label.FormattedText> 
+                 </Label> 
+         
+                 <Label HorizontalOptions="CenterAndExpand" FontSize="16" TextColor="Black" FontAttributes="Bold"> 
+                     <Label.FormattedText> 
+                         <FormattedString> 
+                             <Span Text="{utilities:Translate DoctorAppMedicalTestPrice, StringFormat='{0}:'}"/> 
+                             <Span Text="{Binding MedicalTest.Price, StringFormat=' {0}T'}" /> 
+                         </FormattedString> 
+                     </Label.FormattedText> 
+                 </Label> 
+             </StackLayout> 
+         </ScrollView> 
+         
+         <AbsoluteLayout Grid.Row="2" Padding="10"> 
+         
+             <Grid x:Name="OpacityChangingArea" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Margin="0, 5, 0, 0" 
+                   RowSpacing="20"> 
+                 <Grid.Triggers> 
+                     <DataTrigger TargetType="Grid" 
+                                  Binding="{Binding Source={x:Reference SubmittingReplyDialog},Path=IsVisible}" 
+                                  Value="False"> 
+                         <Setter Property="Opacity" Value="1" /> 
+                         <Setter Property="IsEnabled" Value="True" /> 
+                     </DataTrigger> 
+                     <DataTrigger TargetType="Grid" 
+                                  Binding="{Binding Source={x:Reference SubmittingReplyDialog},Path=IsVisible}" 
+                                  Value="True"> 
+                         <Setter Property="Opacity" Value="0.3" /> 
+                         <Setter Property="IsEnabled" Value="False" /> 
+                     </DataTrigger> 
+                 </Grid.Triggers> 
+         
+                 <Grid.ColumnDefinitions> 
+                     <ColumnDefinition Width="*" /> 
+                 </Grid.ColumnDefinitions> 
+                 <Grid.RowDefinitions> 
+                     <RowDefinition Height="0.4*" /> 
+                     <RowDefinition Height="0.6*" /> 
+                 </Grid.RowDefinitions> 
+         
+                 <cardView:CarouselView Grid.Row="0"
+                                        ItemsSource="{Binding MedicalTestPhotos}" Margin="0" Padding="10, 0" 
+                                        IsRightToLeftFlowDirectionEnabled="True" IsViewReusingEnabled="True" 
+                                        HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"> 
+                     <cardView:CarouselView.ItemTemplate> 
+                         <DataTemplate> 
+                             <Frame 
+                                 HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                 Padding="0" Margin="50, 0, 50, 15" HasShadow="false" IsClippedToBounds="True" 
+                                 CornerRadius="20" BackgroundColor="Transparent"> 
+         
+                                 <Frame.GestureRecognizers> 
+                                     <TapGestureRecognizer 
+                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:MedicalTestPageViewModel}}, Path=OnPhotoSelected}" 
+                                         CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}" /> 
+                                 </Frame.GestureRecognizers> 
+         
+                                 <ffImageLoading:CachedImage Aspect="AspectFill" Source="{Binding .}"
+                                                             BackgroundColor="Transparent" HeightRequest="250" WidthRequest="250"/> 
+         
+                             </Frame> 
+                         </DataTemplate> 
+                     </cardView:CarouselView.ItemTemplate> 
+         
+                     <cardViewControls:LeftArrowControl Margin="2, 0" /> 
+                     <cardViewControls:RightArrowControl Margin="2, 0" /> 
+         
+                     <cardViewControls:IndicatorsControl SelectedIndicatorStyle="{StaticResource ActiveIndicator}" 
+                                                         UnselectedIndicatorStyle="{StaticResource InactiveIndicator}" 
+                                                         Margin="0" 
+                                                         Padding="0" HidesForSingleIndicator="True" /> 
+         
+                 </cardView:CarouselView> 
+         
+                 <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                       RowSpacing="5" Margin="5, 5, 5, 0" IsVisible="False"> 
+                     <Grid.Triggers> 
+                         <DataTrigger TargetType="Grid" 
+                                      Binding="{Binding Source={x:Reference SuccessfulReplySubmitView},Path=IsVisible}" 
+                                      Value="False"> 
+                             <Setter Property="IsVisible" Value="True" /> 
+                         </DataTrigger> 
+                         <DataTrigger TargetType="Grid" 
+                                      Binding="{Binding Source={x:Reference SuccessfulReplySubmitView},Path=IsVisible}" 
+                                      Value="True"> 
+                             <Setter Property="IsVisible" Value="False" /> 
+                         </DataTrigger> 
+                     </Grid.Triggers> 
+                     <Grid.ColumnDefinitions> 
+                         <ColumnDefinition Width="*" /> 
+                     </Grid.ColumnDefinitions> 
+                     <Grid.RowDefinitions> 
+                         <RowDefinition Height="Auto" /> 
+                         <RowDefinition Height="*" /> 
+                         <RowDefinition Height="Auto" /> 
+                     </Grid.RowDefinitions> 
+         
+                     <Label Grid.Row="0" Text="{utilities:Translate DoctorAppMedicalTestYourReply}" FontSize="22" 
+                            TextColor="Black" Margin="5, 0" FontAttributes="Bold"/> 
+         
+                     <Grid Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="5"> 
+                         <Grid.ColumnDefinitions> 
+                             <ColumnDefinition Width="0.70*" /> 
+                             <ColumnDefinition Width="0.30*" /> 
+                         </Grid.ColumnDefinitions> 
+                         <Grid.RowDefinitions> 
+                             <RowDefinition Height="*" /> 
+                         </Grid.RowDefinitions> 
+         
+                         <Frame Grid.Column="0" HasShadow="False" CornerRadius="10" Padding="1, 1, 1, 1"> 
+         
+                             <Frame HasShadow="False" CornerRadius="9" BackgroundColor="White" Padding="0" Margin="0"> 
+         
+                                 <customControls:CustomEditor Keyboard="Text" FontSize="18" TextColor="Black" IsTextPredictionEnabled="False"
+                                                              Placeholder="{utilities:Translate DoctorAppMedicalTestReplyTextPlaceholder}" 
+                                                              Text="{Binding MedicalTestTextReply, Mode=TwoWay}" FlowDirection="RightToLeft"> 
+                                     <customControls:CustomEditor.Behaviors> 
+                                         <behaviors:EventToCommandBehavior EventName="Completed" 
+                                                                           Command="{Binding OnTextReplyCompletedCommand}" /> 
+                                     </customControls:CustomEditor.Behaviors> 
+         
+                                 </customControls:CustomEditor> 
+         
+                             </Frame> 
+         
+                         </Frame> 
+         
+                         <Grid Grid.Column="1" VerticalOptions="CenterAndExpand"> 
+                             <Grid.ColumnDefinitions> 
+                                 <ColumnDefinition Width="*" /> 
+                             </Grid.ColumnDefinitions> 
+                             <Grid.RowDefinitions> 
+                                 <RowDefinition Height="Auto" /> 
+                                 <RowDefinition Height="*" /> 
+                                 <RowDefinition Height="Auto" /> 
+                             </Grid.RowDefinitions> 
+         
+                             <Label Grid.Row="0" Text="{utilities:Translate VoiceRecording}" TextColor="Black" 
+                                    HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="18"/> 
+         
+                             <customControls:ResaImageButton Grid.Row="1" Source="mic.png" 
+                                                             
+                                                             Aspect="AspectFit" VerticalOptions="Center"
+                                                             Command="{Binding StartRecordVoiceCommand}" 
+                                                             IsEnabled="{Binding IsStartRecordingEnable}" 
+                                                             IsVisible="{Binding IsStartRecordingEnable}" /> 
+         
+                             <StackLayout Grid.Row="1" Orientation="Horizontal" Margin="0" 
+                                          Spacing="5" VerticalOptions="FillAndExpand" 
+                                          IsEnabled="{Binding IsPlayPauseRemoveEnable}" 
+                                          IsVisible="{Binding IsPlayPauseRemoveEnable}"> 
+         
+                                 <customControls:ResaImageButton Source="pause_voice.png" 
+                                                                 Aspect="AspectFit"
+                                                                 
+                                                                 HorizontalOptions="FillAndExpand" 
+                                                                 IsVisible="{Binding IsPauseVoiceEnable}" 
+                                                                 Command="{Binding PauseVoiceCommand}" /> 
+         
+                                 <customControls:ResaImageButton Source="play_voice.png" 
+                                                                 Aspect="AspectFit"
+                                                                 
+                                                                 HorizontalOptions="FillAndExpand" 
+                                                                 IsVisible="{Binding IsPlayVoiceEnable}" 
+                                                                 Command="{Binding PlayVoiceCommand}" /> 
+         
+         
+                                 <customControls:ResaImageButton Source="remove_voice.png" 
+                                                                 Aspect="AspectFit"
+                                                                 
+                                                                 HorizontalOptions="FillAndExpand" 
+                                                                 Command="{Binding RemoveRecordedVoiceCommand}" /> 
+         
+                             </StackLayout> 
+         
+                             <customControls:ResaImageButton Grid.Row="1" 
+                                                             Aspect="AspectFit" Source="stop_recording.png"
+                                                             
+                                                             Command="{Binding StopRecordVoiceCommand}" 
+                                                             IsEnabled="{Binding IsStopRecordingEnable}" 
+                                                             IsVisible="{Binding IsStopRecordingEnable}" /> 
+         
+                             <Label Grid.Row="2" 
+                                    Text="{Binding RecordingElapsedTime, StringFormat='{0:mm\\:ss}'}" 
+                                    HorizontalTextAlignment="Center" TextColor="Black" 
+                                    FontSize="18"
+                                    IsEnabled="{Binding IsRecordingElapsedTimeEnable}" 
+                                    IsVisible="{Binding IsRecordingElapsedTimeEnable}" /> 
+         
+                             <Label Grid.Row="2" 
+                                    Text="{Binding PlayingElapsedTime, StringFormat='{0:mm\\:ss}'}" 
+                                    HorizontalTextAlignment="Center" TextColor="Black"
+                                    FontSize="18"
+                                    IsEnabled="{Binding IsPlayingElapsedTimeEnable}" 
+                                    IsVisible="{Binding IsPlayingElapsedTimeEnable}" /> 
+         
+                         </Grid> 
+         
+                     </Grid> 
+         
+                     <Button Grid.Row="2" Margin="0, 10" 
+                             Text="{utilities:Translate DoctorAppMedicalTestSubmitReply}" TextColor="White" 
+                             CornerRadius="25" WidthRequest="200" HeightRequest="60" FontSize="20" FontAttributes="Bold" 
+                             HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="5" 
+                             Command="{Binding SubmitMedicalTestReplyCommand}" 
+                             IsEnabled="{Binding SubmitMedicalTestReplyButtonEnable}"> 
+                         <Button.Triggers> 
+                             <Trigger TargetType="Button" 
+                                      Property="IsEnabled" Value="True"> 
+                                 <Setter Property="BackgroundColor" Value="Green" /> 
+                             </Trigger> 
+                             <Trigger TargetType="Button" 
+                                      Property="IsEnabled" Value="False"> 
+                                 <Setter Property="BackgroundColor" Value="Gray" /> 
+                             </Trigger> 
+                         </Button.Triggers> 
+                     </Button> 
+         
+                 </Grid> 
+         
+                 <Frame x:Name="SuccessfulReplySubmitView" Grid.Row="1" HasShadow="False" 
+                        IsVisible="{Binding IsSuccessfulReplySubmitViewVisible, FallbackValue=False}" CornerRadius="20" 
+                        VerticalOptions="CenterAndExpand" BackgroundColor="White" Margin="10" Padding="20"> 
+         
+                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="15"> 
+                         <Label Text="{utilities:Translate DoctorAppMedicalTestSuccessfulSubmitReplyMessage}" 
+                                TextColor="Green" FontSize="20" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" 
+                                FontAttributes="Bold" VerticalOptions="CenterAndExpand"/> 
+         
+                         <Button Text="{utilities:Translate DoctorAppShowNextMedicalTest}" 
+                                 BackgroundColor="{StaticResource AppPrimaryColor}" CornerRadius="25" FontAttributes="Bold" 
+                                 HorizontalOptions="CenterAndExpand" Padding="15" TextColor="White" VerticalOptions="CenterAndExpand" FontSize="20" 
+                                 Command="{Binding ShowNextMedicalTestCommand}"/> 
+                     </StackLayout> 
+         
+                 </Frame> 
+         
+             </Grid> 
+         
+             <Frame x:Name="SubmittingReplyDialog" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                    AbsoluteLayout.LayoutBounds="0.5, 0.5, 300, 150" 
+                    Padding="10" BorderColor="Black" BackgroundColor="White" HasShadow="False" CornerRadius="10" 
+                    IsVisible="{Binding IsSubmittingReplyDialogVisible, FallbackValue=False}"> 
+         
+                 <StackLayout BackgroundColor="White"> 
+                     <ActivityIndicator Color="{StaticResource AppPrimaryColor}" IsRunning="{Binding IsSubmittingReplyDialogVisible}" 
+                                        IsVisible="{Binding IsSubmittingReplyDialogVisible}" 
+                                        VerticalOptions="CenterAndExpand" /> 
+                     <Label Text="{utilities:Translate DoctorAppSendingMedicalTestReplyIsInProgress}" TextColor="Black" HorizontalOptions="CenterAndExpand" 
+                            HorizontalTextAlignment="Center" /> 
+                     <Button Text="{utilities:Translate Cancel}" WidthRequest="100" HeightRequest="50" VerticalOptions="EndAndExpand" 
+                             HorizontalOptions="Center" Command="{Binding OnSubmittingReplyDialogCancelCommand}" 
+                             CornerRadius="15" BackgroundColor="Red" TextColor="White"/> 
+                 </StackLayout> 
+             </Frame> 
+         
+         </AbsoluteLayout> 
+
+        <customControls:ResaBottomNavigationBar Grid.Row="3"/>
+    </Grid>
+
+</customControls:BaseContentPage>

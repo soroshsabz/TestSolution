@@ -1,0 +1,49 @@
+﻿<customControls:BaseContentPage x:Class="BSN.Resa.DoctorApp.Views.UrgentUpdatePage"
+                                xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                                x:DataType="viewModels:UrgentUpdatePageViewModel"
+                                prism:ViewModelLocator.AutowireViewModel="True"
+                                Title="{utilities:Translate UrgentUpdate}">
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="UpdateImageSection" TargetType="ContentView">
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="StartAndExpand" />
+            </Style>
+            <Style x:Key="UpdateImage" TargetType="Image">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+    <customControls:BaseContentPage.BackgroundImage>Assets/background.png</customControls:BaseContentPage.BackgroundImage>
+    <customControls:BaseContentPage.Content>
+        <StackLayout Style="{StaticResource UpdateImageSection}" VerticalOptions="FillAndExpand"
+                     BackgroundColor="Transparent" Spacing="0" Margin="0" Padding="0">
+
+            <StackLayout Style="{StaticResource UpdateImageSection}" VerticalOptions="Start">
+                <Image Style="{StaticResource UpdateImage}" Source="Assets/urgent_update.png" VerticalOptions="Start" />
+
+            </StackLayout>
+
+            <Label Text="{utilities:Translate UpdatingResa}" FontSize="40" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   TextColor="White" HorizontalOptions="CenterAndExpand" Margin="10, 25, 10, 25" />
+
+            <Button IsVisible="{Binding IsPromptInstallUpdateButtonVisible}" Text="{utilities:Translate InstallUpdatedVersion}"
+                    VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="#F2F2F2" TextColor="#1C9791" FontSize="24" BorderColor="Black" BorderWidth="1"
+                    Padding="10" Command="{Binding PromptInstallUpdateCommand}"/>
+
+        </StackLayout>
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

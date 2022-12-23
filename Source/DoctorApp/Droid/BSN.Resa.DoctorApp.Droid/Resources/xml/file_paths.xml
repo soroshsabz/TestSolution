@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--What is this file and why we use it?:
+From Android 7.0 and on in order to share the files an app create, the app must create a File Provider
+so that the app gives other apps a secure way and permission to access these files. In our case we download a
+file and save it on device storage, and we use File provider to grant access other app i.e Package Installer,
+otherwise a security exception will be thrown by Android OS.
+For more info visit:
+https://developer.android.com/reference/android/support/v4/content/FileProvider-->
+
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+  <external-path name="Download" path="Download/" />
+</paths>

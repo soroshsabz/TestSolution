@@ -1,0 +1,68 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.CallbackRequests.CallbackRequestsPage"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.CallbackRequests;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:CallbackRequestsPageViewModel"
+                                xmlns:callbackRequests="clr-namespace:BSN.Resa.DoctorApp.Views.CallbackRequests;assembly=BSN.Resa.DoctorApp"
+                                IconImageSource="Assets/callback" Title="{utilities:Translate CallbackRequests}"
+                                BackgroundImageSource="Assets/background"
+                                x:Name="This"
+                                AutomationId="CallbackRequestsPage">
+
+    <customControls:BaseContentPage.Content>
+
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+
+                <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                      BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                    <Label Grid.Row="0" Grid.Column="1" Text="{utilities:Translate CallbackRequests}" FontSize="Large"
+                           LineBreakMode="TailTruncation" HorizontalOptions="CenterAndExpand"
+                           TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                </Grid>
+
+                 <callbackRequests:CallbackRequestsPageListView IsCallVisible="{Binding IsCallEnable, FallbackValue=False}"/> 
+
+                <customControls:ResaBottomNavigationBar />
+
+            </StackLayout>
+
+            <Frame IsVisible="{Binding IsCallbackRequestsEmpty, FallbackValue= false}"
+                   AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.75, 75"
+                   CornerRadius="10" BackgroundColor="White" Padding="3">
+
+                <Label
+                    Text="{utilities:Translate ThereArentAnyCallbackRequests}" TextColor="Black"
+                    VerticalOptions="Center"
+                    FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            </Frame>
+
+            <Frame AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.5, 75, 75"
+                   IsVisible="{Binding IsBusy, FallbackValue= false}" CornerRadius="10"
+                   BackgroundColor="{StaticResource AppPrimaryColor}"
+                   Padding="5" HasShadow="False">
+
+                <ActivityIndicator IsVisible="{Binding IsBusy, FallbackValue= false}"
+                                   IsRunning="{Binding IsBusy, FallbackValue= false}"
+                                   WidthRequest="55" HeightRequest="55" VerticalOptions="Center" Color="White" />
+            </Frame>
+
+        </AbsoluteLayout>
+
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

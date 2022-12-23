@@ -1,0 +1,6 @@
+ <!-- This is the place to set the default c# language version for all DoctorApp projects -->
+<Project>
+ <PropertyGroup>
+   <LangVersion>7.3</LangVersion>
+ </PropertyGroup>
+</Project>

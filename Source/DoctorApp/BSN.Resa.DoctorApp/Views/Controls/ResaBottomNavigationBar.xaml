@@ -1,0 +1,91 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imageCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="BSN.Resa.DoctorApp.Views.Controls.ResaBottomNavigationBar"
+             xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+             VerticalOptions="EndAndExpand" Padding="0" Margin="0"
+             x:Name="This">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelsStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0.5, 1, 1, 0.4" />
+            </Style>
+
+            <Style x:Key="ImagesStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFit" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All" />
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value="0.5, 0, 0.6, 0.6" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White"
+              HeightRequest="50" ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="40*" />
+                <ColumnDefinition Width="30*" />
+            </Grid.ColumnDefinitions>
+
+            <AbsoluteLayout x:Name="StateAbsLayout" Grid.Column="0" Padding="0">
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="StateAbsLayout_OnTapped" />
+                </AbsoluteLayout.GestureRecognizers>
+
+                <Image x:Name="DoctorStateImage" Source="Assets/change_state" Style="{StaticResource ImagesStyle}"/>
+
+                <Label x:Name="ChangeStateLabel" Text="{utilities:Translate MyState}" Style="{StaticResource LabelsStyle}"/>
+
+            </AbsoluteLayout>
+
+            <AbsoluteLayout x:Name="CallbackAbsLayout" Grid.Column="1" Padding="0" >
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CallbackAbsLayout_OnTapped" />
+                </AbsoluteLayout.GestureRecognizers>
+
+                <Image x:Name="CallbackImage" Source="Assets/callback" Style="{StaticResource ImagesStyle}"
+                       AbsoluteLayout.LayoutBounds="0.5, 0, 1, 0.6"/>
+
+
+                <Label x:Name="CallbackLabel" Text="{utilities:Translate Requests}" Style="{StaticResource LabelsStyle}"/>
+
+                <imageCircle:CircleImage x:Name="BadgeRedContainer" Aspect="AspectFill" FillColor="Red" Margin="0"
+                                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                                         AbsoluteLayout.LayoutBounds="0.2, 0, 30, 30"
+                                         IsVisible="{Binding Source={x:Reference This}, Path=IsBadgeNumberVisible}"/>
+
+                <Label x:Name="BadgeNumberLabel" Text="{Binding Source={x:Reference This}, Path=BadgeNumber}"
+                       Style="{StaticResource LabelsStyle}" TextColor="White" FontSize="Small"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       IsVisible="{Binding Source={x:Reference This}, Path=IsBadgeNumberVisible}"
+                       AbsoluteLayout.LayoutBounds="0.2, 0, 30, 30" Margin="0" />
+            </AbsoluteLayout>
+
+            <AbsoluteLayout x:Name="CallHistoryAbsLayout" Grid.Column="2" Padding="0">
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CallHistoryAbsLayout_OnTapped" />
+                </AbsoluteLayout.GestureRecognizers>
+
+                <Image x:Name="CallHistoryImage" Source="Assets/call_history" Style="{StaticResource ImagesStyle}"/>
+
+                <Label x:Name="CallHistoryLabel" Text="{utilities:Translate CallbackRequestsHistory}" Style="{StaticResource LabelsStyle}"/>
+
+            </AbsoluteLayout>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

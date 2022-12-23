@@ -1,0 +1,92 @@
+﻿<customControls:BaseContentPage x:Class="BSN.Resa.DoctorApp.Views.AboutPage"
+                                xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:AboutPageViewModel"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:system="clr-namespace:System;assembly=netstandard"
+                                prism:ViewModelLocator.AutowireViewModel="True"
+                                Title="{utilities:Translate AboutUs}"
+                                BackgroundImageSource="Assets/background.png">
+
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="AboutText" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+
+    <customControls:BaseContentPage.Content>
+
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate AboutUs}" FontSize="Large"
+                       LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            </Grid>
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                    <StackLayout Padding="20, 20, 20, 5" VerticalOptions="FillAndExpand">
+
+                        <Image Source="Assets/resa_white_logo.png" HorizontalOptions="CenterAndExpand" />
+
+                        <Label Style="{StaticResource AboutText}" Text="{Binding AboutText}"/>
+
+                        <Label x:Name="ResaContactMediumLabel" Style="{StaticResource AboutText}"
+                               Text="{Binding ResaContactMediumLabelText}" FlowDirection="LeftToRight">
+                            <Label.HorizontalOptions>
+                                <OnPlatform x:TypeArguments="LayoutOptions">
+                                    <On Platform="Android" Value="StartAndExpand"/>
+                                    <On Platform="iOS" Value="EndAndExpand"/>
+                                </OnPlatform>
+                            </Label.HorizontalOptions>
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ContactResaCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        
+                        <Label Text="{utilities:Translate PrivacyPolicy}" Style="{StaticResource AboutText}"
+                               VerticalOptions="EndAndExpand" TextDecorations="Underline"> 
+                            <Label.GestureRecognizers> 
+                                <TapGestureRecognizer Command="{Binding OnPrivacyPolicyTappedCommand}"/> 
+                            </Label.GestureRecognizers>
+                            <Label.IsVisible>
+                                <OnPlatform x:TypeArguments="system:Boolean">
+                                    <On Platform="Android" Value="False"/>
+                                    <On Platform="iOS" Value="True"/>
+                                </OnPlatform>
+                            </Label.IsVisible>
+                        </Label> 
+
+                        <Label Style="{StaticResource AboutText}" Text="{Binding ApplicationVersion,
+                            StringFormat={utilities:Translate AppVersionXamlSpecialVersion}}" VerticalOptions="EndAndExpand"/>
+
+                    </StackLayout>
+            </ScrollView>
+            <customControls:ResaBottomNavigationBar />
+        </StackLayout>
+
+    </customControls:BaseContentPage.Content>
+
+</customControls:BaseContentPage>

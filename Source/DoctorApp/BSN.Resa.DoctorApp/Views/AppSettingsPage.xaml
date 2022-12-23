@@ -1,0 +1,73 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.AppSettingsPage"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:AppSettingsPageViewModel"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                BackgroundImageSource="Assets/background.png">
+
+
+    <customControls:BaseContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate DoctorAppSettings}" FontSize="Large"
+                       LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            </Grid>
+
+            <ScrollView>
+                <StackLayout Margin="10, 15, 10, 10" Spacing="10">
+                    <BoxView HeightRequest="1" BackgroundColor="White" />
+
+                    <customControls:ClickableContentView Command="{Binding OnAdvancedSettingsTappedCommand}">
+
+                        <Grid Padding="10" BackgroundColor="White">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="50" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" />
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.Row="0" Grid.Column="0" Source="Assets/settings_advanced.png" WidthRequest="50"
+                                   HeightRequest="50" />
+
+                            <Label Grid.Row="0" Grid.Column="1" Text="{utilities:Translate Advanced}" FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" TextColor="Black" />
+
+                            <Image Grid.Row="0" Grid.Column="2" Source="Assets/arrow_left.png" WidthRequest="50"
+                                   HeightRequest="50" />
+
+                        </Grid>
+                    </customControls:ClickableContentView>
+
+                </StackLayout>
+
+            </ScrollView>
+
+            <customControls:ResaBottomNavigationBar />
+
+        </StackLayout>
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

@@ -1,0 +1,2547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Balance" xml:space="preserve">
+    <value>اعتبار کل</value>
+  </data>
+  <data name="CaptchaInvalid" xml:space="preserve">
+    <value>عدد محاسبه‌شده اشتباه است.</value>
+  </data>
+  <data name="CaptchaRequired" xml:space="preserve">
+    <value>حاصل محاسبه‌ی عبارت مقابل را وارد نمایید.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>فرمت ایمیل نادرست است.</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>زن</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>نام و نام خانوادگی</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>جنسیت</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>نام خانوادگی</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>مرد</value>
+  </data>
+  <data name="NationalNumber" xml:space="preserve">
+    <value>کد ملی</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>رمز عبور را وارد نمایید.</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>شماره‌ی تلفن</value>
+  </data>
+  <data name="PhoneNumberInvalid" xml:space="preserve">
+    <value>شماره‌ی تلفن وارد‌شده نامعتبر است.</value>
+  </data>
+  <data name="PhoneNumberRequired" xml:space="preserve">
+    <value>واردکردن شماره‌ی تلفن الزامی است.</value>
+  </data>
+  <data name="ReadTerms" xml:space="preserve">
+    <value>مشاهده‌ی قوانین</value>
+  </data>
+  <data name="Registeration" xml:space="preserve">
+    <value>ثبت‌نام</value>
+  </data>
+  <data name="RegisterationAgreementRequired" xml:space="preserve">
+    <value>برای ثبت‌نام پذیرش قوانین رسا الزامی است.</value>
+  </data>
+  <data name="RegistrationAgreement" xml:space="preserve">
+    <value>من قوانین رسا را خوانده‌ام و قبول دارم.</value>
+  </data>
+  <data name="UserInformationCorrectnessResponsibilityMessage" xml:space="preserve">
+    <value>در صورت عدم صحت اطلاعات واردشده مسئولیت با متقاضی می‌باشد.</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>نام کاربری</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeInvalid" xml:space="preserve">
+    <value>کد تایید وارد‌شده اشتباه است.</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeRequired" xml:space="preserve">
+    <value>کد تایید را وارد نمایید.</value>
+  </data>
+  <data name="VSIN" xml:space="preserve">
+    <value>پنج رقم انتهایی کد کاربری</value>
+  </data>
+  <data name="VSINInvalid" xml:space="preserve">
+    <value>کد کاربری وارد‌شده نامعتبر است.</value>
+  </data>
+  <data name="VSINOrPasswordInvalid" xml:space="preserve">
+    <value>کد کاربری یا رمز عبور وارد‌شده اشتباه است.</value>
+  </data>
+  <data name="VSINRequired" xml:space="preserve">
+    <value>پنج رقم انتهایی کد کاربری را وارد نمایید.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>رمز عبور</value>
+  </data>
+  <data name="ObstetricsAndGynecology" xml:space="preserve">
+    <value>زنان و زایمان</value>
+  </data>
+  <data name="Pathobiology" xml:space="preserve">
+    <value>پاتوبیولوژی</value>
+  </data>
+  <data name="ResaNumber" xml:space="preserve">
+    <value>شماره‌ی رسا</value>
+  </data>
+  <data name="ActivationKey" xml:space="preserve">
+    <value>رمز عبور</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>تاریخ ایجاد</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>اعتبار</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="MSISDN" xml:space="preserve">
+    <value>شماره‌ی رسا</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>شماره سریال</value>
+  </data>
+  <data name="Expertise" xml:space="preserve">
+    <value>حوزه‌ی تخصصی</value>
+  </data>
+  <data name="MedicalCouncilNumber" xml:space="preserve">
+    <value>شماره نظام پزشکی</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="ConsumerMSISDN" xml:space="preserve">
+    <value>شماره‌ی مصرف کننده</value>
+  </data>
+  <data name="ConsumerType" xml:space="preserve">
+    <value>نوع مصرف کننده</value>
+  </data>
+  <data name="ConsumerTypeAndConsumerMSISDNCantBeBlank" xml:space="preserve">
+    <value>نوع مصرف کننده و شماره‌ی مصرف کننده نمی‌تواند به صورت همزمان خالی باشد</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>فعال بودن</value>
+  </data>
+  <data name="IsDefault" xml:space="preserve">
+    <value>پیش فرض</value>
+  </data>
+  <data name="PricePerMinute" xml:space="preserve">
+    <value>هزینه‌ در دقیقه</value>
+  </data>
+  <data name="PricePerMinuteIsPositive" xml:space="preserve">
+    <value>هزینه در دقیقه باید بیشتر از صفر باشد</value>
+  </data>
+  <data name="PricePerMinuteRequired" xml:space="preserve">
+    <value>هزینه در دقیقه نباید خالی باشد</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>پزشک</value>
+  </data>
+  <data name="Patient" xml:space="preserve">
+    <value>بیمار</value>
+  </data>
+  <data name="IsAssignable" xml:space="preserve">
+    <value>امکان انتصاب دارد؟</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>حواله‌ی بانکی</value>
+  </data>
+  <data name="CardToCard" xml:space="preserve">
+    <value>کارت به کارت</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>نقدی</value>
+  </data>
+  <data name="Cardiovascular" xml:space="preserve">
+    <value>قلب و عروق</value>
+  </data>
+  <data name="Psychiatrist" xml:space="preserve">
+    <value>روانپزشک</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>آری</value>
+  </data>
+  <data name="CallbackService" xml:space="preserve">
+    <value>سرویس باز‌تماس</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>غیرفعال</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>نامشخص</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>پاسخگو</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>مشغول</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>در مطب</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>خارج از دسترس</value>
+  </data>
+  <data name="Operating" xml:space="preserve">
+    <value>اتاق عمل</value>
+  </data>
+  <data name="Pediatrician" xml:space="preserve">
+    <value>متخصص اطفال</value>
+  </data>
+  <data name="DoNotDisturbOvernight" xml:space="preserve">
+    <value>سرویس عدم اتصال تماس‌های شبانه</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="BlockedNumbers" xml:space="preserve">
+    <value>شماره‌های مسدود شده</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>انصراف</value>
+  </data>
+  <data name="ChangeStateError" xml:space="preserve">
+    <value>خطای تغییر وضعیت</value>
+  </data>
+  <data name="ChangeStatePrompt" xml:space="preserve">
+    <value>خطا در زمان تغییر حالت رخ داده‌است. لطفاً دوباره تلاش نمایید.</value>
+  </data>
+  <data name="ChangeStateWithSmsPrompt" xml:space="preserve">
+    <value>برقراری ارتباط با اینترنت ممکن نیست. وضعیت شما با استفاده از پیامک تغییر می‌کند.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>بستن</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>خطای اتصال</value>
+  </data>
+  <data name="EmptyUsernameOrPasswordError" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور نمی‌تواند خالی باشد.</value>
+  </data>
+  <data name="InternalError" xml:space="preserve">
+    <value>خطای داخلی رخ داده است.</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور نامعتبر است.</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>خطای ورود</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>صفحه‌ی اصلی</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>خیر</value>
+  </data>
+  <data name="NoConnectionError" xml:space="preserve">
+    <value>برقراری ارتباط با اینترنت ممکن نیست.</value>
+  </data>
+  <data name="NoGsmOrInternetError" xml:space="preserve">
+    <value>برقراری ارتباط با سرور ممکن نیست. لطفا گوشی خود را از  «حالت پرواز» خارج کنید و یا اتصال خود را با اینترنت برقرار کنید.</value>
+  </data>
+  <data name="NoServiceError" xml:space="preserve">
+    <value>برقراری ارتباط با سرویس ممکن نیست.</value>
+  </data>
+  <data name="PatientQuestion" xml:space="preserve">
+    <value>آیا فرد تماس گیرنده جزء بیمار‌های شما بود؟</value>
+  </data>
+  <data name="PatientQuestionTitle" xml:space="preserve">
+    <value>رسا</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>تلاش مجدد</value>
+  </data>
+  <data name="SelectYourState" xml:space="preserve">
+    <value>وضعیت خود را انتخاب نمایید:</value>
+  </data>
+  <data name="SendingChangeStateRequest" xml:space="preserve">
+    <value>ارسال پیام تغییر وضعیت</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>بلی</value>
+  </data>
+  <data name="SmsSendError" xml:space="preserve">
+    <value>تغییر وضعیت از طریق پیامک امکان پذیر نیست. لطفاً اتصال اینترنت را برقرار کنید.</value>
+  </data>
+  <data name="Midwifery" xml:space="preserve">
+    <value>کارشناس مامایی</value>
+  </data>
+  <data name="AllowedNumbers" xml:space="preserve">
+    <value>شماره‌های مجاز</value>
+  </data>
+  <data name="AreYouSureYouWantDeleteNumber" xml:space="preserve">
+    <value>آیا از حذف شماره اطمینان دارید؟</value>
+  </data>
+  <data name="ApplicationCannotBeUpdatedDueToLicenseExpiration" xml:space="preserve">
+    <value>برنامه‌ی کنونی به دلیل منقضی‌شدن گواهی قابل به روز رسانی نمی‌باشد. لطفاً با کارشناسان رسا تماس حاصل نمایید.</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>باشه</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>خطای به‌روزرسانی</value>
+  </data>
+  <data name="Num0" xml:space="preserve">
+    <value>صفر</value>
+  </data>
+  <data name="Num1" xml:space="preserve">
+    <value>یک</value>
+  </data>
+  <data name="Num2" xml:space="preserve">
+    <value>دو</value>
+  </data>
+  <data name="Num3" xml:space="preserve">
+    <value>سه</value>
+  </data>
+  <data name="Num4" xml:space="preserve">
+    <value>چهار</value>
+  </data>
+  <data name="Num5" xml:space="preserve">
+    <value>پنج</value>
+  </data>
+  <data name="Num6" xml:space="preserve">
+    <value>شش</value>
+  </data>
+  <data name="Num7" xml:space="preserve">
+    <value>هفت</value>
+  </data>
+  <data name="Num8" xml:space="preserve">
+    <value>هشت</value>
+  </data>
+  <data name="Num9" xml:space="preserve">
+    <value>نه</value>
+  </data>
+  <data name="AllergyAndImmunology" xml:space="preserve">
+    <value>آلرژی و ایمنی‌شناسی</value>
+  </data>
+  <data name="Anaesthesiology" xml:space="preserve">
+    <value>بیهوشی</value>
+  </data>
+  <data name="CardiothoracicSurgery" xml:space="preserve">
+    <value>جراحی قلب</value>
+  </data>
+  <data name="Dentistry" xml:space="preserve">
+    <value>دندان‌پزشکی</value>
+  </data>
+  <data name="Dermatology" xml:space="preserve">
+    <value>پوست</value>
+  </data>
+  <data name="EmergencyMedicine" xml:space="preserve">
+    <value>طب اورژانس</value>
+  </data>
+  <data name="GeneralPractice" xml:space="preserve">
+    <value>پزشکی عمومی</value>
+  </data>
+  <data name="GeneralSurgery" xml:space="preserve">
+    <value>جراحی عمومی</value>
+  </data>
+  <data name="InfectiousDisease" xml:space="preserve">
+    <value>بیماری‌های عفونی</value>
+  </data>
+  <data name="InternalMedicine" xml:space="preserve">
+    <value>بیماری‌های داخلی</value>
+  </data>
+  <data name="Nephrology" xml:space="preserve">
+    <value>بیماری‌های کلیه</value>
+  </data>
+  <data name="Neurology" xml:space="preserve">
+    <value>عصب‌شناسی</value>
+  </data>
+  <data name="Ophthalmology" xml:space="preserve">
+    <value>چشم‌پزشکی</value>
+  </data>
+  <data name="Orthopaedics" xml:space="preserve">
+    <value>ارتوپدی</value>
+  </data>
+  <data name="PaediatricCardiology" xml:space="preserve">
+    <value>قلب و عروق کودکان</value>
+  </data>
+  <data name="PalliativeMedicine" xml:space="preserve">
+    <value>طب تسکینی</value>
+  </data>
+  <data name="Pathology" xml:space="preserve">
+    <value>آسیب‌شناسی</value>
+  </data>
+  <data name="Pulmonology" xml:space="preserve">
+    <value>بیماری‌های ریه</value>
+  </data>
+  <data name="Urology" xml:space="preserve">
+    <value>اورولوژی</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeTimeLimitError" xml:space="preserve">
+    <value>مدت زمان بررسی کد به اتمام رسیده است.</value>
+  </data>
+  <data name="SendPeriodicReport" xml:space="preserve">
+    <value>ارسال گزارش دوره‌ای</value>
+  </data>
+  <data name="FifteenThousandTomans" xml:space="preserve">
+    <value>پانزده هزار تومان</value>
+  </data>
+  <data name="FiftyThousandTomans" xml:space="preserve">
+    <value>پنجاه هزار تومان</value>
+  </data>
+  <data name="FiveThousandTomans" xml:space="preserve">
+    <value>پنج هزار تومان</value>
+  </data>
+  <data name="FortyFiveThousandTomans" xml:space="preserve">
+    <value>چهل و پنج هزار تومان</value>
+  </data>
+  <data name="FortyThousandTomans" xml:space="preserve">
+    <value>چهل هزار تومان</value>
+  </data>
+  <data name="TenThousandTomans" xml:space="preserve">
+    <value>ده هزار تومان</value>
+  </data>
+  <data name="ThirtyFiveThousandTomans" xml:space="preserve">
+    <value>سی و پنج هزار تومان</value>
+  </data>
+  <data name="ThirtyThousandTomans" xml:space="preserve">
+    <value>سی هزار تومان</value>
+  </data>
+  <data name="TwentyFiveThousandTomans" xml:space="preserve">
+    <value>بیست و پنج هزار تومان</value>
+  </data>
+  <data name="TwentyThousandTomans" xml:space="preserve">
+    <value>بیست هزار تومان</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="InputPhoneNumberError" xml:space="preserve">
+    <value>شماره‌ی تلفن وارد شده نامعتبر است.</value>
+  </data>
+  <data name="PleaseEnterThePhoneNumber" xml:space="preserve">
+    <value>لطفاً شماره مورد نظر خود را وارد نمایید:</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>افزودن</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+  <data name="NoPhoneNumberFound" xml:space="preserve">
+    <value>شماره‌‌ای یافت نشد.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>تعداد</value>
+  </data>
+  <data name="Resa" xml:space="preserve">
+    <value>رِسا</value>
+  </data>
+  <data name="PeriodicCallsReporterOptions" xml:space="preserve">
+    <value>گزینه‌های گزارش‌گر دوره‌ای تماس‌ها</value>
+  </data>
+  <data name="DoctorApp" xml:space="preserve">
+    <value>اپلیکیشن پزشک</value>
+  </data>
+  <data name="DoctorTelegramBot" xml:space="preserve">
+    <value>ربات تلگرام پزشک</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>چاپگر</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>گزارش</value>
+  </data>
+  <data name="Sms" xml:space="preserve">
+    <value>پیامک</value>
+  </data>
+  <data name="TelegramBot" xml:space="preserve">
+    <value>ربات تلگرام</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>دوره</value>
+  </data>
+  <data name="PeriodTimeInHours" xml:space="preserve">
+    <value>دوره (ساعت)</value>
+  </data>
+  <data name="ReporterType" xml:space="preserve">
+    <value>نوع گزارشگر</value>
+  </data>
+  <data name="PeriodHoursRangeInvalid" xml:space="preserve">
+    <value>بازه‌ی زمانی دوره‌ی مشخص‌شده نامعتبر است.</value>
+  </data>
+  <data name="ReportPeriodHoursRequired" xml:space="preserve">
+    <value>لطفاً مقدار ساعت دوره‌ ارسال گزارش را مشخص نمایید.</value>
+  </data>
+  <data name="TelegramBotPeriodicReporterRequireChatId" xml:space="preserve">
+    <value>برای فعالسازی گزارشگر ربات تلگرام باید چت‌آیدی تلگرام را وارد نمایید.</value>
+  </data>
+  <data name="FertilityPhd" xml:space="preserve">
+    <value>پی اچ دی باروری</value>
+  </data>
+  <data name="Forensic" xml:space="preserve">
+    <value>پزشکی قانونی</value>
+  </data>
+  <data name="Nutritionist" xml:space="preserve">
+    <value>تغذیه و رژیم درمانی</value>
+  </data>
+  <data name="Oncology" xml:space="preserve">
+    <value>آنکولوژی</value>
+  </data>
+  <data name="PromotionalAccount" xml:space="preserve">
+    <value>اکانت پروموشنال</value>
+  </data>
+  <data name="SpecialNeonatal" xml:space="preserve">
+    <value>فوق تخصص نوزادان</value>
+  </data>
+  <data name="DesignatedResaCommission" xml:space="preserve">
+    <value>کمیسیون تعیین شده برای رسا</value>
+  </data>
+  <data name="NutritionSpecialist" xml:space="preserve">
+    <value>دکتری تغذیه و رژیم درمانی</value>
+  </data>
+  <data name="ForensicMedicineClinicalToxicityFellowship" xml:space="preserve">
+    <value>پزشکی قانونی، فلوشیپ مسمومیتها</value>
+  </data>
+  <data name="InternistGastroenterologist" xml:space="preserve">
+    <value>متخصص داخلی،فوق تخصص گوارش و کبد</value>
+  </data>
+  <data name="Neonatalogist" xml:space="preserve">
+    <value>فوق تخصص نوزادان</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>عکس</value>
+  </data>
+  <data name="AccountId" xml:space="preserve">
+    <value>شناسه‌ی کاربر</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>توضیحات</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>عرض جغرافیایی</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>طول جغرافیایی</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>کدپستی</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>خیابان</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="ClinicAddress" xml:space="preserve">
+    <value>آدرس مطب</value>
+  </data>
+  <data name="LatitudeInvalidRange" xml:space="preserve">
+    <value>عرض جغرافیایی بین منفی ۹۰ تا مثبت ۹۰ درجه می‌باشد.</value>
+  </data>
+  <data name="LongitudeInvalidRange" xml:space="preserve">
+    <value>طول جغرافیایی بین منفی ۱۸۰ تا مثبت ۱۸۰ درجه می‌باشد</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>وارد کردن عنوان الزامی است.</value>
+  </data>
+  <data name="MedicalCouncilNumberShortened" xml:space="preserve">
+    <value>نظام پزشکی</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="PromotionalDoctor" xml:space="preserve">
+    <value>پزشک پروموشنال</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>نوع کاربر</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>عملیات</value>
+  </data>
+  <data name="SerialNumberRequired" xml:space="preserve">
+    <value>وارد کردن شماره‌ی سریال الزامی است.</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>وضعیت</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>شماره</value>
+  </data>
+  <data name="AddAll" xml:space="preserve">
+    <value>افزودن همه</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>صاحب</value>
+  </data>
+  <data name="ConsumedAt" xml:space="preserve">
+    <value>تاریخ مصرف</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>تاریخ ایجاد</value>
+  </data>
+  <data name="ExpiresAt" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>کارت</value>
+  </data>
+  <data name="PhoneNumberHasBeenAlreadyTaken" xml:space="preserve">
+    <value>شماره‌ی موبایل وارد‌شده پیشتر گرفته شده است.</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>صفحه‌ی بعد</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>صفحه‌ی قبل</value>
+  </data>
+  <data name="InputInvalid" xml:space="preserve">
+    <value>ورودی نامعتبر است.</value>
+  </data>
+  <data name="InputNotLatin" xml:space="preserve">
+    <value>ورودی به لاتین نیست.</value>
+  </data>
+  <data name="SettlementComplete" xml:space="preserve">
+    <value>پرداخت شده</value>
+  </data>
+  <data name="SettlementPending" xml:space="preserve">
+    <value>در انتظار پرداخت</value>
+  </data>
+  <data name="Dossier" xml:space="preserve">
+    <value>مشاهده‌ی پرونده</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>بدون عنوان</value>
+  </data>
+  <data name="RegistrationMethod" xml:space="preserve">
+    <value>شیوه‌ی ثبت‌نام</value>
+  </data>
+  <data name="FirstOutgoingCallEstablishedAt" xml:space="preserve">
+    <value>زمان برقراری اولین تماس خروجی</value>
+  </data>
+  <data name="CallerSubscriberIdentificationCard" xml:space="preserve">
+    <value>سیم‌کارت تماس‌گیرنده</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>تاریخ</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>مدت زمان</value>
+  </data>
+  <data name="ReceiverSubscriberIdentificationCard" xml:space="preserve">
+    <value>سیم‌کارت دریافت‌کننده‌ی تماس</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>زمان</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>مبلغ</value>
+  </data>
+  <data name="BeneficiaryParty" xml:space="preserve">
+    <value>ذینفع</value>
+  </data>
+  <data name="PrincipalParty" xml:space="preserve">
+    <value>پرداخت‌کننده</value>
+  </data>
+  <data name="TransactionType" xml:space="preserve">
+    <value>نوع تراکنش</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>راهنما</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="Geolocation" xml:space="preserve">
+    <value>مختصات جغرافیایی</value>
+  </data>
+  <data name="CallFinancialTransaction" xml:space="preserve">
+    <value>تراکنش تماس</value>
+  </data>
+  <data name="CardsMergeFinancialTransaction" xml:space="preserve">
+    <value>تراکنش ادغام سیم‌کارت</value>
+  </data>
+  <data name="EffectiveDuration" xml:space="preserve">
+    <value>مدت زمان موثر</value>
+  </data>
+  <data name="FinishedAt" xml:space="preserve">
+    <value>زمان پایان</value>
+  </data>
+  <data name="StartedAt" xml:space="preserve">
+    <value>زمان شروع</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>غیر فعال</value>
+  </data>
+  <data name="DaysOfWeek" xml:space="preserve">
+    <value>روزهای هفته</value>
+  </data>
+  <data name="NotValidAfter" xml:space="preserve">
+    <value>پایان اعتبار</value>
+  </data>
+  <data name="NotValidBefore" xml:space="preserve">
+    <value>شروع اعتبار</value>
+  </data>
+  <data name="OffHours" xml:space="preserve">
+    <value>ساعت‌های استراحت</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>منطقه‌ی زمانی</value>
+  </data>
+  <data name="IsEnabled" xml:space="preserve">
+    <value>فعال شده‌است</value>
+  </data>
+  <data name="IsOperationalNow" xml:space="preserve">
+    <value>اکنون عملیاتی است</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>جمعه</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>دوشنبه</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>شنبه</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>یک‌شنبه</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>پنج‌شنبه</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>سه‌شنبه</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>چهارشنبه</value>
+  </data>
+  <data name="DaysOfWeekRequired" xml:space="preserve">
+    <value>وارد کردن روز‌های هفته الزامی است.</value>
+  </data>
+  <data name="Toggle" xml:space="preserve">
+    <value>تغییر وضعیت</value>
+  </data>
+  <data name="ServiceReference" xml:space="preserve">
+    <value>شناسه‌ی سرویس</value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>کارت‌ها</value>
+  </data>
+  <data name="LastTransactionId" xml:space="preserve">
+    <value>شناسه‌ی آخرین تراکنش</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>روش پرداخت</value>
+  </data>
+  <data name="SettledAt" xml:space="preserve">
+    <value>تاریخ تسویه</value>
+  </data>
+  <data name="Settlement" xml:space="preserve">
+    <value>تسویه حساب</value>
+  </data>
+  <data name="TransactionId" xml:space="preserve">
+    <value>شناسه‌ی تراکنش</value>
+  </data>
+  <data name="InputRequired" xml:space="preserve">
+    <value>ورودی الزامی است.</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>دقیقه</value>
+  </data>
+  <data name="Validity" xml:space="preserve">
+    <value>اعتبار</value>
+  </data>
+  <data name="DoctorCard" xml:space="preserve">
+    <value>کارت پزشک</value>
+  </data>
+  <data name="PatientCard" xml:space="preserve">
+    <value>کارت بیمار</value>
+  </data>
+  <data name="AllowedDuration" xml:space="preserve">
+    <value>مدت زمان مجاز</value>
+  </data>
+  <data name="IntendedCaller" xml:space="preserve">
+    <value>تماس‌گیرنده‌ی مورد نظر</value>
+  </data>
+  <data name="IntendedReceiver" xml:space="preserve">
+    <value>مخاطب تماس مورد نظر</value>
+  </data>
+  <data name="HasEstablishedCall" xml:space="preserve">
+    <value>تماس برقرار شده‌است</value>
+  </data>
+  <data name="CardBasedChargeFinancialTransaction" xml:space="preserve">
+    <value>تراکنش شارژ مبتنی بر کارت</value>
+  </data>
+  <data name="ElectronicChargeFinancialTransaction" xml:space="preserve">
+    <value>تراکنش شارژ الکترونیکی</value>
+  </data>
+  <data name="OneTimeChargeFinancialTransaction" xml:space="preserve">
+    <value>تراکنش یک بار شارژ</value>
+  </data>
+  <data name="IssuedAt" xml:space="preserve">
+    <value>تاریخ صدور</value>
+  </data>
+  <data name="CorrectionFinancialTransaction" xml:space="preserve">
+    <value>تراکنش اصلاحیه</value>
+  </data>
+  <data name="InternationalBankAccountNumber" xml:space="preserve">
+    <value>شماره شبا</value>
+  </data>
+  <data name="CarryOut" xml:space="preserve">
+    <value>ثبت پرداخت</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="IBANInvalid" xml:space="preserve">
+    <value>شماره شبای وارد شده نامعتبر است.</value>
+  </data>
+  <data name="SuspendedAt" xml:space="preserve">
+    <value>تاریخ تعلیق</value>
+  </data>
+  <data name="LastSettledTransaction" xml:space="preserve">
+    <value>آخرین تراکنش تسویه‌شده</value>
+  </data>
+  <data name="Expiration" xml:space="preserve">
+    <value>انقضا</value>
+  </data>
+  <data name="IsHidden" xml:space="preserve">
+    <value>پنهان است</value>
+  </data>
+  <data name="FirstFinancialTransaction" xml:space="preserve">
+    <value>تراکنش مالی اول</value>
+  </data>
+  <data name="LastFinancialTransaction" xml:space="preserve">
+    <value>تراکنش مالی آخر</value>
+  </data>
+  <data name="MobileNumberInvalid" xml:space="preserve">
+    <value>شماره‌ی موبایل وارد‌شده نامعتبر است.</value>
+  </data>
+  <data name="MobileNumberRequired" xml:space="preserve">
+    <value>واردکردن شماره‌ی موبایل الزامی است.</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>شماره‌ی موبایل</value>
+  </data>
+  <data name="DownloadUpdate" xml:space="preserve">
+    <value>دانلود بروزرسانی</value>
+  </data>
+  <data name="Later" xml:space="preserve">
+    <value>بعداً</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>به‌روزرسانی</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>نام</value>
+  </data>
+  <data name="NationalIdentificationNumber" xml:space="preserve">
+    <value>شناسه‌ی ملی</value>
+  </data>
+  <data name="CommercialNumber" xml:space="preserve">
+    <value>شماره‌ی اقتصادی</value>
+  </data>
+  <data name="FirmsCommercialNumberInvalid" xml:space="preserve">
+    <value>شماره‌ی اقتصادی وارد شده نامعتبر است.</value>
+  </data>
+  <data name="FirmsNationalIdentificationNumberInvalid" xml:space="preserve">
+    <value>شناسه‌ی ملی وارد شده نامعتبر است.</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>یادداشت</value>
+  </data>
+  <data name="BusinessAccount" xml:space="preserve">
+    <value>حساب تجاری</value>
+  </data>
+  <data name="AuthorizationScopes" xml:space="preserve">
+    <value>سطوح دسترسی</value>
+  </data>
+  <data name="Hostname" xml:space="preserve">
+    <value>نام هاست</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>آدرس آی پی</value>
+  </data>
+  <data name="PricingPolicy" xml:space="preserve">
+    <value>سیاست قیمت‌گذاری</value>
+  </data>
+  <data name="OncallHours" xml:space="preserve">
+    <value>ساعت‌های پاسخگویی</value>
+  </data>
+  <data name="IsAvailable" xml:space="preserve">
+    <value>آزاد است</value>
+  </data>
+  <data name="IsAvailableForPublicUse" xml:space="preserve">
+    <value>برای استفاده‌ی عموم آزاد است</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>مقصد</value>
+  </data>
+  <data name="CouncilNumber" xml:space="preserve">
+    <value>شماره نظام</value>
+  </data>
+  <data name="TimeZoneUtcOffset" xml:space="preserve">
+    <value>انحراف منطقه‌ی زمانی از ساعت هماهنگ جهانی</value>
+  </data>
+  <data name="BookedAt" xml:space="preserve">
+    <value>تاریخ رزرو</value>
+  </data>
+  <data name="GatewayDescription" xml:space="preserve">
+    <value>توضیحات درگاه</value>
+  </data>
+  <data name="PaymentGatewayIdentifier" xml:space="preserve">
+    <value>درگاه پرداخت</value>
+  </data>
+  <data name="ReservationNumber" xml:space="preserve">
+    <value>شماره رزرو</value>
+  </data>
+  <data name="PaymentVerifiedAt" xml:space="preserve">
+    <value>تاریخ تایید پرداخت</value>
+  </data>
+  <data name="AcademicTitle" xml:space="preserve">
+    <value>عنوان آکادمیک</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>هیچ</value>
+  </data>
+  <data name="WorkplaceAddress" xml:space="preserve">
+    <value>آدرس محل کار</value>
+  </data>
+  <data name="FreeFirstCall" xml:space="preserve">
+    <value>تماس اول رایگان</value>
+  </data>
+  <data name="PrimarySubscriberIdentificationCardSerialNumber" xml:space="preserve">
+    <value>شماره سریال سیم کارت اصلی</value>
+  </data>
+  <data name="Specialty" xml:space="preserve">
+    <value>تخصص</value>
+  </data>
+  <data name="IsPublic" xml:space="preserve">
+    <value>عمومی است</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>استان</value>
+  </data>
+  <data name="InputTooLong" xml:space="preserve">
+    <value>طول ورودی از حد مجاز بیشتر است.</value>
+  </data>
+  <data name="SubscriptionPlan" xml:space="preserve">
+    <value>پلن کاربری</value>
+  </data>
+  <data name="FameSeeker" xml:space="preserve">
+    <value>به دنبال شهرت</value>
+  </data>
+  <data name="KeepAtBay" xml:space="preserve">
+    <value>مدیریت تماس‌های فعلی</value>
+  </data>
+  <data name="LiquidationFinancialTransaction" xml:space="preserve">
+    <value>تراکنش تصفیه</value>
+  </data>
+  <data name="Tokens" xml:space="preserve">
+    <value>توکن‌ها</value>
+  </data>
+  <data name="PromotionFinancialTransaction" xml:space="preserve">
+    <value>تراکنش پروموشن</value>
+  </data>
+  <data name="AbortAfterCompletion" xml:space="preserve">
+    <value>قطع پس از اتمام</value>
+  </data>
+  <data name="HasOperationalAudioAnnouncement" xml:space="preserve">
+    <value>اطلاع‌رسانی صوتی قابل پخش دارد</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>صوت</value>
+  </data>
+  <data name="IsOperational" xml:space="preserve">
+    <value>عملیاتی است</value>
+  </data>
+  <data name="ReasonForSuspension" xml:space="preserve">
+    <value>دلیل تعلیق</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>دانلود</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>تگ‌ها</value>
+  </data>
+  <data name="Blacklist" xml:space="preserve">
+    <value>لیست سیاه</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>نویسنده</value>
+  </data>
+  <data name="Characterization" xml:space="preserve">
+    <value>توصیف</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>آیکون</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>بازگشت</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>گروه</value>
+  </data>
+  <data name="Members" xml:space="preserve">
+    <value>اعضا</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>ترتیب</value>
+  </data>
+  <data name="FrequentlyAskedQuestions" xml:space="preserve">
+    <value>سوال‌های رایج</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>پاسخ</value>
+  </data>
+  <data name="AnsweredAt" xml:space="preserve">
+    <value>تاریخ پاسخ</value>
+  </data>
+  <data name="AnsweredBy" xml:space="preserve">
+    <value>پاسخ‌دهنده</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>سوال</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>خطای ورودی</value>
+  </data>
+  <data name="ErrorContactingResa" xml:space="preserve">
+    <value>خطای ارتباط با سامانه رسا</value>
+  </data>
+  <data name="LoginErrorGeneralMessage" xml:space="preserve">
+    <value>در فرآیند ورود خطایی رخ داد</value>
+  </data>
+  <data name="BankReferenceNumber" xml:space="preserve">
+    <value>شماره پیگیری بانک</value>
+  </data>
+  <data name="CommunicationChannels" xml:space="preserve">
+    <value>کانال‌های ارتباطی</value>
+  </data>
+  <data name="FinancialReport" xml:space="preserve">
+    <value>گزارش مالی</value>
+  </data>
+  <data name="PatientDiagnosticDocuments" xml:space="preserve">
+    <value>اسناد تشخیصی بیمار</value>
+  </data>
+  <data name="PeriodicConsumptionReport" xml:space="preserve">
+    <value>گزارش دوره‌ای مصرف</value>
+  </data>
+  <data name="Platform" xml:space="preserve">
+    <value>پلتفرم</value>
+  </data>
+  <data name="Telegram" xml:space="preserve">
+    <value>تلگرام</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>شناسه</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>طبقه‌بندی</value>
+  </data>
+  <data name="FinancialReportChannel" xml:space="preserve">
+    <value>کانال گزارش مالی</value>
+  </data>
+  <data name="PatientDiagnosticDocumentsChannel" xml:space="preserve">
+    <value>کانال اسناد تشخیصی بیمار</value>
+  </data>
+  <data name="PeriodicConsumptionReportChannel" xml:space="preserve">
+    <value>کانال گزارش دوره‌ای مصرف</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>تعریف نشده</value>
+  </data>
+  <data name="PatientDiagnosticDocumentsService" xml:space="preserve">
+    <value>سرویس اسناد تشخیصی بیمار</value>
+  </data>
+  <data name="PricePerRequest" xml:space="preserve">
+    <value>هزینه برای هر درخواست</value>
+  </data>
+  <data name="ResaCommissionPerRequest" xml:space="preserve">
+    <value>کمیسیون رسا برای هر درخواست</value>
+  </data>
+  <data name="FileTransferFinancialTransaction" xml:space="preserve">
+    <value>تراکنش انتقال فایل</value>
+  </data>
+  <data name="SecondaryPhoneNumber" xml:space="preserve">
+    <value>شماره تلفن ثانویه</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>امروز</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>دیروز</value>
+  </data>
+  <data name="Calls" xml:space="preserve">
+    <value>تماس‌ها</value>
+  </data>
+  <data name="MinutesAgo" xml:space="preserve">
+    <value>دقیقه قبل</value>
+  </data>
+  <data name="HoursAgo" xml:space="preserve">
+    <value>ساعت قبل</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>قدیمی‌تر</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>الان</value>
+  </data>
+  <data name="IUnderstand" xml:space="preserve">
+    <value>متوجه هستم</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>تنظیمات</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="DoctorAppPatientInsufficientCreditMessage" xml:space="preserve">
+    <value>بیمار مورد نظر فاقد اعتبار کافی برای میزبانی این تماس است.</value>
+  </data>
+  <data name="DoctorAppDrawOverAppPermissionPleaseEnable" xml:space="preserve">
+    <value>لطفا مجوز مربوط به قابلیت نمایش روی سایر برنامه‌ها را فعال کنید</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationale" xml:space="preserve">
+    <value>توجه نمایید که برای کارکرد صحیح اپلیکیشن همواره دسترسی‌های ذکر شده را فعال نگاه دارید.</value>
+  </data>
+  <data name="CallbackRequests" xml:space="preserve">
+    <value>تماس‌های درخواستی</value>
+  </data>
+  <data name="ThereArentAnyCallbackRequests" xml:space="preserve">
+    <value>هیچ درخواست تماسی وجود ندارد</value>
+  </data>
+  <data name="PatientIdXamlSpecialVersion" xml:space="preserve">
+    <value>کد بیمار:{0}</value>
+  </data>
+  <data name="MyState" xml:space="preserve">
+    <value>وضعیت من</value>
+  </data>
+  <data name="CallbackRequestsHistory" xml:space="preserve">
+    <value>تاریخچه درخواست</value>
+  </data>
+  <data name="DoctorAppAboutDescription" xml:space="preserve">
+    <value>رسالت سلامت ایرانیان با هدف ارتباط هدفمند و موثر بیمار و پزشک ایجاد شده است. شما می‌توانید انتقادات و پیشنهادات خود را با ما در میان بگذارید:</value>
+  </data>
+  <data name="AppVersionXamlSpecialVersion" xml:space="preserve">
+    <value>نسخه: {0}</value>
+  </data>
+  <data name="DoctorAppSettingsAdvanced" xml:space="preserve">
+    <value>تنظیمات پیشرفته</value>
+  </data>
+  <data name="DoctorAppAppSettingsImproveBgBlockerService" xml:space="preserve">
+    <value>ارتقای عملکرد بلاکر</value>
+  </data>
+  <data name="DoctorAppSettings" xml:space="preserve">
+    <value>تنظیمات برنامه</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>پیشرفته</value>
+  </data>
+  <data name="ConnectingToResa" xml:space="preserve">
+    <value>در حال اتصال به رسا...</value>
+  </data>
+  <data name="ChangeState" xml:space="preserve">
+    <value>تغییر وضعیت</value>
+  </data>
+  <data name="ResaCodeXamlSpecialVersion" xml:space="preserve">
+    <value>کد رسا: {0}</value>
+  </data>
+  <data name="DoctorAppWelcomeToResaApplication" xml:space="preserve">
+    <value>به اپلیکیشن رسا خوش آمدید</value>
+  </data>
+  <data name="DoctorAppXiaomiMiuiAutostartInfo" xml:space="preserve">
+    <value>در گوشی‌های شیائومی که رام آنها MIUI است (که شامل اکثریت است) قابلیت اجرای سرویس‌های پیش‌زمینه (یعنی زمانی که گوشی در حال اجرا نیست) بصورت پیش‌فرض غیر فعال است. برای کارکرد صحیح اپلیکیشن رسا نیاز است تا  قابلیت «Autostart» را برای اپلیکیشن رسا فعال نمایید:</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>ورود</value>
+  </data>
+  <data name="ResaFullName" xml:space="preserve">
+    <value>رسالت سلامت ایرانیان</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>درخواست‌ها</value>
+  </data>
+  <data name="DoctorAppAppSettingsImproveBgBlockerServiceDescription" xml:space="preserve">
+    <value>بلاکر تماس رسا در حالت معمول دارای محدودیت از طرف سیستم‌عامل اندروید(بخصوص در نسخه‌های جدیدتر) است. با فعال کردن این گزینه شما به این سرویس الویت بالاتری می‌دهید که این کار باعث می‌شود علاوه بر کارکرد صحیح سرویس، سرعت پاسخ‌گویی آن نیز بالاتر رود. توجه داشته باشید که در صورت فعال بودن این حالت، اندروید یک نوتیفیکیشن بصورت ثابت نشان خواهد داد.</value>
+  </data>
+  <data name="IntroductoryRemarks" xml:space="preserve">
+    <value>یادداشت‌های معرفی</value>
+  </data>
+  <data name="BackgroundImage" xml:space="preserve">
+    <value>تصویر پس‌زمینه</value>
+  </data>
+  <data name="SecondaryIcon" xml:space="preserve">
+    <value>آیکون ثانویه</value>
+  </data>
+  <data name="AddResaAsBlocker" xml:space="preserve">
+    <value>افزودن رسا به عنوان مسدود‌کننده</value>
+  </data>
+  <data name="CallBlockingPermission" xml:space="preserve">
+    <value>دسترسی مسدودسازی تماس</value>
+  </data>
+  <data name="ClickDetailsIconNearCall" xml:space="preserve">
+    <value>۲. روی آیکون جزئیات (حرف i) کنار تماس کلیک کنید.</value>
+  </data>
+  <data name="ContactsSharingWithResa" xml:space="preserve">
+    <value>اشتراک تماس‌ها با رسا</value>
+  </data>
+  <data name="DuplicateNumber" xml:space="preserve">
+    <value>شماره تکراری</value>
+  </data>
+  <data name="FromNowOnYouCanAddPatientsToResa" xml:space="preserve">
+    <value>۴. از این پس می‌توانید از طریق شماره‌های اخیر و مخاطبان، بیماران خود را به رسا معرفی نمایید.</value>
+  </data>
+  <data name="GoToCallBlockingSectionAndEnableResa" xml:space="preserve">
+    <value>۳. وارد قسمت نرم‌افزارهای مسدودکننده (Call Blocking And Identification) شوید.
+سپس رسا را به عنوان مسدود کننده فعال کنید.</value>
+  </data>
+  <data name="GoToDeviceSettings" xml:space="preserve">
+    <value>۱. وارد تنظیمات(Settings) گوشی شوید.</value>
+  </data>
+  <data name="GoToHelp" xml:space="preserve">
+    <value>برو به راهنما</value>
+  </data>
+  <data name="GoToPhoneSection" xml:space="preserve">
+    <value>۲. وارد قسمت تلفن(Phone) شوید.</value>
+  </data>
+  <data name="GoToRecentsSection" xml:space="preserve">
+    <value>۱. وارد قسمت تماس‌های اخیر (Recents) شوید.</value>
+  </data>
+  <data name="InsertedNumberIsAlreadyInAllowedList" xml:space="preserve">
+    <value>شماره‌ی وارد شده هم‌اکنون جزو شماره‌های مجاز است.</value>
+  </data>
+  <data name="InsertedNumberIsAlreadyInBlockedList" xml:space="preserve">
+    <value>شماره‌ی وارد شده هم‌اکنون جزو شماره‌های مسدود‌شده است.</value>
+  </data>
+  <data name="IsInvalid" xml:space="preserve">
+    <value>نا‌معتبر است</value>
+  </data>
+  <data name="NotAbleSharingResaNumber" xml:space="preserve">
+    <value>عدم امکان اشتراک شماره‌ی رسا</value>
+  </data>
+  <data name="ResaAppNeedsUpdatePleaseDownloadMessage" xml:space="preserve">
+    <value>رسا نیازمند بروز رسانی فوری است. لطفاً نسبت به دانلود آن اقدام نمایید.</value>
+  </data>
+  <data name="ResaHasNotCallBlockingPermissionMessage" xml:space="preserve">
+    <value>گوشی شما امکان مسدودکردن تماس را به رسا نداده است. برای آموزش فعال‌کردن آن به قسمت راهنما از منوی رسا مراجعه کنید.</value>
+  </data>
+  <data name="ResaIsAmongSharedContactsErrorMessage" xml:space="preserve">
+    <value>در لیست شماره‌های فرستاده شده شماره‌ی رسا وجود دارد. امکان اشتراک‌گذاری شماره‌ی رسا با این اپلیکیشن وجود ندارد.</value>
+  </data>
+  <data name="ResaIsBeingUpdatedInBg" xml:space="preserve">
+    <value>هم اکنون رسا در حال بروزرسانی در پس‌زمینه است.</value>
+  </data>
+  <data name="TapShareContactThenMoreAndEnableSharing" xml:space="preserve">
+    <value>۳. روی گزینه‌ی اشتراک مخاطب (Share Contact) کلیک کنید.
+سپس گزینه‌ی بیشتر (More) را انتخاب کرده و اشتراک با رسا را فعال نمایید.</value>
+  </data>
+  <data name="TheNumber" xml:space="preserve">
+    <value>شماره‌ی</value>
+  </data>
+  <data name="UrgentUpdate" xml:space="preserve">
+    <value>بروزرسانی مهم</value>
+  </data>
+  <data name="YouMustLoginToShareContactWithResa" xml:space="preserve">
+    <value>برای اشتراک‌گذاری شماره با رسا ابتدا باید در اپلیکیشن لاگین کنید.</value>
+  </data>
+  <data name="IsMyPatient" xml:space="preserve">
+    <value>بیمار من است</value>
+  </data>
+  <data name="IsNotMyPatient" xml:space="preserve">
+    <value>بیمار من نیست</value>
+  </data>
+  <data name="NumbersSmart" xml:space="preserve">
+    <value>شماره(های)</value>
+  </data>
+  <data name="SelectedContentIsNotSharableWithResaMessage" xml:space="preserve">
+    <value>محتوای انتخاب‌شده با رِسا قابل اشتراک‌گذاری نیست.</value>
+  </data>
+  <data name="SharingNumberWithResa" xml:space="preserve">
+    <value>اشتراک شماره با رسا</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>درباره ما</value>
+  </data>
+  <data name="DoctorAppName" xml:space="preserve">
+    <value>رسا</value>
+  </data>
+  <data name="DoctorAppDownloadResaNewVersion" xml:space="preserve">
+    <value>دریافت نسخه جدید رسا</value>
+  </data>
+  <data name="AtTheTime" xml:space="preserve">
+    <value>در زمان</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsFrom" xml:space="preserve">
+    <value>درخواست تماس از طرف</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsFromOnePatient" xml:space="preserve">
+    <value>درخواست تماس از طرف یک بیمار</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsNotificationChannelDescription" xml:space="preserve">
+    <value>درخواست‌های تماس از طرف بیماران</value>
+  </data>
+  <data name="DoctorAppGeneralNotificationChannelTitle" xml:space="preserve">
+    <value>اعلان‌های عمومی</value>
+  </data>
+  <data name="DoctorAppIdontKnowYet" xml:space="preserve">
+    <value>فعلا نمی‌دانم</value>
+  </data>
+  <data name="DoctorAppNewAppVersionDownloaded" xml:space="preserve">
+    <value>نسخه‌ی جدید رسا دریافت شد.</value>
+  </data>
+  <data name="DoctorAppNewCallbackRequestFromPatient" xml:space="preserve">
+    <value>درخواست تماس جدید از طرف بیمار</value>
+  </data>
+  <data name="DoctorAppOneCallbackRequestFromPatient" xml:space="preserve">
+    <value>۱ درخواست تماس از طرف بیمار</value>
+  </data>
+  <data name="DoctorAppPatientCallsBlockerService" xml:space="preserve">
+    <value>سرویس بلاکر تماس بیماران</value>
+  </data>
+  <data name="DoctorAppPatients" xml:space="preserve">
+    <value>بیمار</value>
+  </data>
+  <data name="DoctorAppWasOneOfYourPatients" xml:space="preserve">
+    <value>جزو بیمار‌های شما بود؟</value>
+  </data>
+  <data name="DoctorAppWasTheCallerWithTheNumber" xml:space="preserve">
+    <value>آیا فرد تماس گیرنده با شماره‌ی</value>
+  </data>
+  <data name="ResaSystem" xml:space="preserve">
+    <value>سامانه رسا</value>
+  </data>
+  <data name="DoctorAppClickToDownloadResaNewVersion" xml:space="preserve">
+    <value>برای دریافت نسخه‌ی جدید رسا کلیک کنید.</value>
+  </data>
+  <data name="UpdatingResa" xml:space="preserve">
+    <value>بروزرسانی رسا</value>
+  </data>
+  <data name="ResaApplication" xml:space="preserve">
+    <value>اپلیکیشن رسا</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationaleDescription" xml:space="preserve">
+    <value>پزشک گرامی، برای کارکرد صحیح اپلیکیشن رسا لازم است مجوز‌های خواسته شده را فعال نمایید و همواره از فعال ماندن آنها نیز اطمینان حاصل کنید.</value>
+  </data>
+  <data name="DoctorAppStoragePermissionRationalleDescription" xml:space="preserve">
+    <value>برای دانلود و بروزرسانی آخرین نسخه اپلیکیشن رسا لازم است مجوز دسترسی به حافظه را فعال کنید.</value>
+  </data>
+  <data name="DoctorAppContactsPermissionRationalleDescription" xml:space="preserve">
+    <value>برای کار با اپلیکیشن رسا نیاز است مجوز کانتک‌ها را فعال کنید.</value>
+  </data>
+  <data name="HasTimeLimitForDiagnosticDocumentsService" xml:space="preserve">
+    <value>سیرویس اسناد تشخیصی بیمار دارای محدودیت زمانی میباشد</value>
+  </data>
+  <data name="DoctorAppPermissionsAutostartRationale" xml:space="preserve">
+    <value>لطفا مجوز قابلیت «اجرای خودکار» (AutoStart)  را برای اپ رسا فعال کنید. این مجوز برای کارکرد صحیح بلاکر تماس ضروریست</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationaleAndHowToEnable" xml:space="preserve">
+    <value>لطفا تمامی مجوز‌های خواسته شده را فعال نمائید. می‌توانید برای اینکار وارد تنظیمات برنامه رسا شده و از قسمت مجوز‌ها این مجوز‌ها را فعال کنید.</value>
+  </data>
+  <data name="DoctorAppPermissionsNotificationRationale" xml:space="preserve">
+    <value>لطفا مجوز دسترسی به تنظیمات نوتیفیکیشن اندروید را برای اپ رسا فعال کنید. این مجوز برای کارکرد صحیح بلاکر تماس ضروریست.</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsNotificationChannelTitle" xml:space="preserve">
+    <value>درخواست‌های تماس</value>
+  </data>
+  <data name="DoctorAppDownloadsNotificationChannelDescription" xml:space="preserve">
+    <value>دانلود‌های اپ رسا</value>
+  </data>
+  <data name="DoctorAppDownloadsNotificationChannelTitle" xml:space="preserve">
+    <value>دانلود‌ها</value>
+  </data>
+  <data name="DoctorAppEnterResa" xml:space="preserve">
+    <value>ورود به رسا</value>
+  </data>
+  <data name="DoctorAppSettingsPage" xml:space="preserve">
+    <value>صفحه تنظیمات اپ رسا</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>دسته‌بندی‌ها</value>
+  </data>
+  <data name="IsHiddenInCategoryPages" xml:space="preserve">
+    <value>در صفحات تخصص پنهان است</value>
+  </data>
+  <data name="IsPageActive" xml:space="preserve">
+    <value>صفحه‌ی فعال دارد</value>
+  </data>
+  <data name="PreviousPrice" xml:space="preserve">
+    <value>قیمت قبلی</value>
+  </data>
+  <data name="AboutDoctor" xml:space="preserve">
+    <value>درباره‌ی پزشک</value>
+  </data>
+  <data name="MobileBackgroundImage" xml:space="preserve">
+    <value>تصویر پس‌زمینه‌ی موبایل</value>
+  </data>
+  <data name="SeoContent" xml:space="preserve">
+    <value>متن سئویی</value>
+  </data>
+  <data name="CanNotBeBlank" xml:space="preserve">
+    <value>نمیتواند خالی باشد</value>
+  </data>
+  <data name="SeoContentNotFound" xml:space="preserve">
+    <value>محتوای سئویی یافت نشد</value>
+  </data>
+  <data name="CategoryCreatedSuccessfuly" xml:space="preserve">
+    <value>دسته‌بندی با موفقیت ایجاد شد</value>
+  </data>
+  <data name="CategoryDeletedSuccessfuly" xml:space="preserve">
+    <value>دسته‌بندی با موفقیت حذف شد</value>
+  </data>
+  <data name="CategoryPageActicatedSuccessfuly" xml:space="preserve">
+    <value>صفحه‌ی دسته‌بندی با موفقیت فعال شد</value>
+  </data>
+  <data name="CategoryPageDeacticatedSuccessfuly" xml:space="preserve">
+    <value>صفحه‌ی دسته‌بندی با موفقیت غیر ‌فعال شد</value>
+  </data>
+  <data name="CategoryUpdatedSuccessfuly" xml:space="preserve">
+    <value>دسته‌بندی {0} با موفقیت به‌روزرسانی شد</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>متن</value>
+  </data>
+  <data name="InvalidAuthorImageFormat" xml:space="preserve">
+    <value>فرمت تصویر تستیمونیال نامعتبر است</value>
+  </data>
+  <data name="InvalidBackgroundImageFormat" xml:space="preserve">
+    <value>فرمت تصویر پس‌زمینه نامعتبر است</value>
+  </data>
+  <data name="InvalidMobileBackgroundImageFormat" xml:space="preserve">
+    <value>فرمت تصویر پس‌زمینه برای موبایل نامعتبر است</value>
+  </data>
+  <data name="RequestFailed" xml:space="preserve">
+    <value>درخواست شما با خطا روبرو شد</value>
+  </data>
+  <data name="SeoContentCreatedSuccessfuly" xml:space="preserve">
+    <value>متن سئویی با موفقیت ایجاد شد</value>
+  </data>
+  <data name="SeoContentDeletedSuccessfuly" xml:space="preserve">
+    <value>متن سئویی با موفیقیت حذف شد</value>
+  </data>
+  <data name="SeoContentsOrderUpdatedSuccessfuly" xml:space="preserve">
+    <value>ترتیب متن‌های سئویی با موفقیت به‌روز‌رسانی شد</value>
+  </data>
+  <data name="SeoContentUpdatedSuccessfuly" xml:space="preserve">
+    <value>متن سئویی با موفقیت ویرایش شد</value>
+  </data>
+  <data name="TestimonialCreatedSuccessfuly" xml:space="preserve">
+    <value>تستیمونیال با موفقیت ایجاد شد</value>
+  </data>
+  <data name="TestimonialDeletedSuccessfuly" xml:space="preserve">
+    <value>تستیمونیال با موفقیت حذف شد</value>
+  </data>
+  <data name="TestimonialUpdatedSuccessfuly" xml:space="preserve">
+    <value>تستیمونیال با موفقیت ویرایش شد</value>
+  </data>
+  <data name="CATEGORY_BACKGROUND_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>تصویر پس‌زمینه برای کتگوری یافت نشد</value>
+  </data>
+  <data name="CATEGORY_MOBILE_BACKGROUND_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>تصویر پس‌زمینه موبایل برای کتگوری یافت نشد</value>
+  </data>
+  <data name="CATEGORY_NOT_FOUND" xml:space="preserve">
+    <value>کتگوری یافت نشد</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_DOCTORS" xml:space="preserve">
+    <value>دریافت پزشک‌ها با خطا مواجه شد</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_SEO_CONTENTS" xml:space="preserve">
+    <value>دریافت متن‌های سئویی با خطا مواجه شد</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_TESTIMONIALS" xml:space="preserve">
+    <value>دریافت تستیمونیال‌ها با خطا مواجه شد</value>
+  </data>
+  <data name="TESTIMONIAL_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>تصویر تستیمونیال یافت نشد</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_DOCTOR_INACCESIBLE_PERIODS" xml:space="preserve">
+    <value>دریافت زمان‌های در دسترس نبودن پزشک با مشکل مواجه شد</value>
+  </data>
+  <data name="DeviceModel" xml:space="preserve">
+    <value>مدل موبایل</value>
+  </data>
+  <data name="OperatingSystem" xml:space="preserve">
+    <value>سیستم عامل</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>موبایل</value>
+  </data>
+  <data name="IsPrimary" xml:space="preserve">
+    <value>اصلی است</value>
+  </data>
+  <data name="ACCOUNT_MUST_HAVE_AT_LEAST_ONE_PRIMARY_DEVICE" xml:space="preserve">
+    <value>اکانت حداقل باید یک دیوایس اصلی داشته باشد</value>
+  </data>
+  <data name="DOCTOR_ALREADY_HAS_A_PRIMARY_DEVICE" xml:space="preserve">
+    <value>پزشک در حال حاظر یک دیوایس اصلی دارد</value>
+  </data>
+  <data name="DEVICE_ADDED_TO_DOCTOR_SUCCESSFULLY" xml:space="preserve">
+    <value>موبایل با موفقیت به پزشک اظافه شد</value>
+  </data>
+  <data name="DEVICE_DELETED_SUCCESSFULLY" xml:space="preserve">
+    <value>موبایل با موفقیت حذف شد</value>
+  </data>
+  <data name="DEVICE_EDITED_SUCCESSFULLY" xml:space="preserve">
+    <value>موبایل با موفیقت به روز‌رسانی شد</value>
+  </data>
+  <data name="PolicyActivateError" xml:space="preserve">
+    <value>خطا در فعال سازی سیاست</value>
+  </data>
+  <data name="TimeBasedChargePackageDescriptionIsRequired" xml:space="preserve">
+    <value>وارد کردن توضیحات بسته شارژ الزامی است.</value>
+  </data>
+  <data name="TimeBasedChargePackageDurationMustBeGreaterThanZero" xml:space="preserve">
+    <value>مدت زمان مکالمه برای بسته شارژ باید بیشتر از صفر باشد.</value>
+  </data>
+  <data name="TimeBasedChargePackageTitleIsRequired" xml:space="preserve">
+    <value>وارد کردن عنوان بسته شارژ الزامی است.</value>
+  </data>
+  <data name="DurationInMinute" xml:space="preserve">
+    <value>مدت زمان به دقیقه</value>
+  </data>
+  <data name="PackageTitle" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="TimeBasedChargePackageMedicalSpeciality" xml:space="preserve">
+    <value>تخصص پزشکی</value>
+  </data>
+  <data name="TimeBasedChargePackageNoPackageFound" xml:space="preserve">
+    <value>هیچ بسته شارژی ثبت نشده است.</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>همه</value>
+  </data>
+  <data name="NEW_TIME_BASED_PACKAGE_SUCCESSFULLY_ADDED" xml:space="preserve">
+    <value>بسته جدید با موفقیت ثبت شد.</value>
+  </data>
+  <data name="TIME_BASED_PACKAGE_SUCCESSFULLY_UPDATED" xml:space="preserve">
+    <value>بسته شارژ با موفقیت به‌روز رسانی شد.</value>
+  </data>
+  <data name="TIME_BASED_PACKAGE_SUCCESSFULLY_DELETED" xml:space="preserve">
+    <value>بسته شارژ با موفقیت حذف شد.</value>
+  </data>
+  <data name="DOCTOR_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>پزشک مورد نظر یافت نشد.</value>
+  </data>
+  <data name="MEDICAL_SPECIALITY_HAS_NO_TIME_BASED_PACKAGE_MESSAGE" xml:space="preserve">
+    <value>هیچ بسته شارژی برای این تخصص ثبت نشده است.</value>
+  </data>
+  <data name="MEDICAL_SPECIALITY_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>تخصص پزشکی مورد نظر یافت نشد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_DELETED_SUCCESSFULLY_MESSAGE" xml:space="preserve">
+    <value>بسته شارژ مورد نظر حذف شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_DELETE_FAILD_MESSAGE" xml:space="preserve">
+    <value>حذف بسته شارژ با خطا مواجه شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_FAILD_TO_RETRIEVE_MESSAGE" xml:space="preserve">
+    <value>دریافت بسته شارژ با خطا مواجه شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_LIST_FAILD_TO_RETRIEVE_MESSAGE" xml:space="preserve">
+    <value>دریافت لیست بسته‌های شارژ با خطا مواجه شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NEW_PACKAGE_ADDED_MESSAGE" xml:space="preserve">
+    <value>بسته شارژ جدید با موفقیت ثبت شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NEW_PACKAGE_ADD_FAILD_MESSAGE" xml:space="preserve">
+    <value>ذخیره بسته شارژ جدید با خطا مواجه شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>بسته شارژ مورد نظر یافت نشد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_THERE_IS_NO_DEFAULT_PACKAGE_MESSAGE" xml:space="preserve">
+    <value>هیچ بسته شارژ پیشفرضی ثبت نشده است.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_UPDATED_SUCCESSFULLY_MESSAGE" xml:space="preserve">
+    <value>اطلاعات بسته شارژ با تغییرات مورد نظر بروزرسانی شد.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_UPDATE_FAILD_MESSAGE" xml:space="preserve">
+    <value>ذخیره تغییرات با خطا مواجه شد.</value>
+  </data>
+  <data name="DoctorNotFound" xml:space="preserve">
+    <value>پزشک یافت نشد</value>
+  </data>
+  <data name="CallbackRequestNotFound" xml:space="preserve">
+    <value>درخواست بازتماس یافت نشد</value>
+  </data>
+  <data name="PatientNotFound" xml:space="preserve">
+    <value>بیمار یافت نشد</value>
+  </data>
+  <data name="CallIsNotValid" xml:space="preserve">
+    <value>تماس معتبر نیست</value>
+  </data>
+  <data name="BUSINESSـACCOUNTS" xml:space="preserve">
+    <value>حساب‌های تجاری</value>
+  </data>
+  <data name="CHARGE_CARDS" xml:space="preserve">
+    <value>کارت شارژ</value>
+  </data>
+  <data name="CUSTOMERـSUPPORT" xml:space="preserve">
+    <value>پشتیبانی مشتریان</value>
+  </data>
+  <data name="DOCTORS" xml:space="preserve">
+    <value>پزشکان</value>
+  </data>
+  <data name="EMERGENCY_CALLS" xml:space="preserve">
+    <value>تماس‌های اضطراری</value>
+  </data>
+  <data name="FINANCIALـTRANSACTIONS" xml:space="preserve">
+    <value>تراکنش‌های مالی</value>
+  </data>
+  <data name="GATEWAYـPAYMENTـREQUESTS" xml:space="preserve">
+    <value>پرداخت‌های درگاه بانکی</value>
+  </data>
+  <data name="ONEـTIMEـCHARGE" xml:space="preserve">
+    <value>یک بار شارژ</value>
+  </data>
+  <data name="PATIENTS" xml:space="preserve">
+    <value>بیمارها</value>
+  </data>
+  <data name="PRICINGـPOLICIES" xml:space="preserve">
+    <value>سیاست‌های قیمت‌گذاری</value>
+  </data>
+  <data name="REPORTS" xml:space="preserve">
+    <value>گزارش‌های تفصیلی</value>
+  </data>
+  <data name="SENDـBATCHـSHORTـMESSAGE" xml:space="preserve">
+    <value>ارسال گروهی پیام کوتاه</value>
+  </data>
+  <data name="SIMـCARDS" xml:space="preserve">
+    <value>سیم کارت‌ها</value>
+  </data>
+  <data name="TIMEـBASEDـCHARGEـPACKAGES" xml:space="preserve">
+    <value>بسته های مبتنی بر زمان</value>
+  </data>
+  <data name="VIRTUALـPHONENUMBERS" xml:space="preserve">
+    <value>شماره‌های مجازی</value>
+  </data>
+  <data name="WORKـPLACES" xml:space="preserve">
+    <value>اماکن ثبت شده</value>
+  </data>
+  <data name="AmountIsMoreThanCredit" xml:space="preserve">
+    <value>مبلغ وارد شده از موجودی بیشتر است</value>
+  </data>
+  <data name="AmountIsNotValid" xml:space="preserve">
+    <value>مبلغ معتبر نیست</value>
+  </data>
+  <data name="PrincipalPartyNotFound" xml:space="preserve">
+    <value>پرداخت کننده یافت نشد</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_ADDED_MESSAGE" xml:space="preserve">
+    <value>تراکنش نقدینگی با موفقیت اظافه شد</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>مبلغ ترانکش نقدینگی باید بیشتر از صفر باشد</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_DESCRIPTION_IS_REQUIRED" xml:space="preserve">
+    <value>توضیحات تراکنش نقدینگی الزامی است</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_FAILED_MESSAGE" xml:space="preserve">
+    <value>تراکنش نقدینگی با خطا مواجه شد</value>
+  </data>
+  <data name="PRINCIPAL_PARTY_SUBSCRIBER_NUMBER" xml:space="preserve">
+    <value>شماره کارت</value>
+  </data>
+  <data name="PRINCIPAL_PARTY_SUBSCRIBER_NUMBER_IS_REQUIRED" xml:space="preserve">
+    <value>شماره کارت الزامی است</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTIONS" xml:space="preserve">
+    <value>تراکنش های نقدینگی</value>
+  </data>
+  <data name="NEW_LIQUIDATION_TRANSACTION_SUCCESSFULLY_ADDED" xml:space="preserve">
+    <value>تراکنش نقدینگی جدید با موفقیت اظافه شد</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_AMOUNT_IS_REQUIRED" xml:space="preserve">
+    <value>مبلغ تراکنش نقدینگی الزامی است</value>
+  </data>
+  <data name="BlankReference" xml:space="preserve">
+    <value>شماره رفرنس نمیتواند خالی باشد</value>
+  </data>
+  <data name="CannotChargePatient" xml:space="preserve">
+    <value>حساب بیمار نمیتواند شارژ شود.</value>
+  </data>
+  <data name="InvalidAmount" xml:space="preserve">
+    <value>مقدار وارد شده صحیح نیست</value>
+  </data>
+  <data name="InvalidAmountTailingZero" xml:space="preserve">
+    <value>مقدار وارد شده صحیح نیست. (باید در آخر عدد 0 باشد)</value>
+  </data>
+  <data name="NotifyResellerSmsError" xml:space="preserve">
+    <value>ارسال پیامک به شارژ کننده امکان پذیر نیست</value>
+  </data>
+  <data name="FILE_CONVERTION_IS_SUCCESS" xml:space="preserve">
+    <value>فایل به درستی تبدیل شده.</value>
+  </data>
+  <data name="FILE_FORMAT_IS_NOT_VALID" xml:space="preserve">
+    <value>فرمت فایل نامعتبر است.</value>
+  </data>
+  <data name="IMAGE_DIMENSIONS_IS_NOT_VALID" xml:space="preserve">
+    <value>ابعاد تصویر نامعتبر است.</value>
+  </data>
+  <data name="IMAGE_FILE_SIZE_IS_NOT_VALID" xml:space="preserve">
+    <value>اندازه تصویر بیش از حد مجاز است (۲۵۰ کیلوبایت) است.</value>
+  </data>
+  <data name="DOCTOR_CREATED_SUCCESSFULLY" xml:space="preserve">
+    <value>پزشک با موفقیت ایجاد شد</value>
+  </data>
+  <data name="DOCTOR_UPDATED_SUCCESSFULLY" xml:space="preserve">
+    <value>پزشک با موفقیت ویرایش شد</value>
+  </data>
+  <data name="IS_INVALID_IMAGE" xml:space="preserve">
+    <value>تصویر معتبر نیست</value>
+  </data>
+  <data name="DOCTOR_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>تصویر پزشک یافت نشد</value>
+  </data>
+  <data name="CallLessThanThirtySeconds" xml:space="preserve">
+    <value>تماس کمتر از ۳۰ ثانیه</value>
+  </data>
+  <data name="NoCallOccured" xml:space="preserve">
+    <value>تماسی گرفته نشده</value>
+  </data>
+  <data name="SuccessfulCall" xml:space="preserve">
+    <value>تماس موفق</value>
+  </data>
+  <data name="UnsuccessfulCall" xml:space="preserve">
+    <value>تماس ناموفق</value>
+  </data>
+  <data name="UnsuccessfulCallBecauseInsufficientCredit_etc" xml:space="preserve">
+    <value>تماس نا موفق یه دلیل نداشتن اعتبار و غیره</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>تاریخ وارد شده معتبر نیست</value>
+  </data>
+  <data name="ChainCardAddedToCardsSuccessfully" xml:space="preserve">
+    <value>کارت مورد نظر با موفقیت به کارت اضافه شد</value>
+  </data>
+  <data name="ChainCardRemovedFromCardsSuccessfully" xml:space="preserve">
+    <value>کارت زنجیره ای مورد نظر با موفقی حذف شد</value>
+  </data>
+  <data name="ChainCardForwardedHasConflict" xml:space="preserve">
+    <value>کارت وارد شده با یکی از کارت های زنجیره ای تداخل دارد</value>
+  </data>
+  <data name="CategoryPageHeaderTitle" xml:space="preserve">
+    <value>عنوان صفحه</value>
+  </data>
+  <data name="DoctorAppMedicalTests" xml:space="preserve">
+    <value>جواب‌های آزمایش</value>
+  </data>
+  <data name="DoctorAppMedicalTestPrice" xml:space="preserve">
+    <value>کارمزد</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>نمایش</value>
+  </data>
+  <data name="DoctorAppMedicalTest" xml:space="preserve">
+    <value>پاسخ به جواب آزمایش</value>
+  </data>
+  <data name="ThereArentAnyMedicalTests" xml:space="preserve">
+    <value>جواب آزمایشی وجود ندارد.</value>
+  </data>
+  <data name="DoctorAppEnableMicPermissionToRecordVoice" xml:space="preserve">
+    <value>برای ضبط صدا لازم است مجوز آن را فعال کنید.</value>
+  </data>
+  <data name="DoctorAppMedicalTestRemoveRecordedVoiceMessage" xml:space="preserve">
+    <value>صدای ضبط شده حذف شود؟</value>
+  </data>
+  <data name="DoctorAppReachedVoiceRecordingTimeLimitMessage" xml:space="preserve">
+    <value>حداکثر مدت ضبط صدا به پایان رسید.</value>
+  </data>
+  <data name="DoctorAppVoiceRecordingErrorMessage" xml:space="preserve">
+    <value>خطا در فرآیند ضبط صدا</value>
+  </data>
+  <data name="DoctorAppMedicalTestReplyTextPlaceholder" xml:space="preserve">
+    <value>توضیحات متنی خود را اینجا وارد کنید</value>
+  </data>
+  <data name="DoctorAppMedicalTestSubmitReply" xml:space="preserve">
+    <value>ارسال پاسخ</value>
+  </data>
+  <data name="DoctorAppMedicalTestYourReply" xml:space="preserve">
+    <value>پاسخ شما:</value>
+  </data>
+  <data name="VoiceRecording" xml:space="preserve">
+    <value>ضبط صدا</value>
+  </data>
+  <data name="DoctorAppSendingMedicalTestReplyIsInProgress" xml:space="preserve">
+    <value>در حال ارسال جواب آزمایش...</value>
+  </data>
+  <data name="DoctorAppMedicalTestSuccessfulSubmitReplyMessage" xml:space="preserve">
+    <value>توضیحات شما برای این جواب آزمایش با موفقیت ارسال شد.</value>
+  </data>
+  <data name="DoctorAppShowNextMedicalTest" xml:space="preserve">
+    <value>بررسی جواب آزمایش بعدی</value>
+  </data>
+  <data name="ResaDoctorApp" xml:space="preserve">
+    <value>اپلیکیشن پزشک رسا</value>
+  </data>
+  <data name="PleaseEnterTheFullPhoneNumberWithCountryCode" xml:space="preserve">
+    <value>لطفا شماره تلفن مورد نظر را بصورت کامل همراه با کد کشور وارد کنید.
+مثال: 989121234567+</value>
+  </data>
+  <data name="IntenalExceptionWasThrownInSearchDoctors" xml:space="preserve">
+    <value>جستجوی دکتر با خطا مواجه شد</value>
+  </data>
+  <data name="CanNotFoundْQuery" xml:space="preserve">
+    <value>کلمه داده شده را نمیتوانم بیدا کنم</value>
+  </data>
+  <data name="CallNotFound" xml:space="preserve">
+    <value>تماس یافت نشد</value>
+  </data>
+  <data name="CallBookSurvey_Create_Successfully" xml:space="preserve">
+    <value>نظرسنجی جدید با موفقیت ثبت شد</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>تایید</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>پیام</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>رد</value>
+  </data>
+  <data name="Vote" xml:space="preserve">
+    <value>امتیاز</value>
+  </data>
+  <data name="Survey" xml:space="preserve">
+    <value>نظرسنجی</value>
+  </data>
+  <data name="SurveyApproveSuccessfully" xml:space="preserve">
+    <value>نظرسنجی موردنظر با موفقیت تایید شد</value>
+  </data>
+  <data name="SurveyRejectSuccessfully" xml:space="preserve">
+    <value>نظرسنجی موردنظر تایید نشد</value>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>نام پزشک</value>
+  </data>
+  <data name="DoctorAppPatientCreditInMinutes" xml:space="preserve">
+    <value>اعتبار بیمار</value>
+  </data>
+  <data name="InvalidVsinMessage" xml:space="preserve">
+    <value>شناسه وارد شده معتبر نمیباشد</value>
+  </data>
+  <data name="OneHundredFiftyThousandTomans" xml:space="preserve">
+    <value>یکصد و پنجاه هزار تومان</value>
+  </data>
+  <data name="OneHundredThousandTomans" xml:space="preserve">
+    <value>صد هزار تومان</value>
+  </data>
+  <data name="ThreeHundredThousandTomans" xml:space="preserve">
+    <value>سیصد هزار تومان</value>
+  </data>
+  <data name="TwoHundredFiftyThousandTomans" xml:space="preserve">
+    <value>دویست و پنجاه هزار تومان</value>
+  </data>
+  <data name="TwoHundredThousandTomans" xml:space="preserve">
+    <value>دویست هزار تومان</value>
+  </data>
+  <data name="SixtyThousandTomans" xml:space="preserve">
+    <value>شصت هزار تومان</value>
+  </data>
+  <data name="SeventyThousandTomans" xml:space="preserve">
+    <value>هفتاد هزار تومان</value>
+  </data>
+  <data name="EightyThousandTomans" xml:space="preserve">
+    <value>هشتاد هزار تومان</value>
+  </data>
+  <data name="NinetyThousandTomans" xml:space="preserve">
+    <value>نود هزار تومان</value>
+  </data>
+  <data name="OneHundredTenThousandTomans" xml:space="preserve">
+    <value>یکصد و ده هزار تومان</value>
+  </data>
+  <data name="OneHundredTwentyThousandTomans" xml:space="preserve">
+    <value>یکصد و بیست هزار تومان</value>
+  </data>
+  <data name="OneHundredThirtyThousandTomans" xml:space="preserve">
+    <value>یکصد و سی هزار تومان</value>
+  </data>
+  <data name="OneHundredFortyThousandTomans" xml:space="preserve">
+    <value>یکصد و چهل هزار تومان</value>
+  </data>
+  <data name="OneHundredSixtyThousandTomans" xml:space="preserve">
+    <value>یکصد و شصت هزار تومان</value>
+  </data>
+  <data name="OneHundredSeventyThousandTomans" xml:space="preserve">
+    <value>یکصد و هفتاد هزار تومان</value>
+  </data>
+  <data name="OneHundredEightyThousandTomans" xml:space="preserve">
+    <value>یکصد و هشتاد هزار تومان</value>
+  </data>
+  <data name="OneHundredNinetyThousandTomans" xml:space="preserve">
+    <value>یکصد و نود هزار تومان</value>
+  </data>
+  <data name="TwoHundredTenThousandTomans" xml:space="preserve">
+    <value>دویست و ده هزار تومان</value>
+  </data>
+  <data name="TwoHundredTwentyThousandTomans" xml:space="preserve">
+    <value>دویست و بیست هزار تومان</value>
+  </data>
+  <data name="TwoHundredThirtyThousandTomans" xml:space="preserve">
+    <value>دویست و سی هزار تومان</value>
+  </data>
+  <data name="TwoHundredFortyThousandTomans" xml:space="preserve">
+    <value>دویست و چهل هزار تومان</value>
+  </data>
+  <data name="TwoHundredSixtyThousandTomans" xml:space="preserve">
+    <value>دویست و شصت هزار تومان</value>
+  </data>
+  <data name="TwoHundredSeventyThousandTomans" xml:space="preserve">
+    <value>دویست و هفتاد هزار تومان</value>
+  </data>
+  <data name="TwoHundredEightyThousandTomans" xml:space="preserve">
+    <value>دویست و هشتاد هزار تومان</value>
+  </data>
+  <data name="TwoHundredNinetyThousandTomans" xml:space="preserve">
+    <value>دویست و نود هزار تومان</value>
+  </data>
+  <data name="ResaFullNameOmaniVersion" xml:space="preserve">
+    <value>رسالت سلامت ایرانیان</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>حریم خصوصی</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>دقیقه</value>
+  </data>
+  <data name="NoAnyCategoriesIsSelected" xml:space="preserve">
+    <value>هیچ دسته بندی ای انتخاب نشده است</value>
+  </data>
+  <data name="DuplicateCategoryIsForbidden" xml:space="preserve">
+    <value>انتخاب دسته بندی تکراری مجاز نیست</value>
+  </data>
+  <data name="DuplicateSpecialtiesIsForbidden" xml:space="preserve">
+    <value>انتخاب تخصص تکراری مجاز نیست</value>
+  </data>
+  <data name="NoAnySpecialtiesIsSelected" xml:space="preserve">
+    <value>هیچ تخصصی انتخاب نشده است</value>
+  </data>
+  <data name="SpecialtiesCreatedSuccessfuly" xml:space="preserve">
+    <value>تخصص ها با موفقیت ایجاد شد</value>
+  </data>
+  <data name="XCategoryShouldSelect" xml:space="preserve">
+    <value>دسته بندی باید انتخاب شود</value>
+  </data>
+  <data name="XSpecialtiesShouldSelect" xml:space="preserve">
+    <value>تخصص باید انتخاب شود</value>
+  </data>
+  <data name="InstallUpdatedVersion" xml:space="preserve">
+    <value>نصب نسخه جدید</value>
+  </data>
+  <data name="ResaNewVersionDownloadedmessage" xml:space="preserve">
+    <value>نسخه جدید رسا دانلود شد. برای نصب کلیک کنید.</value>
+  </data>
+  <data name="DoctorAppPatientsCallBlockerService" xml:space="preserve">
+    <value>سرویس بلاکر تماس بیماران</value>
+  </data>
+  <data name="DOCTOR_RECOMMENDATIONS" xml:space="preserve">
+    <value>پزشکان معرفی شده</value>
+  </data>
+  <data name="RecommendationDate" xml:space="preserve">
+    <value>تاریخ معرفی</value>
+  </data>
+  <data name="Recommender" xml:space="preserve">
+    <value>معرف</value>
+  </data>
+  <data name="Joined" xml:space="preserve">
+    <value>ملحق شده</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>جدید</value>
+  </data>
+  <data name="NotJoined" xml:space="preserve">
+    <value>ملحق نشده</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>سایر</value>
+  </data>
+  <data name="Spam" xml:space="preserve">
+    <value>پیام نامربوط</value>
+  </data>
+  <data name="PracticedMedicineSince" xml:space="preserve">
+    <value>آغاز طبابت</value>
+  </data>
+  <data name="DoctorAppChangingDoctorStatusFailedMessage" xml:space="preserve">
+    <value>خطا در تغییر وضعیت</value>
+  </data>
+  <data name="ChargeDiscountCardNotFound" xml:space="preserve">
+    <value>کد تخفیف شارژ پیدا نشد</value>
+  </data>
+  <data name="CallDiscountCardNotFound" xml:space="preserve">
+    <value>کارت تخفیف تماس یافت نشد</value>
+  </data>
+  <data name="ChargeRequestNotFound" xml:space="preserve">
+    <value>درخواست ثبت نام یافت نشد</value>
+  </data>
+  <data name="ChargeRequestNotFoundOrAlreadyProcessed" xml:space="preserve">
+    <value>درخواست شارژ یافت نشد و یا قبلا پردازش شده است</value>
+  </data>
+  <data name="DiscountCode" xml:space="preserve">
+    <value>کد تخفیف</value>
+  </data>
+  <data name="EffectedDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="UsedCount" xml:space="preserve">
+    <value>تعداد استفاده شده</value>
+  </data>
+  <data name="DiscountCardNotFound" xml:space="preserve">
+    <value>کارت تخفیف یافت نشد</value>
+  </data>
+  <data name="CallDiscountCard" xml:space="preserve">
+    <value>کارت تخفیف تماس</value>
+  </data>
+  <data name="ChargeDiscountCard" xml:space="preserve">
+    <value>کارت تخفیف شارژ</value>
+  </data>
+  <data name="ExpiredDate" xml:space="preserve">
+    <value>تاریخ انقضا</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>ثابت</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>درصدی</value>
+  </data>
+  <data name="DiscountAmount" xml:space="preserve">
+    <value>مبلغ تخفیف</value>
+  </data>
+  <data name="DiscountCardCalculationMethod" xml:space="preserve">
+    <value>نحوه ی تخفیف</value>
+  </data>
+  <data name="DiscountCardType" xml:space="preserve">
+    <value>نوع کارت تخفیف</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>درصد تخفیف</value>
+  </data>
+  <data name="DiscountUsedCount" xml:space="preserve">
+    <value>تعداد استفاده</value>
+  </data>
+  <data name="MaximumChargeAmount" xml:space="preserve">
+    <value>حداکثر مبلغ شارژ</value>
+  </data>
+  <data name="MinimumChargeAmount" xml:space="preserve">
+    <value>حدقل مبلغ شارژ</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>یا</value>
+  </data>
+  <data name="DiscountCard" xml:space="preserve">
+    <value>کارت تخفیف</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>جایگاه</value>
+  </data>
+  <data name="MaxUsedCount" xml:space="preserve">
+    <value>حداکثر تعداد استفاده</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>عملگر</value>
+  </data>
+  <data name="DiscountCardActivatedSuccessfully" xml:space="preserve">
+    <value>کارت تخفیف با موفقیت فعال شد</value>
+  </data>
+  <data name="DiscountCardDeactivatedSuccessfully" xml:space="preserve">
+    <value>کارت تخفیف با موفقیت غیرفعال شد</value>
+  </data>
+  <data name="ChargeDenominationNotFound" xml:space="preserve">
+    <value>شارژ کارت یافت نشد</value>
+  </data>
+  <data name="SubscriberCantBeCharged" xml:space="preserve">
+    <value>مشترک نمیتواند شارژ انجام دهد</value>
+  </data>
+  <data name="SubscriberCantUseDiscountCode" xml:space="preserve">
+    <value>مشترک موردنظر امکان استفاده از این کد تخفیف را ندارد</value>
+  </data>
+  <data name="SubscriberNotFound" xml:space="preserve">
+    <value>مشترک یافت نشد</value>
+  </data>
+  <data name="CreateDiscountCardSuccessfully" xml:space="preserve">
+    <value>کارت تخفیف با موفقیت ثبت شد</value>
+  </data>
+  <data name="NullPermit" xml:space="preserve">
+    <value>permit خالی میباشد</value>
+  </data>
+  <data name="InValidChargeDiscountCardForUse" xml:space="preserve">
+    <value>کارت تخفیف شارژ برای استفاده نامعتبر است</value>
+  </data>
+  <data name="DiscountCeiling" xml:space="preserve">
+    <value>سقف تخفیف</value>
+  </data>
+  <data name="DoctorAppAboutDescriptionOmaniVersion" xml:space="preserve">
+    <value>رسا با هدف ارتباط هدفمند و موثر بیمار و پزشک ایجاد شده است. شما می‌توانید انتقادات و پیشنهادات خود را با ما در میان بگذارید:</value>
+  </data>
+  <data name="ExclusiveNumberNotFound" xml:space="preserve">
+    <value>شماره اختصاصی یافت نشد</value>
+  </data>
+  <data name="ExclusiveNumber" xml:space="preserve">
+    <value>شماره اختصاصی</value>
+  </data>
+  <data name="ExclusiveNumberState" xml:space="preserve">
+    <value>وضعیت شماره اختصاصی</value>
+  </data>
+  <data name="CreateExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>شماره اختصاصی جدید با موفقیت ذخیره شد</value>
+  </data>
+  <data name="DeleteExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>شماره اختصاصی با موفقیت حذف شد</value>
+  </data>
+  <data name="ResetExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>شماره اختصاصی با موفقیت آزاد شد</value>
+  </data>
+  <data name="ExclusiveNumberIsInUse" xml:space="preserve">
+    <value>شماره اختصاصی در حال استفاده است</value>
+  </data>
+  <data name="ExclusiveNumbers" xml:space="preserve">
+    <value>شماره های اختصاصی</value>
+  </data>
+  <data name="HomePageContent" xml:space="preserve">
+    <value>محتوای صفحه اصلی</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>هزینه</value>
+  </data>
+  <data name="UseForVisitedPatients" xml:space="preserve">
+    <value>برای بیماران ویزیت شده</value>
+  </data>
+  <data name="FixedResaCommission" xml:space="preserve">
+    <value>سهم رسا</value>
+  </data>
+  <data name="FixedResaCommissionIsPositive" xml:space="preserve">
+    <value>سهم رسا باید بیشتر یا مساوی صفر باشد</value>
+  </data>
+  <data name="FixedResaCommissionRequired" xml:space="preserve">
+    <value>سهم رسا نباید خالی باشد</value>
+  </data>
+  <data name="PricingPolicyType" xml:space="preserve">
+    <value>نوع سیاست</value>
+  </data>
+  <data name="PricingPerMinuteFixedCommissionPolicy" xml:space="preserve">
+    <value>سیاست دقیقه ای با سهم ثابت</value>
+  </data>
+  <data name="PricingPerSessionFixedCommissionPolicy" xml:space="preserve">
+    <value>سیاست جلسه ای با سهم ثابت</value>
+  </data>
+  <data name="PercentResaCommission" xml:space="preserve">
+    <value> سهم رصا به درصد</value>
+  </data>
+  <data name="PercentResaCommissionIsPositive" xml:space="preserve">
+    <value>سهم رسا به درصد باید بزرگتر یا مساوی صفر باشد</value>
+  </data>
+  <data name="PercentResaCommissionRequired" xml:space="preserve">
+    <value>سهم رسا به درصد الزامی است</value>
+  </data>
+  <data name="PricingPerMinutePercentCommissionPolicy" xml:space="preserve">
+    <value>سیاست دقیقه ای با سهم درصدی</value>
+  </data>
+  <data name="PricingPerSessionPercentCommissionPolicy" xml:space="preserve">
+    <value>سیاست جلسه ای با سهم درصدی</value>
+  </data>
+  <data name="HealthCareCall" xml:space="preserve">
+    <value>تماس دقیقه ای</value>
+  </data>
+  <data name="SessionCall" xml:space="preserve">
+    <value>تماس جلسه ای</value>
+  </data>
+  <data name="CallType" xml:space="preserve">
+    <value>نوع تماس</value>
+  </data>
+  <data name="ResaaCommissionType" xml:space="preserve">
+    <value>نوع کمیسیون رسا</value>
+  </data>
+  <data name="ResaCommission" xml:space="preserve">
+    <value>کمیسیون رسا</value>
+  </data>
+  <data name="SpecificSimcard" xml:space="preserve">
+    <value>سیم کارت مشخص شده</value>
+  </data>
+  <data name="PricePolicyType" xml:space="preserve">
+    <value>نوع قیمت گذاری</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>تاریخ پایان</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>تاریخ شروع</value>
+  </data>
+  <data name="Failed_To_Retrieve_Accessible_Periods" xml:space="preserve">
+    <value>دریافت زمان‌های در دسترس با مشکل مواجه شد</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>اکانت مورد نظر موجود نمی باشد</value>
+  </data>
+  <data name="ErrorOnParsingDoctorRecommendationState" xml:space="preserve">
+    <value>خطا در تحلیل مقدار وضعیت معرفی پزشک</value>
+  </data>
+  <data name="ErrorOnUpdaingDoctorRecommendationRecord" xml:space="preserve">
+    <value>خطا در فرآیند بروز رسانی وضعیت رکورد معرفی پزشک</value>
+  </data>
+  <data name="YearsOfPractice" xml:space="preserve">
+    <value>سابقه طبابت (برحسب سال)</value>
+  </data>
+  <data name="WebSiteTestimonials" xml:space="preserve">
+    <value>تستیمونیال های وبسایت</value>
+  </data>
+  <data name="Hospitals" xml:space="preserve">
+    <value>بیمارستانها</value>
+  </data>
+  <data name="Insurances" xml:space="preserve">
+    <value>بیمه ها</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>زبان و گویش ها</value>
+  </data>
+  <data name="CommunityMemberships" xml:space="preserve">
+    <value>انجمن های علمی</value>
+  </data>
+  <data name="Reward" xml:space="preserve">
+    <value>جوایز</value>
+  </data>
+  <data name="ScientificHistory" xml:space="preserve">
+    <value>سوابق علمی</value>
+  </data>
+  <data name="Biography" xml:space="preserve">
+    <value>زندگینامه</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>اینستاگرام</value>
+  </data>
+  <data name="SurveyLikeSuccessfully" xml:space="preserve">
+    <value>با موفقیت ثبت شد</value>
+  </data>
+  <data name="CallId" xml:space="preserve">
+    <value>شناسه تماس</value>
+  </data>
+  <data name="Dislike" xml:space="preserve">
+    <value>مخالف</value>
+  </data>
+  <data name="Like" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="SurveyUpdatedSuccessfully" xml:space="preserve">
+    <value>ویرایش نظر با موفقیت ثبت شد</value>
+  </data>
+  <data name="SurveyFieldCreateSuccessfully" xml:space="preserve">
+    <value>دلیل نظر با موفقیت ثبت شد</value>
+  </data>
+  <data name="SurveyFieldDeleteSuccessfully" xml:space="preserve">
+    <value>دلیل نظر با موفقیت حذف شد</value>
+  </data>
+  <data name="SurveyFieldUpdateSuccessfully" xml:space="preserve">
+    <value>دلیل نظر با موفقیت ویرایش شد</value>
+  </data>
+  <data name="AddedSuccessfully" xml:space="preserve">
+    <value>با موفقیت اضافه شد</value>
+  </data>
+  <data name="UpdatedSuccessfully" xml:space="preserve">
+    <value>با موفقیت به روز رسانی شد</value>
+  </data>
+  <data name="Angry" xml:space="preserve">
+    <value>ناراضی</value>
+  </data>
+  <data name="Happy" xml:space="preserve">
+    <value>راضی</value>
+  </data>
+  <data name="NotCheckedSurveyStatus" xml:space="preserve">
+    <value>در حال بررسی</value>
+  </data>
+  <data name="RejectSurveyStatus" xml:space="preserve">
+    <value>عدم تایید</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>ثانیه</value>
+  </data>
+  <data name="Kurdish" xml:space="preserve">
+    <value>کردی</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>فارسی</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>ترکی</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>تومان</value>
+  </data>
+  <data name="RequiredFieldValidationMessage" xml:space="preserve">
+    <value>فیلد {0} نمیتواند خالی باشد</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>پکیج ها</value>
+  </data>
+  <data name="PolicyActivated" xml:space="preserve">
+    <value>سیاست با موفقیت فعال شد</value>
+  </data>
+  <data name="PolicyCreated" xml:space="preserve">
+    <value>سیاست با موفقیت ایجاد شد</value>
+  </data>
+  <data name="PolicyDeactivated" xml:space="preserve">
+    <value>سیاست با موفقیت غیر فعال شد</value>
+  </data>
+  <data name="PolicyDeactivateError" xml:space="preserve">
+    <value>خطا در غیر فعال سازی سیاست</value>
+  </data>
+  <data name="DisplayOrder" xml:space="preserve">
+    <value>ترتیب نمایش</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>امتیاز</value>
+  </data>
+  <data name="DuplicatePhoneNumberError" xml:space="preserve">
+    <value>شماره تماس قبلا در سیستم ثبت شده است</value>
+  </data>
+  <data name="PatientSuccessfullyRegistered" xml:space="preserve">
+    <value>بیمار با موفقیت ثبت شود</value>
+  </data>
+  <data name="BlockedCredit" xml:space="preserve">
+    <value>اعتبار رزرو شده</value>
+  </data>
+  <data name="CallBookingId" xml:space="preserve">
+    <value>شناسه رزرو تماس</value>
+  </data>
+	<data name="FOR_EACH_DOCTOR_MORE_THAN_N_DEVICE_CAN_NOT_BE_ADDED" xml:space="preserve">
+    <value>برای هر پزشک بیش از {0} دستگاه نمیشود اضافه کرد</value>
+  </data>
+  <data name="PRIMARY_DEVICE_COULD_NOT_BE_REMOVED" xml:space="preserve">
+    <value>دستگاه اصلی حذف نشد، لطفا یک دستگاه دیگر را به عنوان دستگاه اصلی معرفی کنید</value>
+  </data>
+	<data name="BOOKING_NOT_FOUND" xml:space="preserve">
+    <value>زمان رزرو شده پیدا نشد</value>
+  </data>
+  <data name="CALLBACK_CONSENT_PROMPT_FEEDBACK" xml:space="preserve">
+    <value>CallbackConsentPromptFeedback</value>
+  </data>
+  <data name="CALLBACK_CONSENT_PROMPT_FEEDBACK_LESS_THAN_5_MINUTES" xml:space="preserve">
+    <value>CallbackConsentPromptFeedbackLessThan5Minutes</value>
+  </data>
+  <data name="Creating_Failed_Healthcare_Call" xml:space="preserve">
+    <value>فرآیند ایجاد درخواست تماس ناتمام ماند ({0})</value>
+  </data>
+  <data name="DOCTOR_CALLBACK_ARRANGEMENT_INSUFFICIENT_CREDIT" xml:space="preserve">
+    <value>DoctorCallbackArrangementInsufficientCredit</value>
+  </data>
+  <data name="FAILED_TO_PROCESS" xml:space="preserve">
+    <value>درخواست تکمیل نشد {0} ({1})</value>
+  </data>
+  <data name="FAILED_TO_PROCESS_FAILED_HEALTHCARE_CALL" xml:space="preserve">
+    <value>درخواست تماس مشاوره تکمیل نشد ({0} - {1})</value>
+  </data>
+  <data name="PROCESS_FAILURE" xml:space="preserve">
+    <value>فرآیند ناتمام</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>اکانت مورد نظر موجود نمی باشد</value>
+  </data>
+  <data name="FailedToProccessDroppedHealthcareCall" xml:space="preserve">
+    <value>فرآیند متوقف شد ({0} - {1})</value>
+  </data>
+  <data name="NotifyCallRequestToDoctor" xml:space="preserve">
+    <value>اطلاع تماس به پزشک مربوطه</value>
+  </data>
+  <data name="NotifyPatientToBeReadyTemplate" xml:space="preserve">
+    <value>هشدار به کاربر جهت برقراری تماس</value>
+  </data>
+  <data name="UnknownCallerMessageTemplate" xml:space="preserve">
+    <value>پیام از شماره ناشناس</value>
+  </data>
+  <data name="InvalidValidity" xml:space="preserve">
+    <value>برای معتبر بودن، مقدار باید بزرگتر از صفر باشد</value>
+  </data>
+  <data name="CardNotFound" xml:space="preserve">
+    <value>کارت موردنظر یافت نشد</value>
+  </data>
+  <data name="CallRequestPriorityIsNull" xml:space="preserve">
+    <value>اولویت درخواست تماس خالی میباشد.</value>
+  </data>
+  <data name="DocumentNotFound" xml:space="preserve">
+    <value>داکیومنت موردنظر موجود نمی باشد</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>فایل موجود نمی باشد</value>
+  </data>
+  <data name="InvalidModel" xml:space="preserve">
+    <value>مدل معتبر نمی باشد</value>
+  </data>
+  <data name="PhoneNumberNotFound" xml:space="preserve">
+    <value>شماره تلفن وارد شده پیدا نشد</value>
+  </data>
+  <data name="EndedCallRequestsQueueProcessing" xml:space="preserve">
+    <value>پردازش صف درخواست تماس پایان یافت</value>
+  </data>
+  <data name="StartedCallRequestsQueueProcessing" xml:space="preserve">
+    <value>پردازش صف درخواست تماس شروع شد</value>
+  </data>
+  <data name="QueueProcessing" xml:space="preserve">
+    <value>در تماس با سیستم</value>
+  </data>
+<data name="Timeout" xml:space="preserve">
+    <value>استراحت</value>
+  </data>
+  <data name="Travel" xml:space="preserve">
+    <value>در سفر</value>
+  </data>
+  <data name="EnglishTitle" xml:space="preserve">
+    <value>عنوان انگلیسی</value>
+  </data>
+  <data name="MedicalSpecialtyPageActicatedSuccessfuly" xml:space="preserve">
+    <value>تخصص با موفقیت فعال شد</value>
+  </data>
+  <data name="MedicalSpecialtyPageDeacticatedSuccessfuly" xml:space="preserve">
+    <value>تخصص با موفقیت غیر فعال شد</value>
+  </data>
+  <data name="TimeBasedChargePackageMedicalSpecialty" xml:space="preserve">
+    <value>تخصص</value>
+  </data>
+  <data name="RejectedSurveyAlert" xml:space="preserve">
+    <value>متن نظر شما به دلیل عدم رعایت قوانین ارسال نظر در سامانه رسا حذف شد</value>
+  </data>
+</root>

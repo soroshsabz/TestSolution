@@ -1,0 +1,70 @@
+﻿<customControls:BaseContentPage x:Class="BSN.Resa.DoctorApp.Views.MenuPage"
+                                xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                xmlns:models="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                                x:DataType="viewModels:NavigationDrawerViewModel"
+                                Title="{utilities:Translate Resa}"
+                                prism:ViewModelLocator.AutowireViewModel="True"
+                                IconImageSource="Assets/menu.png"
+                                BackgroundColor="{StaticResource AppPrimaryColor}">
+
+    <customControls:BaseContentPage.FlowDirection>
+        <OnPlatform x:TypeArguments="FlowDirection">
+            <On Platform="iOS" Value="LeftToRight" />
+        </OnPlatform>
+    </customControls:BaseContentPage.FlowDirection>
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MenuText" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+            <Style x:Key="MenuIcon" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="35" />
+            </Style>
+            <Style x:Key="MenuHeader" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="FontSize" Value="28" />
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+    <customControls:BaseContentPage.Content>
+        <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+            <ListView BackgroundColor="Transparent"
+                                           ItemsSource="{Binding Menus}"
+                                           SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                                           VerticalOptions="FillAndExpand"
+                                           CachingStrategy="RecycleElement"
+                                           Footer="">
+                <ListView.Header>
+                    <StackLayout BackgroundColor="White" Padding="10">
+                        <Label Text="{utilities:Translate Resa}" Style="{StaticResource MenuHeader}" />
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="viewModels:MenuItem">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" Padding="5">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Spacing="10">
+                                    <Label Text="{Binding Title}" Style="{StaticResource MenuText}"/>
+                                    <Image Source="{Binding IconName}" Style="{StaticResource MenuIcon}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

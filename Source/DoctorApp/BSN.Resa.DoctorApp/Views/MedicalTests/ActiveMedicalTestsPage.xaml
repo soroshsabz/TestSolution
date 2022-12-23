@@ -1,0 +1,165 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.MedicalTests;assembly=BSN.Resa.DoctorApp"
+                                xmlns:models="clr-namespace:BSN.Resa.DoctorApp.Domain.Models;assembly=BSN.Resa.DoctorApp.Domain"
+                                x:DataType="viewModels:ActiveMedicalTestsPageViewModel"
+                                x:Class="BSN.Resa.DoctorApp.Views.MedicalTests.ActiveMedicalTestsPage"
+                                BackgroundImageSource="Assets/background.png"
+                                Title="{utilities:Translate DoctorAppMedicalTests}">
+
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="PhoneNumberStyle" BasedOn="{StaticResource LabelStyle}" TargetType="Label">
+                <Setter Property="FlowDirection" Value="LeftToRight" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="LightSkyBlue" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+
+    <customControls:BaseContentPage.Content>
+
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+
+                <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                      BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                    <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                    <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate DoctorAppMedicalTests}"
+                           FontSize="Large"
+                           LineBreakMode="TailTruncation"
+                           TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+                </Grid>
+
+                <CollectionView ItemsSource="{Binding MedicalTests}" Header="" Margin="5, 0"
+                                SelectionMode="Single" SelectedItem="{Binding SelectedMedicalTest}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="2" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid BackgroundColor="#dbfafa" Padding="5" FlowDirection="RightToLeft">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="20*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- The following Button is a dummy element merely to make header titles vertically aligned with actual ListView rows elements.  -->
+                                <Button Grid.Row="0" Grid.Column="0" IsVisible="False"/>
+
+                                <Label Grid.Row="0" Grid.Column="1" Text="{utilities:Translate Patient}"
+                                       Style="{StaticResource LabelStyle}">
+                                    <Label.HorizontalTextAlignment>
+                                        <OnPlatform x:TypeArguments="TextAlignment">
+                                            <On Platform="Android" Value="Start"/>
+                                            <On Platform="iOS" Value="Center"/>
+                                        </OnPlatform>
+                                    </Label.HorizontalTextAlignment>
+
+                                </Label>
+
+                                <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelStyle}"
+                                       Text="{utilities:Translate DoctorAppMedicalTestPrice}" />
+
+                                <!-- The following Button is a dummy element merely to make header titles vertically aligned with actual ListView rows elements. -->
+                                <Button Grid.Row="0" Grid.Column="3" IsVisible="False"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.HeaderTemplate>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:MedicalTest">
+                            <Grid BackgroundColor="White" Padding="5" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10*" />
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="20*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0" Grid.Column="0" WidthRequest="50" HeightRequest="50"
+                                       Source="Assets/patient_profile_placeholder_trimmed.png" />
+
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource PhoneNumberStyle}"
+                                       Text="{Binding PatientPhone}" />
+
+                                <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource LabelStyle}"
+                                       Text="{Binding Price, StringFormat='{0}T'}" />
+
+                                <Button Grid.Row="0" Grid.Column="3" Text="{utilities:Translate View}"
+                                        BackgroundColor="{StaticResource AppPrimaryColor}"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:ActiveMedicalTestsPageViewModel}}, Path=ViewCommand}"
+                                        CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext}" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+                <customControls:ResaBottomNavigationBar />
+
+            </StackLayout>
+
+            <Frame IsVisible="{Binding IsActiveMedicalTestsEmpty, FallbackValue= false}"
+                   AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.75, 75"
+                   CornerRadius="10" BackgroundColor="White" Padding="3">
+
+                <Label
+                    Text="{utilities:Translate ThereArentAnyMedicalTests}" TextColor="Black"
+                    VerticalOptions="Center"
+                    FontSize="Medium" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+
+            </Frame>
+
+        </AbsoluteLayout>
+
+
+    </customControls:BaseContentPage.Content>
+
+</customControls:BaseContentPage>

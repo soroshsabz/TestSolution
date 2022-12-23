@@ -1,0 +1,25 @@
+﻿<customViews:CustomFlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                  x:DataType="viewModels:NavigationDrawerViewModel"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+				  xmlns:views="clr-namespace:BSN.Resa.DoctorApp.Views;assembly=BSN.Resa.DoctorApp"
+                  xmlns:customViews="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="BSN.Resa.DoctorApp.Views.FlyoutPage"
+				  IsPresented="{Binding IsPresented, Mode = TwoWay}"
+				  Title="">
+    <customViews:CustomFlyoutPage.FlowDirection>
+        <OnPlatform x:TypeArguments="FlowDirection">
+            <On Platform="iOS" Value="RightToLeft"/>
+        </OnPlatform>
+    </customViews:CustomFlyoutPage.FlowDirection>
+
+    <customViews:CustomFlyoutPage.Flyout>
+        <views:MenuPage/>
+    </customViews:CustomFlyoutPage.Flyout>
+    <customViews:CustomFlyoutPage.Detail>
+		<ContentPage Title="Dummy"/>
+		<!-- Dummy -->
+	</customViews:CustomFlyoutPage.Detail>
+</customViews:CustomFlyoutPage>

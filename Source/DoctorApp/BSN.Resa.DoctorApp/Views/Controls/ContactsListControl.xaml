@@ -1,0 +1,136 @@
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels.Contacts;assembly=BSN.Resa.DoctorApp"
+             xmlns:models="clr-namespace:BSN.Resa.DoctorApp.ViewModels.Contacts;assembly=BSN.Resa.DoctorApp"
+             xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+             x:Class="BSN.Resa.DoctorApp.Views.Controls.ContactsListControl"
+             x:DataType="viewModels:BaseContactsListPage"
+             x:Name="this"
+             VerticalOptions="FillAndExpand">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PhoneNumbersItem" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="Padding" Value="5" />
+            </Style>
+            <Style x:Key="PhoneNumbersHeader" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#dbfafa" />
+                <Setter Property="Padding" Value="5" />
+            </Style>
+            <Style x:Key="PhoneNumber" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
+            <Style x:Key="BlockedCount" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+            <Style x:Key="RemovePhoneNumber" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style x:Key="NoPhoneNumberFound" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+            <Style x:Key="PhoneNumbers" TargetType="ListView">
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="RowHeight" Value="60" />
+            </Style>
+            <Style x:Key="SearchEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="PlaceholderColor" Value="#F1F1F1" />
+                <Setter Property="Keyboard" Value="Telephone" />
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout>
+            <Entry x:Name="SearchEntry"
+                   Style="{StaticResource SearchEntry}"
+                   IsVisible="{Binding Source={x:Reference this}, Path=IsSearchMode}"
+                   Text="{Binding Source={x:Reference this}, Path=SearchingPhoneNumber, Mode=TwoWay}"
+                   Placeholder="{utilities:Translate Search}">
+                <Entry.Triggers>
+                    <DataTrigger TargetType="Entry" Binding="{Binding Source={x:Reference this}, Path=IsSearchMode}"
+                                 Value="True">
+                        <DataTrigger.EnterActions>
+                            <utilities:FocusTriggerAction Focused="True" />
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <utilities:FocusTriggerAction Focused="False" />
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <Label Text="{utilities:Translate NoPhoneNumberFound}" Style="{StaticResource NoPhoneNumberFound}"
+                   IsVisible="{Binding Source={x:Reference this}, Path=IsAnyPhoneNumber, Converter={StaticResource Not}}" />
+            <ListView ItemsSource="{Binding Source={x:Reference this}, Path=Contacts}"
+                                           Style="{StaticResource PhoneNumbers}" Header=""
+                                           IsVisible="{Binding Source={x:Reference this}, Path=IsAnyPhoneNumber}"
+                                           Footer="" BackgroundColor="Transparent" CachingStrategy="RecycleElement">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid Style="{StaticResource PhoneNumbersHeader}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*" />
+                                <ColumnDefinition Width="20*" />
+                                <ColumnDefinition Width="60*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--The following Button is a dummy element merely to make header titles vertically aligned with actual ListView rows elements</-->
+                            <Button Grid.Row="0" Grid.Column="0" Text="{utilities:Translate Remove}" IsVisible="False" />
+                            <Label Grid.Row="0" Grid.Column="1"
+                                   Text="{utilities:Translate Count}" Style="{StaticResource BlockedCount}" />
+                            <Label Grid.Row="0" Grid.Column="2"
+                                   Text="{utilities:Translate PhoneNumber}" Style="{StaticResource PhoneNumber}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <!-- To see why the syntax of x:DataType is like this (particularly using + sign) visit:
+                    https://social.msdn.microsoft.com/Forums/SECURITY/en-US/f709a02e-06c1-4b5d-b6c7-948f1dc80927/how-do-i-use-nested-models-inside-xdatatype-in-a-uwp-app
+                -->
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:BaseContactsListPageViewModel+ContactItem">
+                        <ViewCell>
+                            <Grid Style="{StaticResource PhoneNumbersItem}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="60*" />
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Row="0" Grid.Column="0" Text="{utilities:Translate Remove}"
+                                        Style="{StaticResource RemovePhoneNumber}"
+                                        Command="{Binding RemoveContactCommand}"
+                                        CommandParameter="{Binding PhoneNumber}" />
+                                <Label Grid.Row="0" Grid.Column="1"
+                                       Text="{Binding BlockedCount}" Style="{StaticResource BlockedCount}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding PhoneNumber}"
+                                       Style="{StaticResource PhoneNumber}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

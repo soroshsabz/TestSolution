@@ -1,0 +1,44 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:TestPageViewModel"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                x:Class="BSN.Resa.DoctorApp.Views.TestPage"
+                                BackgroundImageSource="Assets/background.png">
+
+    <customControls:BaseContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1"/>
+
+                <Label Grid.Row="0" Grid.Column="2" Text="درباره رسا" FontSize="Large" LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            </Grid>
+
+            <ScrollView>
+                <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Vertical">
+                    <Entry Text="{Binding EntryValue}" Placeholder="Enter badge number here" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                    <Button Text="Action" Command="{Binding ActionCommand}"/>
+                    <Button Text="Cancel" Command="{Binding CancelCommand}"/>
+                </StackLayout>
+            </ScrollView>
+
+            <customControls:ResaBottomNavigationBar/>
+            
+        </StackLayout>
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

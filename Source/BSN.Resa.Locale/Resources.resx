@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbortAfterCompletion" xml:space="preserve">
+    <value>Abort After Completion</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About us</value>
+  </data>
+  <data name="AcademicTitle" xml:space="preserve">
+    <value>Academic Title</value>
+  </data>
+  <data name="AccountId" xml:space="preserve">
+    <value>AccountId</value>
+  </data>
+  <data name="AccountType" xml:space="preserve">
+    <value>AccountType</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ActivationKey" xml:space="preserve">
+    <value>ActivationKey</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddAll" xml:space="preserve">
+    <value>AddAll</value>
+  </data>
+  <data name="AddResaAsBlocker" xml:space="preserve">
+    <value>Adding Resa as blocker</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="AllergyAndImmunology" xml:space="preserve">
+    <value>AllergyAndImmunology</value>
+  </data>
+  <data name="AllowedDuration" xml:space="preserve">
+    <value>Allowed Duration</value>
+  </data>
+  <data name="AllowedNumbers" xml:space="preserve">
+    <value>Allowed Numbers</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountIsMoreThanCredit" xml:space="preserve">
+    <value>Amount Is More Than Credit</value>
+  </data>
+  <data name="AmountIsNotValid" xml:space="preserve">
+    <value>Amount Is Not Valid</value>
+  </data>
+  <data name="Anaesthesiology" xml:space="preserve">
+    <value>Anaesthesiology</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="AnsweredAt" xml:space="preserve">
+    <value>AnsweredAt</value>
+  </data>
+  <data name="AnsweredBy" xml:space="preserve">
+    <value>AnsweredBy</value>
+  </data>
+  <data name="ApplicationCannotBeUpdatedDueToLicenseExpiration" xml:space="preserve">
+    <value>ApplicationCannotBeUpdatedDueToLicenseExpiration</value>
+  </data>
+  <data name="AppVersionXamlSpecialVersion" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="AreYouSureYouWantDeleteNumber" xml:space="preserve">
+    <value>Are you sure you want delete number</value>
+  </data>
+  <data name="AtTheTime" xml:space="preserve">
+    <value>at</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="AuthorizationScopes" xml:space="preserve">
+    <value>Authorization Scopes</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="BackgroundImage" xml:space="preserve">
+    <value>Background Image</value>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="BankReferenceNumber" xml:space="preserve">
+    <value>Bank Reference Number</value>
+  </data>
+  <data name="BankTransfer" xml:space="preserve">
+    <value>BankTransfer</value>
+  </data>
+  <data name="BeneficiaryParty" xml:space="preserve">
+    <value>BeneficiaryParty</value>
+  </data>
+  <data name="Blacklist" xml:space="preserve">
+    <value>Blacklist</value>
+  </data>
+  <data name="BlockedNumbers" xml:space="preserve">
+    <value>Blocked Numbers</value>
+  </data>
+  <data name="BookedAt" xml:space="preserve">
+    <value>Booked At</value>
+  </data>
+  <data name="BusinessAccount" xml:space="preserve">
+    <value>Business Account</value>
+  </data>
+  <data name="Busy" xml:space="preserve">
+    <value>Busy</value>
+  </data>
+  <data name="CallbackRequests" xml:space="preserve">
+    <value>Callback requests</value>
+  </data>
+  <data name="CallbackRequestsHistory" xml:space="preserve">
+    <value>Requests History</value>
+  </data>
+  <data name="CallbackService" xml:space="preserve">
+    <value>CallbackService</value>
+  </data>
+  <data name="CallBlockingPermission" xml:space="preserve">
+    <value>Call blocking permission</value>
+  </data>
+  <data name="CallerSubscriberIdentificationCard" xml:space="preserve">
+    <value>CallerSubscriberIdentificationCard</value>
+  </data>
+  <data name="CallFinancialTransaction" xml:space="preserve">
+    <value>CallFinancialTransaction</value>
+  </data>
+  <data name="CallLessThanThirtySeconds" xml:space="preserve">
+    <value>Call Less Than Thirty Seconds</value>
+  </data>
+  <data name="Calls" xml:space="preserve">
+    <value>Calls</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CaptchaInvalid" xml:space="preserve">
+    <value>CaptchaInvalid</value>
+  </data>
+  <data name="CaptchaRequired" xml:space="preserve">
+    <value>CaptchaRequired</value>
+  </data>
+  <data name="Card" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="CardBasedChargeFinancialTransaction" xml:space="preserve">
+    <value>Card Based Charge Financial Transaction</value>
+  </data>
+  <data name="CardiothoracicSurgery" xml:space="preserve">
+    <value>CardiothoracicSurgery</value>
+  </data>
+  <data name="Cardiovascular" xml:space="preserve">
+    <value>Cardiovascular</value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="CardsMergeFinancialTransaction" xml:space="preserve">
+    <value>CardsMergeFinancialTransaction</value>
+  </data>
+  <data name="CardToCard" xml:space="preserve">
+    <value>CardToCard</value>
+  </data>
+  <data name="CarryOut" xml:space="preserve">
+    <value>Carry Out</value>
+  </data>
+  <data name="Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="ChangeState" xml:space="preserve">
+    <value>Change State</value>
+  </data>
+  <data name="ChangeStateError" xml:space="preserve">
+    <value>Change state error</value>
+  </data>
+  <data name="ChangeStatePrompt" xml:space="preserve">
+    <value>En error occured while changing state. Please try again.</value>
+  </data>
+  <data name="ChangeStateWithSmsPrompt" xml:space="preserve">
+    <value>ChangeStateWithSmsPrompt</value>
+  </data>
+  <data name="Characterization" xml:space="preserve">
+    <value>Characterization</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Classification</value>
+  </data>
+  <data name="ClickDetailsIconNearCall" xml:space="preserve">
+    <value>2. Tap on details icon (letter i) adjasent to each cantact.</value>
+  </data>
+  <data name="ClinicAddress" xml:space="preserve">
+    <value>ClinicAddress</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CommercialNumber" xml:space="preserve">
+    <value>Commercial Number</value>
+  </data>
+  <data name="CommunicationChannels" xml:space="preserve">
+    <value>Communication Channels</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ConnectingToResa" xml:space="preserve">
+    <value>Connecting to RESA...</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Connection error</value>
+  </data>
+  <data name="ConsumedAt" xml:space="preserve">
+    <value>ConsumedAt</value>
+  </data>
+  <data name="EmptyUsernameOrPasswordError" xml:space="preserve">
+    <value>Username or password firlds cannot be empty.</value>
+  </data>
+  <data name="InternalError" xml:space="preserve">
+    <value>Internal Error</value>
+  </data>
+  <data name="ConsumerMSISDN" xml:space="preserve">
+    <value>ConsumerMSISDN</value>
+  </data>
+  <data name="ConsumerType" xml:space="preserve">
+    <value>ConsumerType</value>
+  </data>
+  <data name="ConsumerTypeAndConsumerMSISDNCantBeBlank" xml:space="preserve">
+    <value>ConsumerTypeAndConsumerMSISDNCantBeBlank</value>
+  </data>
+  <data name="ContactsSharingWithResa" xml:space="preserve">
+    <value>Sharing contacts with Resa</value>
+  </data>
+  <data name="CorrectionFinancialTransaction" xml:space="preserve">
+    <value>CorrectionFinancialTransaction</value>
+  </data>
+  <data name="CouncilNumber" xml:space="preserve">
+    <value>CouncilNumber</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>CreatedAt</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>CreatedDate</value>
+  </data>
+  <data name="Credit" xml:space="preserve">
+    <value>Credit</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DaysOfWeek" xml:space="preserve">
+    <value>DaysOfWeek</value>
+  </data>
+  <data name="DaysOfWeekRequired" xml:space="preserve">
+    <value>DaysOfWeekRequired</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Dentistry" xml:space="preserve">
+    <value>Dentistry</value>
+  </data>
+  <data name="Dermatology" xml:space="preserve">
+    <value>Dermatology</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DesignatedResaCommission" xml:space="preserve">
+    <value>DesignatedResaCommission</value>
+  </data>
+  <data name="Destination" xml:space="preserve">
+    <value>Destination</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="DoctorApp" xml:space="preserve">
+    <value>DoctorApp</value>
+  </data>
+  <data name="DoctorAppAboutDescription" xml:space="preserve">
+    <value>Iranians Health Media (RESA) has been created to provide an effective and purposeful solution to connect patients and phisysians. Your feedbacks are highly appreciated for us, call.</value>
+  </data>
+  <data name="DoctorAppAppSettingsImproveBgBlockerService" xml:space="preserve">
+    <value>Improve call blocker service</value>
+  </data>
+  <data name="DoctorAppAppSettingsImproveBgBlockerServiceDescription" xml:space="preserve">
+    <value>Resa's call blocker service has some limitations imposed by Android(especially on newer versions). By enabling this option you will give its service higher priority than normal and as a result the blocker not only will function more reliably but also more responsive. Note this will cause a permanent notification appears on mobile's notification area unless you disable this option.</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsFrom" xml:space="preserve">
+    <value>callback requests from</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsFromOnePatient" xml:space="preserve">
+    <value>callback requests from one patient</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsNotificationChannelDescription" xml:space="preserve">
+    <value>Callback requests from patients</value>
+  </data>
+  <data name="DoctorAppCallbackRequestsNotificationChannelTitle" xml:space="preserve">
+    <value>Callback Requests</value>
+  </data>
+  <data name="DoctorAppClickToDownloadResaNewVersion" xml:space="preserve">
+    <value>Click to download the latest version of Resa.</value>
+  </data>
+  <data name="DoctorAppContactsPermissionRationalleDescription" xml:space="preserve">
+    <value>In order for Resa app to function properly you need to grant Contacts permission.</value>
+  </data>
+  <data name="DoctorAppDownloadResaNewVersion" xml:space="preserve">
+    <value>Download new version of Resa</value>
+  </data>
+  <data name="DoctorAppDownloadsNotificationChannelDescription" xml:space="preserve">
+    <value>Resa downloads notifications</value>
+  </data>
+  <data name="DoctorAppDownloadsNotificationChannelTitle" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="DoctorAppDrawOverAppPermissionPleaseEnable" xml:space="preserve">
+    <value>Please enable display over apps permission</value>
+  </data>
+  <data name="DoctorAppEnterResa" xml:space="preserve">
+    <value>Enter Resa</value>
+  </data>
+  <data name="DoctorAppGeneralNotificationChannelTitle" xml:space="preserve">
+    <value>General Notifications</value>
+  </data>
+  <data name="DoctorAppIdontKnowYet" xml:space="preserve">
+    <value>I don't know yet</value>
+  </data>
+  <data name="DoctorAppName" xml:space="preserve">
+    <value>Resa</value>
+  </data>
+  <data name="DoctorAppNewAppVersionDownloaded" xml:space="preserve">
+    <value>New version of Resa app was downloaded.</value>
+  </data>
+  <data name="DoctorAppNewCallbackRequestFromPatient" xml:space="preserve">
+    <value>New callback request from patient</value>
+  </data>
+  <data name="DoctorAppOneCallbackRequestFromPatient" xml:space="preserve">
+    <value>One callback request from patient</value>
+  </data>
+  <data name="DoctorAppPatientCallsBlockerService" xml:space="preserve">
+    <value>Resa patients call blocker service</value>
+  </data>
+  <data name="DoctorAppPatientInsufficientCreditMessage" xml:space="preserve">
+    <value>The patient has not sufficient amount of credit to host the call.</value>
+  </data>
+  <data name="DoctorAppPatients" xml:space="preserve">
+    <value>patients</value>
+  </data>
+  <data name="DoctorAppPermissionsAutostartRationale" xml:space="preserve">
+    <value>Please enable the "Autostart" option for Resa. Enabling this option is necessary for Resa calls blocker to function properly.</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationale" xml:space="preserve">
+    <value>Please bear it in mind that in order for Resa app to function properly always keep the related permissions granted.</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationaleAndHowToEnable" xml:space="preserve">
+    <value>Please grant all requested permissions. You can also do this in Resa app setting sreen in the Permissions section.</value>
+  </data>
+  <data name="DoctorAppPermissionsGeneralRationaleDescription" xml:space="preserve">
+    <value>Dear doctor, in order for the Resa app to function properly you need to grant the app the requested permissions, and make sure they all always keep being granted.</value>
+  </data>
+  <data name="DoctorAppPermissionsNotificationRationale" xml:space="preserve">
+    <value>Please grant the access to Notification Policy to Resa. This permission is required for Resa call blocker to function properly.</value>
+  </data>
+  <data name="DoctorAppSettings" xml:space="preserve">
+    <value>App settings</value>
+  </data>
+  <data name="DoctorAppSettingsAdvanced" xml:space="preserve">
+    <value>Advanced Settings</value>
+  </data>
+  <data name="DoctorAppSettingsPage" xml:space="preserve">
+    <value>Resa App Settings Page</value>
+  </data>
+  <data name="DoctorAppStoragePermissionRationalleDescription" xml:space="preserve">
+    <value>In order to download and update Resa app to the latest version you need to grant Storage permission.</value>
+  </data>
+  <data name="DoctorAppWasOneOfYourPatients" xml:space="preserve">
+    <value>one of your patients?</value>
+  </data>
+  <data name="DoctorAppWasTheCallerWithTheNumber" xml:space="preserve">
+    <value>Was the caller with the number</value>
+  </data>
+  <data name="DoctorAppWelcomeToResaApplication" xml:space="preserve">
+    <value>Welcome to Resa Application</value>
+  </data>
+  <data name="DoctorAppXiaomiMiuiAutostartInfo" xml:space="preserve">
+    <value>In Xiaomi phones which their Rom are "MIUI" in order for the Resa application to behave correctly, "Autostart" option needs to be enabled.</value>
+  </data>
+  <data name="DoctorCard" xml:space="preserve">
+    <value>Doctor's Card</value>
+  </data>
+  <data name="DoctorTelegramBot" xml:space="preserve">
+    <value>DoctorTelegramBot</value>
+  </data>
+  <data name="DoNotDisturbOvernight" xml:space="preserve">
+    <value>DoNotDisturbOvernight</value>
+  </data>
+  <data name="Dossier" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DownloadUpdate" xml:space="preserve">
+    <value>Download Update</value>
+  </data>
+  <data name="DuplicateNumber" xml:space="preserve">
+    <value>Duplicat number</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EffectiveDuration" xml:space="preserve">
+    <value>EffectiveDuration</value>
+  </data>
+  <data name="ElectronicChargeFinancialTransaction" xml:space="preserve">
+    <value>Electronic Charge Financial Transaction</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>EmailInvalid</value>
+  </data>
+  <data name="EmergencyMedicine" xml:space="preserve">
+    <value>EmergencyMedicine</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorContactingResa" xml:space="preserve">
+    <value>Error Contacting Resa Service</value>
+  </data>
+  <data name="Expertise" xml:space="preserve">
+    <value>Expertise</value>
+  </data>
+  <data name="Expiration" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="ExpirationDate" xml:space="preserve">
+    <value>ExpirationDate</value>
+  </data>
+  <data name="ExpiresAt" xml:space="preserve">
+    <value>ExpiresAt</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FameSeeker" xml:space="preserve">
+    <value>Fame Seeker</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="FertilityPhd" xml:space="preserve">
+    <value>FertilityPhd</value>
+  </data>
+  <data name="FifteenThousandTomans" xml:space="preserve">
+    <value>FifteenThousandTomans</value>
+  </data>
+  <data name="FiftyThousandTomans" xml:space="preserve">
+    <value>FiftyThousandTomans</value>
+  </data>
+  <data name="FileTransferFinancialTransaction" xml:space="preserve">
+    <value>File Transfer Financial Transaction</value>
+  </data>
+  <data name="FinancialReport" xml:space="preserve">
+    <value>Financial Report</value>
+  </data>
+  <data name="FinancialReportChannel" xml:space="preserve">
+    <value>Financial Report Channel</value>
+  </data>
+  <data name="FinishedAt" xml:space="preserve">
+    <value>FinishedAt</value>
+  </data>
+  <data name="FirmsCommercialNumberInvalid" xml:space="preserve">
+    <value>Firm's Commercial Number Is Invalid.</value>
+  </data>
+  <data name="FirmsNationalIdentificationNumberInvalid" xml:space="preserve">
+    <value>Firm's National Identification Number Is Invalid.</value>
+  </data>
+  <data name="FirstFinancialTransaction" xml:space="preserve">
+    <value>First Financial Transaction</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="FirstOutgoingCallEstablishedAt" xml:space="preserve">
+    <value>FirstOutgoingCallEstablishedAt</value>
+  </data>
+  <data name="FiveThousandTomans" xml:space="preserve">
+    <value>FiveThousandTomans</value>
+  </data>
+  <data name="Forensic" xml:space="preserve">
+    <value>Forensic</value>
+  </data>
+  <data name="ForensicMedicineClinicalToxicityFellowship" xml:space="preserve">
+    <value>ForensicMedicineClinicalToxicityFellowship</value>
+  </data>
+  <data name="FortyFiveThousandTomans" xml:space="preserve">
+    <value>FortyFiveThousandTomans</value>
+  </data>
+  <data name="FortyThousandTomans" xml:space="preserve">
+    <value>FortyThousandTomans</value>
+  </data>
+  <data name="FreeFirstCall" xml:space="preserve">
+    <value>Free First Call</value>
+  </data>
+  <data name="FrequentlyAskedQuestions" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="FromNowOnYouCanAddPatientsToResa" xml:space="preserve">
+    <value>4. From now on you can add your patients numbers to Resa from Contacts or Recent Calls.</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>FullName</value>
+  </data>
+  <data name="GatewayDescription" xml:space="preserve">
+    <value>Gateway Description</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GeneralPractice" xml:space="preserve">
+    <value>GeneralPractitioner</value>
+  </data>
+  <data name="GeneralSurgery" xml:space="preserve">
+    <value>GeneralSurgery</value>
+  </data>
+  <data name="Geolocation" xml:space="preserve">
+    <value>Geolocation</value>
+  </data>
+  <data name="GoToCallBlockingSectionAndEnableResa" xml:space="preserve">
+    <value>3. Go to "Call Blocking And Identification" section, and enable Resa as a blocker.</value>
+  </data>
+  <data name="GoToDeviceSettings" xml:space="preserve">
+    <value>1. Go to device's Settings.</value>
+  </data>
+  <data name="GoToHelp" xml:space="preserve">
+    <value>Go to Help</value>
+  </data>
+  <data name="GoToPhoneSection" xml:space="preserve">
+    <value>2. Go to Phone section.</value>
+  </data>
+  <data name="GoToRecentsSection" xml:space="preserve">
+    <value>1. Go to "Recents" section.</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="HasEstablishedCall" xml:space="preserve">
+    <value>Has Established Call</value>
+  </data>
+  <data name="HasOperationalAudioAnnouncement" xml:space="preserve">
+    <value>Has Operational Audio Announcement</value>
+  </data>
+  <data name="HasTimeLimitForDiagnosticDocumentsService" xml:space="preserve">
+    <value>Has Time Limit For Diagnostic Documents Service</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Hostname" xml:space="preserve">
+    <value>Hostname</value>
+  </data>
+  <data name="HoursAgo" xml:space="preserve">
+    <value>hour(s) ago</value>
+  </data>
+  <data name="IBANInvalid" xml:space="preserve">
+    <value>IBAN Invalid</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="InfectiousDisease" xml:space="preserve">
+    <value>InfectiousDisease</value>
+  </data>
+  <data name="InputError" xml:space="preserve">
+    <value>Input Error</value>
+  </data>
+  <data name="InputInvalid" xml:space="preserve">
+    <value>Input Invalid</value>
+  </data>
+  <data name="InputNotLatin" xml:space="preserve">
+    <value>Input Not Latin</value>
+  </data>
+  <data name="InputPhoneNumberError" xml:space="preserve">
+    <value>Input phone number error</value>
+  </data>
+  <data name="InputRequired" xml:space="preserve">
+    <value>Input Required</value>
+  </data>
+  <data name="InputTooLong" xml:space="preserve">
+    <value>Input is too long.</value>
+  </data>
+  <data name="InsertedNumberIsAlreadyInAllowedList" xml:space="preserve">
+    <value>Inserted number is already in the Allowed numbers list.</value>
+  </data>
+  <data name="InsertedNumberIsAlreadyInBlockedList" xml:space="preserve">
+    <value>Inserted number is already in the Blocked numbers list.</value>
+  </data>
+  <data name="IntendedCaller" xml:space="preserve">
+    <value>Intended Caller</value>
+  </data>
+  <data name="IntendedReceiver" xml:space="preserve">
+    <value>Intended Receiver</value>
+  </data>
+  <data name="InternalMedicine" xml:space="preserve">
+    <value>InternalMedicine</value>
+  </data>
+  <data name="InternationalBankAccountNumber" xml:space="preserve">
+    <value>IBAN</value>
+  </data>
+  <data name="InternistGastroenterologist" xml:space="preserve">
+    <value>InternistGastroenterologist</value>
+  </data>
+  <data name="IntroductoryRemarks" xml:space="preserve">
+    <value>Introductory Remarks</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>Date Is Invalid</value>
+  </data>
+  <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Invalid username or password</value>
+  </data>
+  <data name="IPAddress" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>IsActive</value>
+  </data>
+  <data name="IsAssignable" xml:space="preserve">
+    <value>IsAssignable</value>
+  </data>
+  <data name="IsAvailable" xml:space="preserve">
+    <value>Is Available</value>
+  </data>
+  <data name="IsAvailableForPublicUse" xml:space="preserve">
+    <value>Is Available For Public Use</value>
+  </data>
+  <data name="IsDefault" xml:space="preserve">
+    <value>IsDefault</value>
+  </data>
+  <data name="IsEnabled" xml:space="preserve">
+    <value>IsEnabled</value>
+  </data>
+  <data name="IsHidden" xml:space="preserve">
+    <value>Is Hidden</value>
+  </data>
+  <data name="IsInvalid" xml:space="preserve">
+    <value>Is invalid</value>
+  </data>
+  <data name="IsMyPatient" xml:space="preserve">
+    <value>Is my patient</value>
+  </data>
+  <data name="IsNotMyPatient" xml:space="preserve">
+    <value>Is not my patient</value>
+  </data>
+  <data name="IsOperational" xml:space="preserve">
+    <value>Is Operational</value>
+  </data>
+  <data name="IsOperationalNow" xml:space="preserve">
+    <value>IsOperationalNow</value>
+  </data>
+  <data name="IsPublic" xml:space="preserve">
+    <value>Is Public</value>
+  </data>
+  <data name="IssuedAt" xml:space="preserve">
+    <value>IssuedAt</value>
+  </data>
+  <data name="IUnderstand" xml:space="preserve">
+    <value>I understand</value>
+  </data>
+  <data name="KeepAtBay" xml:space="preserve">
+    <value>Keep At Bay</value>
+  </data>
+  <data name="LastFinancialTransaction" xml:space="preserve">
+    <value>Last Financial Transaction</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="LastSettledTransaction" xml:space="preserve">
+    <value>Last Settled Transaction</value>
+  </data>
+  <data name="LastTransactionId" xml:space="preserve">
+    <value>LastTransactionId</value>
+  </data>
+  <data name="Later" xml:space="preserve">
+    <value>Later</value>
+  </data>
+  <data name="Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="LatitudeInvalidRange" xml:space="preserve">
+    <value>LatitudeInvalidRange</value>
+  </data>
+  <data name="LiquidationFinancialTransaction" xml:space="preserve">
+    <value>Liquidation Financial Transaction</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>Login error</value>
+  </data>
+  <data name="LoginErrorGeneralMessage" xml:space="preserve">
+    <value>Error in logging in Resa</value>
+  </data>
+  <data name="Longitude" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="LongitudeInvalidRange" xml:space="preserve">
+    <value>LongitudeInvalidRange</value>
+  </data>
+  <data name="MainPage" xml:space="preserve">
+    <value>Main Page</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="MedicalCouncilNumber" xml:space="preserve">
+    <value>MedicalCouncilNumber</value>
+  </data>
+  <data name="MedicalCouncilNumberShortened" xml:space="preserve">
+    <value>MedicalCouncilNumberShortened</value>
+  </data>
+  <data name="Members" xml:space="preserve">
+    <value>Members</value>
+  </data>
+  <data name="Midwifery" xml:space="preserve">
+    <value>Midwifery</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="MinutesAgo" xml:space="preserve">
+    <value>minutes ago</value>
+  </data>
+  <data name="MobileNumber" xml:space="preserve">
+    <value>MobileNumber</value>
+  </data>
+  <data name="MobileNumberInvalid" xml:space="preserve">
+    <value>MobileNumberInvalid</value>
+  </data>
+  <data name="MobileNumberRequired" xml:space="preserve">
+    <value>MobileNumberRequired</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="MSISDN" xml:space="preserve">
+    <value>MSISDN</value>
+  </data>
+  <data name="MyState" xml:space="preserve">
+    <value>My State</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NationalIdentificationNumber" xml:space="preserve">
+    <value>National Identification Number</value>
+  </data>
+  <data name="NationalNumber" xml:space="preserve">
+    <value>National Number</value>
+  </data>
+  <data name="Neonatalogist" xml:space="preserve">
+    <value>Neonatalogist</value>
+  </data>
+  <data name="Nephrology" xml:space="preserve">
+    <value>Nephrology</value>
+  </data>
+  <data name="Neurology" xml:space="preserve">
+    <value>Neurology</value>
+  </data>
+  <data name="NextPage" xml:space="preserve">
+    <value>NextPage</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoCallOccured" xml:space="preserve">
+    <value>No Call Occured</value>
+  </data>
+  <data name="NoConnectionError" xml:space="preserve">
+    <value>No connection error</value>
+  </data>
+  <data name="NoGsmOrInternetError" xml:space="preserve">
+    <value>Not able to reach server. Please make sure your phone is not in "Airplane mode", and you have internet.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="NoPhoneNumberFound" xml:space="preserve">
+    <value>No phone number found</value>
+  </data>
+  <data name="NoServiceError" xml:space="preserve">
+    <value>NoServiceError</value>
+  </data>
+  <data name="NotAbleSharingResaNumber" xml:space="preserve">
+    <value>Not being able to share Resa number</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="NotValidAfter" xml:space="preserve">
+    <value>NotValidAfter</value>
+  </data>
+  <data name="NotValidBefore" xml:space="preserve">
+    <value>NotValidBefore</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="Num0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Num1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Num2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Num3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Num4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Num5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Num6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Num7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Num8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Num9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="NumbersSmart" xml:space="preserve">
+    <value>Number(s)</value>
+  </data>
+  <data name="Nutritionist" xml:space="preserve">
+    <value>Nutritionist</value>
+  </data>
+  <data name="NutritionSpecialist" xml:space="preserve">
+    <value>NutritionSpecialist</value>
+  </data>
+  <data name="ObstetricsAndGynecology" xml:space="preserve">
+    <value>ObstetricsAndGynecology</value>
+  </data>
+  <data name="OffHours" xml:space="preserve">
+    <value>OffHours</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Office</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Older" xml:space="preserve">
+    <value>Older</value>
+  </data>
+  <data name="OncallHours" xml:space="preserve">
+    <value>On-call Hours</value>
+  </data>
+  <data name="Oncology" xml:space="preserve">
+    <value>Oncology</value>
+  </data>
+  <data name="OneTimeChargeFinancialTransaction" xml:space="preserve">
+    <value>One Time Charge Financial Transaction</value>
+  </data>
+  <data name="Operating" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="Ophthalmology" xml:space="preserve">
+    <value>Ophthalmology</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Orthopaedics" xml:space="preserve">
+    <value>Orthopaedics</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="PaediatricCardiology" xml:space="preserve">
+    <value>PaediatricCardiology</value>
+  </data>
+  <data name="PalliativeMedicine" xml:space="preserve">
+    <value>PalliativeMedicine</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>PasswordRequired</value>
+  </data>
+  <data name="Pathobiology" xml:space="preserve">
+    <value>Pathobiology</value>
+  </data>
+  <data name="Pathology" xml:space="preserve">
+    <value>Pathology</value>
+  </data>
+  <data name="Patient" xml:space="preserve">
+    <value>Patient</value>
+  </data>
+  <data name="PatientCard" xml:space="preserve">
+    <value>Patient's Card</value>
+  </data>
+  <data name="PatientDiagnosticDocuments" xml:space="preserve">
+    <value>Patient Diagnostic Documents</value>
+  </data>
+  <data name="PatientDiagnosticDocumentsChannel" xml:space="preserve">
+    <value>Patient Diagnostic Documents Channel</value>
+  </data>
+  <data name="PatientDiagnosticDocumentsService" xml:space="preserve">
+    <value>Patient Diagnostic Documents Service</value>
+  </data>
+  <data name="PatientIdXamlSpecialVersion" xml:space="preserve">
+    <value>Patient ID: {0}</value>
+  </data>
+  <data name="PatientNotFound" xml:space="preserve">
+    <value>Patient Not Found</value>
+  </data>
+  <data name="PatientQuestion" xml:space="preserve">
+    <value>PatientQuestion</value>
+  </data>
+  <data name="PatientQuestionTitle" xml:space="preserve">
+    <value>PatientQuestionTitle</value>
+  </data>
+  <data name="PaymentGatewayIdentifier" xml:space="preserve">
+    <value>Payment Gateway Identifier</value>
+  </data>
+  <data name="PaymentMethod" xml:space="preserve">
+    <value>PaymentMethod</value>
+  </data>
+  <data name="PaymentVerifiedAt" xml:space="preserve">
+    <value>Payment Verified At</value>
+  </data>
+  <data name="Pediatrician" xml:space="preserve">
+    <value>Pediatrician</value>
+  </data>
+  <data name="Period" xml:space="preserve">
+    <value>Period</value>
+  </data>
+  <data name="PeriodHoursRangeInvalid" xml:space="preserve">
+    <value>PeriodHoursRangeInvalid</value>
+  </data>
+  <data name="PeriodicCallsReporterOptions" xml:space="preserve">
+    <value>PeriodicCallsReporterOptions</value>
+  </data>
+  <data name="PeriodicConsumptionReport" xml:space="preserve">
+    <value>Periodic Consumption Report</value>
+  </data>
+  <data name="PeriodicConsumptionReportChannel" xml:space="preserve">
+    <value>Periodic Consumption Report Channel</value>
+  </data>
+  <data name="PeriodTimeInHours" xml:space="preserve">
+    <value>PeriodTimeInHours</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="PhoneNumberHasBeenAlreadyTaken" xml:space="preserve">
+    <value>PhoneNumberHasBeenAlreadyTaken</value>
+  </data>
+  <data name="PhoneNumberInvalid" xml:space="preserve">
+    <value>PhoneNumberInvalid</value>
+  </data>
+  <data name="PhoneNumberRequired" xml:space="preserve">
+    <value>PhoneNumberRequired</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeInvalid" xml:space="preserve">
+    <value>PhoneNumberVerificationCodeInvalid</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeRequired" xml:space="preserve">
+    <value>PhoneNumberVerificationCodeRequired</value>
+  </data>
+  <data name="PhoneNumberVerificationCodeTimeLimitError" xml:space="preserve">
+    <value>PhoneNumberVerificationCodeTimeLimitError</value>
+  </data>
+  <data name="Platform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="PleaseEnterThePhoneNumber" xml:space="preserve">
+    <value>Please enter the phone number</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>PostalCode</value>
+  </data>
+  <data name="PreviousPage" xml:space="preserve">
+    <value>PreviousPage</value>
+  </data>
+  <data name="PricePerMinute" xml:space="preserve">
+    <value>PricePerMinute</value>
+  </data>
+  <data name="PricePerMinuteIsPositive" xml:space="preserve">
+    <value>PricePerMinuteIsPositive</value>
+  </data>
+  <data name="PricePerMinuteRequired" xml:space="preserve">
+    <value>PricePerMinuteRequired</value>
+  </data>
+  <data name="PricePerRequest" xml:space="preserve">
+    <value>Price Per Request</value>
+  </data>
+  <data name="PricingPolicy" xml:space="preserve">
+    <value>Pricing Policy</value>
+  </data>
+  <data name="PrimarySubscriberIdentificationCardSerialNumber" xml:space="preserve">
+    <value>Primary Subscriber Identification Card Serial Number</value>
+  </data>
+  <data name="PrincipalParty" xml:space="preserve">
+    <value>PrincipalParty</value>
+  </data>
+  <data name="Printer" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="PromotionalAccount" xml:space="preserve">
+    <value>PromotionalAccount</value>
+  </data>
+  <data name="PromotionalDoctor" xml:space="preserve">
+    <value>PromotionalDoctor</value>
+  </data>
+  <data name="PromotionFinancialTransaction" xml:space="preserve">
+    <value>Promotion Financial Transaction</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="Psychiatrist" xml:space="preserve">
+    <value>Psychiatrist</value>
+  </data>
+  <data name="Pulmonology" xml:space="preserve">
+    <value>Pulmonology</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="ReadTerms" xml:space="preserve">
+    <value>ReadTerms</value>
+  </data>
+  <data name="ReasonForSuspension" xml:space="preserve">
+    <value>Reason For Suspension</value>
+  </data>
+  <data name="ReceiverSubscriberIdentificationCard" xml:space="preserve">
+    <value>ReceiverSubscriberIdentificationCard</value>
+  </data>
+  <data name="Registeration" xml:space="preserve">
+    <value>Registeration</value>
+  </data>
+  <data name="RegisterationAgreementRequired" xml:space="preserve">
+    <value>RegisterationAgreementRequired</value>
+  </data>
+  <data name="RegistrationAgreement" xml:space="preserve">
+    <value>RegistrationAgreement</value>
+  </data>
+  <data name="RegistrationMethod" xml:space="preserve">
+    <value>RegistrationMethod</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ReporterType" xml:space="preserve">
+    <value>ReporterType</value>
+  </data>
+  <data name="ReportPeriodHoursRequired" xml:space="preserve">
+    <value>ReportPeriodHoursRequired</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="Resa" xml:space="preserve">
+    <value>Resa</value>
+  </data>
+  <data name="ResaApplication" xml:space="preserve">
+    <value>Resa Application</value>
+  </data>
+  <data name="ResaAppNeedsUpdatePleaseDownloadMessage" xml:space="preserve">
+    <value>Resa needs to be updated urgently. Please download the last version.</value>
+  </data>
+  <data name="ResaCodeXamlSpecialVersion" xml:space="preserve">
+    <value>Resa code: {0}</value>
+  </data>
+  <data name="ResaCommissionPerRequest" xml:space="preserve">
+    <value>Resa Commission Per Request</value>
+  </data>
+  <data name="ResaFullName" xml:space="preserve">
+    <value>Iranians Health Media</value>
+  </data>
+  <data name="ResaHasNotCallBlockingPermissionMessage" xml:space="preserve">
+    <value>Resa is not granted call blocking permission by your device. To learn how to enable it go to Help page.</value>
+  </data>
+  <data name="ResaIsAmongSharedContactsErrorMessage" xml:space="preserve">
+    <value>Resa's number is among the chosen numbers to be shared. You cannot share Resa's numbers with this application.</value>
+  </data>
+  <data name="ResaIsBeingUpdatedInBg" xml:space="preserve">
+    <value>Resa is now being updated in the background.</value>
+  </data>
+  <data name="ResaNumber" xml:space="preserve">
+    <value>ResaNumber</value>
+  </data>
+  <data name="ResaSystem" xml:space="preserve">
+    <value>Resa System</value>
+  </data>
+  <data name="ReservationNumber" xml:space="preserve">
+    <value>Reservation Number</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SecondaryIcon" xml:space="preserve">
+    <value>Secondary Icon</value>
+  </data>
+  <data name="SecondaryPhoneNumber" xml:space="preserve">
+    <value>SecondaryPhoneNumber</value>
+  </data>
+  <data name="SelectedContentIsNotSharableWithResaMessage" xml:space="preserve">
+    <value>The selected content is not sharable with Resa.</value>
+  </data>
+  <data name="SelectYourState" xml:space="preserve">
+    <value>Select your state</value>
+  </data>
+  <data name="SendingChangeStateRequest" xml:space="preserve">
+    <value>SendingChangeStateRequest</value>
+  </data>
+  <data name="SendPeriodicReport" xml:space="preserve">
+    <value>Send Periodic Report</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>SerialNumber</value>
+  </data>
+  <data name="SerialNumberRequired" xml:space="preserve">
+    <value>SerialNumberRequired</value>
+  </data>
+  <data name="ServiceReference" xml:space="preserve">
+    <value>ServiceReference</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettledAt" xml:space="preserve">
+    <value>Settled At</value>
+  </data>
+  <data name="Settlement" xml:space="preserve">
+    <value>Settlement</value>
+  </data>
+  <data name="SettlementComplete" xml:space="preserve">
+    <value>SettlementComplete</value>
+  </data>
+  <data name="SettlementPending" xml:space="preserve">
+    <value>SettlementPending</value>
+  </data>
+  <data name="SharingNumberWithResa" xml:space="preserve">
+    <value>Sharing number with Resa</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="Sms" xml:space="preserve">
+    <value>Sms</value>
+  </data>
+  <data name="SmsSendError" xml:space="preserve">
+    <value>SmsSendError</value>
+  </data>
+  <data name="SpecialNeonatal" xml:space="preserve">
+    <value>SpecialNeonatal</value>
+  </data>
+  <data name="Specialty" xml:space="preserve">
+    <value>Specialty</value>
+  </data>
+  <data name="StartedAt" xml:space="preserve">
+    <value>StartedAt</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="SubscriptionPlan" xml:space="preserve">
+    <value>Subscription Plan</value>
+  </data>
+  <data name="SuccessfulCall" xml:space="preserve">
+    <value>Successful Call</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="SuspendedAt" xml:space="preserve">
+    <value>Suspended At</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="TapShareContactThenMoreAndEnableSharing" xml:space="preserve">
+    <value>3. Tap "Share Contact". Then after selecting "More" enable sharing with Resa.</value>
+  </data>
+  <data name="Telegram" xml:space="preserve">
+    <value>Telegram</value>
+  </data>
+  <data name="TelegramBot" xml:space="preserve">
+    <value>TelegramBot</value>
+  </data>
+  <data name="TelegramBotPeriodicReporterRequireChatId" xml:space="preserve">
+    <value>TelegramBotPeriodicReporterRequireChatId</value>
+  </data>
+  <data name="TenThousandTomans" xml:space="preserve">
+    <value>TenThousandTomans</value>
+  </data>
+  <data name="TheNumber" xml:space="preserve">
+    <value>The number</value>
+  </data>
+  <data name="ThereArentAnyCallbackRequests" xml:space="preserve">
+    <value>There aren't any callback requests</value>
+  </data>
+  <data name="ThirtyFiveThousandTomans" xml:space="preserve">
+    <value>ThirtyFiveThousandTomans</value>
+  </data>
+  <data name="ThirtyThousandTomans" xml:space="preserve">
+    <value>ThirtyThousandTomans</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>TimeZone</value>
+  </data>
+  <data name="TimeZoneUtcOffset" xml:space="preserve">
+    <value>Time Zone UTC Offset</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>TitleRequired</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Toggle" xml:space="preserve">
+    <value>Toggle</value>
+  </data>
+  <data name="Tokens" xml:space="preserve">
+    <value>Tokens</value>
+  </data>
+  <data name="TransactionId" xml:space="preserve">
+    <value>Transaction Id</value>
+  </data>
+  <data name="TransactionType" xml:space="preserve">
+    <value>TransactionType</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="TwentyFiveThousandTomans" xml:space="preserve">
+    <value>TwentyFiveThousandTomans</value>
+  </data>
+  <data name="TwentyThousandTomans" xml:space="preserve">
+    <value>TwentyThousandTomans</value>
+  </data>
+  <data name="Undefined" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UnsuccessfulCall" xml:space="preserve">
+    <value>Unsuccessful Call</value>
+  </data>
+  <data name="UnsuccessfulCallBecauseInsufficientCredit_etc" xml:space="preserve">
+    <value>Unsuccessful Call Because Insufficient Credit ,etc</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>UpdateError</value>
+  </data>
+  <data name="UpdatingResa" xml:space="preserve">
+    <value>Updating Resa</value>
+  </data>
+  <data name="UrgentUpdate" xml:space="preserve">
+    <value>Urgent update</value>
+  </data>
+  <data name="Urology" xml:space="preserve">
+    <value>Urology</value>
+  </data>
+  <data name="UserInformationCorrectnessResponsibilityMessage" xml:space="preserve">
+    <value>UserInformationCorrectnessResponsibilityMessage</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>UserName</value>
+  </data>
+  <data name="Validity" xml:space="preserve">
+    <value>Validity</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="VSIN" xml:space="preserve">
+    <value>VSIN</value>
+  </data>
+  <data name="VSINInvalid" xml:space="preserve">
+    <value>VSINInvalid</value>
+  </data>
+  <data name="VSINOrPasswordInvalid" xml:space="preserve">
+    <value>VSINOrPasswordInvalid</value>
+  </data>
+  <data name="VSINRequired" xml:space="preserve">
+    <value>VSINRequired</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="WorkplaceAddress" xml:space="preserve">
+    <value>Workplace Address</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Yesterday</value>
+  </data>
+  <data name="YouMustLoginToShareContactWithResa" xml:space="preserve">
+    <value>You must login to app to share a contact with Resa.</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="IsHiddenInCategoryPages" xml:space="preserve">
+    <value>Is Hidden In Category Pages</value>
+  </data>
+  <data name="IsPageActive" xml:space="preserve">
+    <value>Is Page Active</value>
+  </data>
+  <data name="PreviousPrice" xml:space="preserve">
+    <value>Previous Price</value>
+  </data>
+  <data name="AboutDoctor" xml:space="preserve">
+    <value>About Doctor</value>
+  </data>
+  <data name="MobileBackgroundImage" xml:space="preserve">
+    <value>Mobile Background Image</value>
+  </data>
+  <data name="SeoContent" xml:space="preserve">
+    <value>Seo Content</value>
+  </data>
+  <data name="CanNotBeBlank" xml:space="preserve">
+    <value>Can't be blank</value>
+  </data>
+  <data name="SeoContentNotFound" xml:space="preserve">
+    <value>Seo content not found.</value>
+  </data>
+  <data name="CategoryCreatedSuccessfuly" xml:space="preserve">
+    <value>Category Created Successfuly</value>
+  </data>
+  <data name="CategoryDeletedSuccessfuly" xml:space="preserve">
+    <value>Category Deleted Successfuly</value>
+  </data>
+  <data name="CategoryPageActicatedSuccessfuly" xml:space="preserve">
+    <value>Category Page Acticated Successfuly</value>
+  </data>
+  <data name="CategoryPageDeacticatedSuccessfuly" xml:space="preserve">
+    <value>Category Page Deacticated Successfuly</value>
+  </data>
+  <data name="CategoryUpdatedSuccessfuly" xml:space="preserve">
+    <value>Category Updated Successfuly</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="InvalidAuthorImageFormat" xml:space="preserve">
+    <value>Invalid Author Image Format</value>
+  </data>
+  <data name="InvalidBackgroundImageFormat" xml:space="preserve">
+    <value>Invalid Background Image Format</value>
+  </data>
+  <data name="InvalidMobileBackgroundImageFormat" xml:space="preserve">
+    <value>Invalid Mobile Background Image Format</value>
+  </data>
+  <data name="RequestFailed" xml:space="preserve">
+    <value>Request Failed</value>
+  </data>
+  <data name="SeoContentCreatedSuccessfuly" xml:space="preserve">
+    <value>Seo Content Created Successfuly</value>
+  </data>
+  <data name="SeoContentDeletedSuccessfuly" xml:space="preserve">
+    <value>Seo Content Created Successfuly</value>
+  </data>
+  <data name="SeoContentsOrderUpdatedSuccessfuly" xml:space="preserve">
+    <value>Seo Contents Order Updated Successfuly</value>
+  </data>
+  <data name="SeoContentUpdatedSuccessfuly" xml:space="preserve">
+    <value>Seo Content Updated Successfuly</value>
+  </data>
+  <data name="TestimonialCreatedSuccessfuly" xml:space="preserve">
+    <value>Testimonial Created Successfuly</value>
+  </data>
+  <data name="TestimonialDeletedSuccessfuly" xml:space="preserve">
+    <value>Testimonial Deleted Successfuly</value>
+  </data>
+  <data name="TestimonialUpdatedSuccessfuly" xml:space="preserve">
+    <value>Testimonial Updated Successfuly</value>
+  </data>
+  <data name="CATEGORY_BACKGROUND_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>category background image not found</value>
+  </data>
+  <data name="CATEGORY_MOBILE_BACKGROUND_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>category mobile background image not found</value>
+  </data>
+  <data name="CATEGORY_NOT_FOUND" xml:space="preserve">
+    <value>category not found</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_DOCTORS" xml:space="preserve">
+    <value>failed to retrieve doctors</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_SEO_CONTENTS" xml:space="preserve">
+    <value>failed to retrieve doctors</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_TESTIMONIALS" xml:space="preserve">
+    <value>failed to retrieve testimonials</value>
+  </data>
+  <data name="TESTIMONIAL_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>testimonial image not found</value>
+  </data>
+  <data name="FAILED_TO_RETRIEVE_DOCTOR_INACCESIBLE_PERIODS" xml:space="preserve">
+    <value>Failed to retrieve doctor inaccesible periods</value>
+  </data>
+  <data name="Device" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="DeviceModel" xml:space="preserve">
+    <value>Device Model</value>
+  </data>
+  <data name="OperatingSystem" xml:space="preserve">
+    <value>Operating System</value>
+  </data>
+  <data name="IsPrimary" xml:space="preserve">
+    <value>Is Primary</value>
+  </data>
+  <data name="ACCOUNT_MUST_HAVE_AT_LEAST_ONE_PRIMARY_DEVICE" xml:space="preserve">
+    <value>Account must have at least one primary device</value>
+  </data>
+  <data name="DEVICE_NOT_FOUND" xml:space="preserve">
+    <value>device not found</value>
+  </data>
+  <data name="DOCTOR_ALREADY_HAS_A_PRIMARY_DEVICE" xml:space="preserve">
+    <value>doctor already has a primary device</value>
+  </data>
+  <data name="FOR_EACH_DOCTOR_MORE_THAN_N_DEVICE_CAN_NOT_BE_ADDED" xml:space="preserve">
+    <value>For each doctor more than {0} device can't be added</value>
+  </data>
+  <data name="PRIMARY_DEVICE_COULD_NOT_BE_REMOVED" xml:space="preserve">
+    <value>Primary device could not be removed. Please set another device as primary.</value>
+  </data>
+  <data name="DEVICE_ADDED_TO_DOCTOR_SUCCESSFULLY" xml:space="preserve">
+    <value>device added to doctor successfully</value>
+  </data>
+  <data name="DEVICE_DELETED_SUCCESSFULLY" xml:space="preserve">
+    <value>device deleted successfully</value>
+  </data>
+  <data name="DEVICE_EDITED_SUCCESSFULLY" xml:space="preserve">
+    <value>deviec edited successfully</value>
+  </data>
+  <data name="BOOKING_NOT_FOUND" xml:space="preserve">
+    <value>booking not found</value>
+  </data>
+  <data name="CALLBACK_CONSENT_PROMPT_FEEDBACK" xml:space="preserve">
+    <value>CallbackConsentPromptFeedback</value>
+  </data>
+  <data name="CALLBACK_CONSENT_PROMPT_FEEDBACK_LESS_THAN_5_MINUTES" xml:space="preserve">
+    <value>CallbackConsentPromptFeedbackLessThan5Minutes</value>
+  </data>
+  <data name="Creating_Failed_Healthcare_Call" xml:space="preserve">
+    <value>Creating Failed Healthcare Call ({0})</value>
+  </data>
+  <data name="DOCTOR_CALLBACK_ARRANGEMENT_INSUFFICIENT_CREDIT" xml:space="preserve">
+    <value>DoctorCallbackArrangementInsufficientCredit</value>
+  </data>
+  <data name="FAILED_TO_PROCESS" xml:space="preserve">
+    <value>failed to process {0} ({1})</value>
+  </data>
+  <data name="FAILED_TO_PROCESS_FAILED_HEALTHCARE_CALL" xml:space="preserve">
+    <value>Failed To Process Failed Healthcare Call ({0} - {1})</value>
+  </data>
+  <data name="PROCESS_FAILURE" xml:space="preserve">
+    <value>process failure</value>
+  </data>
+  <data name="TimeBasedChargePackageDescriptionIsRequired" xml:space="preserve">
+    <value>Description is required.</value>
+  </data>
+  <data name="TimeBasedChargePackageDurationMustBeGreaterThanZero" xml:space="preserve">
+    <value>Package time duration must be greater than zero.</value>
+  </data>
+  <data name="TimeBasedChargePackageTitleIsRequired" xml:space="preserve">
+    <value>Package name is required.</value>
+  </data>
+  <data name="DurationInMinute" xml:space="preserve">
+    <value>Duration in minute</value>
+  </data>
+  <data name="PackageTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="TimeBasedChargePackageMedicalSpeciality" xml:space="preserve">
+    <value>Applied to speciality</value>
+  </data>
+  <data name="TimeBasedChargePackageNoPackageFound" xml:space="preserve">
+    <value>No package found</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="NEW_TIME_BASED_PACKAGE_SUCCESSFULLY_ADDED" xml:space="preserve">
+    <value>New time based package successfully added.</value>
+  </data>
+  <data name="TIME_BASED_PACKAGE_SUCCESSFULLY_UPDATED" xml:space="preserve">
+    <value>Time based package successfully updated.</value>
+  </data>
+  <data name="TIME_BASED_PACKAGE_SUCCESSFULLY_DELETED" xml:space="preserve">
+    <value>Time based package successfully deleted.</value>
+  </data>
+  <data name="DOCTOR_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>Doctor not found.</value>
+  </data>
+  <data name="MEDICAL_SPECIALITY_HAS_NO_TIME_BASED_PACKAGE_MESSAGE" xml:space="preserve">
+    <value>There is no package registred for medical speciality.</value>
+  </data>
+  <data name="MEDICAL_SPECIALITY_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>Medical speciality not found.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_DELETED_SUCCESSFULLY_MESSAGE" xml:space="preserve">
+    <value>Package delete faild.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_DELETE_FAILD_MESSAGE" xml:space="preserve">
+    <value>Package delete faild.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_FAILD_TO_RETRIEVE_MESSAGE" xml:space="preserve">
+    <value>Retrieving package failed due to a system error.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_LIST_FAILD_TO_RETRIEVE_MESSAGE" xml:space="preserve">
+    <value>Retrieving packages list failed due to a system error.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NEW_PACKAGE_ADDED_MESSAGE" xml:space="preserve">
+    <value>New package added successfully.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NEW_PACKAGE_ADD_FAILD_MESSAGE" xml:space="preserve">
+    <value>Add new package faild.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_NOT_FOUND_MESSAGE" xml:space="preserve">
+    <value>Package does not existed.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_THERE_IS_NO_DEFAULT_PACKAGE_MESSAGE" xml:space="preserve">
+    <value>There is no default package registered.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_UPDATED_SUCCESSFULLY_MESSAGE" xml:space="preserve">
+    <value>Package updated successfully.</value>
+  </data>
+  <data name="TIME_BASED_CHARGE_PACKAGE_UPDATE_FAILD_MESSAGE" xml:space="preserve">
+    <value>Package updated faild.</value>
+  </data>
+  <data name="DoctorNotFound" xml:space="preserve">
+    <value>Doctor Not Found</value>
+  </data>
+  <data name="CallbackRequestNotFound" xml:space="preserve">
+    <value>Callback Request Not Found</value>
+  </data>
+  <data name="CallIsNotValid" xml:space="preserve">
+    <value>Call Is Not Valid</value>
+  </data>
+  <data name="BUSINESSـACCOUNTS" xml:space="preserve">
+    <value>Business accounts</value>
+  </data>
+  <data name="CHARGE_CARDS" xml:space="preserve">
+    <value>charge cards</value>
+  </data>
+  <data name="CUSTOMERـSUPPORT" xml:space="preserve">
+    <value>customer support</value>
+  </data>
+  <data name="DOCTORS" xml:space="preserve">
+    <value>Doctors</value>
+  </data>
+  <data name="EMERGENCY_CALLS" xml:space="preserve">
+    <value>emergency calls</value>
+  </data>
+  <data name="FINANCIALـTRANSACTIONS" xml:space="preserve">
+    <value>financial transactions</value>
+  </data>
+  <data name="GATEWAYـPAYMENTـREQUESTS" xml:space="preserve">
+    <value>gateway payment requests</value>
+  </data>
+  <data name="ONEـTIMEـCHARGE" xml:space="preserve">
+    <value>one time charge</value>
+  </data>
+  <data name="PATIENTS" xml:space="preserve">
+    <value>Patients</value>
+  </data>
+  <data name="PRICINGـPOLICIES" xml:space="preserve">
+    <value>pricing policies</value>
+  </data>
+  <data name="REPORTS" xml:space="preserve">
+    <value>reports</value>
+  </data>
+  <data name="SENDـBATCHـSHORTـMESSAGE" xml:space="preserve">
+    <value>send batch short message</value>
+  </data>
+  <data name="SIMـCARDS" xml:space="preserve">
+    <value>sim cards</value>
+  </data>
+  <data name="TIMEـBASEDـCHARGEـPACKAGES" xml:space="preserve">
+    <value>Time based charge packages</value>
+  </data>
+  <data name="VIRTUALـPHONENUMBERS" xml:space="preserve">
+    <value>virtual phon numbers</value>
+  </data>
+  <data name="WORKـPLACES" xml:space="preserve">
+    <value>work places</value>
+  </data>
+  <data name="PrincipalPartyNotFound" xml:space="preserve">
+    <value>Principal Party Not Found</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_ADDED_MESSAGE" xml:space="preserve">
+    <value>Liquidation transaction added successfully</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
+    <value>Liquidation transaction amount must be greater than zero</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_DESCRIPTION_IS_REQUIRED" xml:space="preserve">
+    <value>Liquidation transaction description is required</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_FAILED_MESSAGE" xml:space="preserve">
+    <value>Liquidation transaction failed</value>
+  </data>
+  <data name="PRINCIPAL_PARTY_SUBSCRIBER_NUMBER" xml:space="preserve">
+    <value>Principal party subscriber number</value>
+  </data>
+  <data name="PRINCIPAL_PARTY_SUBSCRIBER_NUMBER_IS_REQUIRED" xml:space="preserve">
+    <value>Principal party subscriber number is required</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTIONS" xml:space="preserve">
+    <value>Liquidation Transactions</value>
+  </data>
+  <data name="NEW_LIQUIDATION_TRANSACTION_SUCCESSFULLY_ADDED" xml:space="preserve">
+    <value>New liquidation transaction successfully added</value>
+  </data>
+  <data name="LIQUIDATION_TRANSACTION_AMOUNT_IS_REQUIRED" xml:space="preserve">
+    <value>Liquidation trasaction amount is required</value>
+  </data>
+  <data name="BlankReference" xml:space="preserve">
+    <value>Reference number can not be blank</value>
+  </data>
+  <data name="CannotChargePatient" xml:space="preserve">
+    <value>Patient can not be charged</value>
+  </data>
+  <data name="InvalidAmount" xml:space="preserve">
+    <value>Amount is invalid</value>
+  </data>
+  <data name="InvalidAmountTailingZero" xml:space="preserve">
+    <value>Amount is invalid (no tailing zero present).</value>
+  </data>
+  <data name="NotifyResellerSmsError" xml:space="preserve">
+    <value>Cannot send sms to reseller</value>
+  </data>
+  <data name="FILE_CONVERTION_IS_SUCCESS" xml:space="preserve">
+    <value>File convertion is success.</value>
+  </data>
+  <data name="FILE_FORMAT_IS_NOT_VALID" xml:space="preserve">
+    <value>File format is not valid</value>
+  </data>
+  <data name="IMAGE_DIMENSIONS_IS_NOT_VALID" xml:space="preserve">
+    <value>Image dimensions is not valid.</value>
+  </data>
+  <data name="IMAGE_FILE_SIZE_IS_NOT_VALID" xml:space="preserve">
+    <value>Image file size is not valid.</value>
+  </data>
+  <data name="DOCTOR_CREATED_SUCCESSFULLY" xml:space="preserve">
+    <value>doctor created successfully</value>
+  </data>
+  <data name="DOCTOR_UPDATED_SUCCESSFULLY" xml:space="preserve">
+    <value>doctor updated successfully</value>
+  </data>
+  <data name="IS_INVALID_IMAGE" xml:space="preserve">
+    <value>Image is not valid</value>
+  </data>
+  <data name="DOCTOR_IMAGE_NOT_FOUND" xml:space="preserve">
+    <value>doctor image not found</value>
+  </data>
+  <data name="CALLBACK_REQUEST_DEACTIVATE_SUCCESSFULLY" xml:space="preserve">
+    <value>Callback request deactivated Successfully</value>
+  </data>
+  <data name="PHONENUMBER_SHOULD_BE_MOBILENUMBER" xml:space="preserve">
+    <value>PhoneNumber should be mobile number</value>
+  </data>
+  <data name="ACTIVE_CALLBACK_REQUESTS_SUCCESSFULLY_NITIFED_TO_PATIENT" xml:space="preserve">
+    <value>Active callback requests successfully notified to patient</value>
+  </data>
+  <data name="ChainCardAddedToCardsSuccessfully" xml:space="preserve">
+    <value>Chain card added to cards successfully</value>
+  </data>
+  <data name="ChainCardRemovedFromCardsSuccessfully" xml:space="preserve">
+    <value>Chain card removed from cards successfully</value>
+  </data>
+  <data name="ChainCardForwardedHasConflict" xml:space="preserve">
+    <value>The card has conflict with another chain card</value>
+  </data>
+  <data name="IntenalExceptionWasThrownInSearchDoctors" xml:space="preserve">
+    <value>Intenal exception was thrown in search doctors</value>
+  </data>
+  <data name="CanNotFoundQuery" xml:space="preserve">
+    <value>Can not found query</value>
+  </data>
+  <data name="CallNotFound" xml:space="preserve">
+    <value>Call Not Found</value>
+  </data>
+  <data name="CallBookSurvey_Create_Successfully" xml:space="preserve">
+    <value>New survey added successfully</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="Vote" xml:space="preserve">
+    <value>Vote</value>
+  </data>
+  <data name="Survey" xml:space="preserve">
+    <value>Survey</value>
+  </data>
+  <data name="SurveyApproveSuccessfully" xml:space="preserve">
+    <value>Survey approve successfully</value>
+  </data>
+  <data name="SurveyRejectSuccessfully" xml:space="preserve">
+    <value>Survey reject successfully</value>
+  </data>
+  <data name="DoctorName" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="CategoryPageHeaderTitle" xml:space="preserve">
+    <value>Page Header Title</value>
+  </data>
+  <data name="PleaseEnterTheFullPhoneNumberWithCountryCode" xml:space="preserve">
+    <value>Please enter full phone number with country code.
+Example: +96897012345</value>
+  </data>
+  <data name="DoctorAppMedicalTests" xml:space="preserve">
+    <value>Medical Tests</value>
+  </data>
+  <data name="DoctorAppMedicalTestPrice" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="DoctorAppMedicalTest" xml:space="preserve">
+    <value>Medical Test Answer</value>
+  </data>
+  <data name="ThereArentAnyMedicalTests" xml:space="preserve">
+    <value>There aren't any medical tests.</value>
+  </data>
+  <data name="DoctorAppEnableMicPermissionToRecordVoice" xml:space="preserve">
+    <value>To start recording you need to grant its permission.</value>
+  </data>
+  <data name="DoctorAppMedicalTestRemoveRecordedVoiceMessage" xml:space="preserve">
+    <value>Delete recorded voice?</value>
+  </data>
+  <data name="DoctorAppReachedVoiceRecordingTimeLimitMessage" xml:space="preserve">
+    <value>Recording time limit was reached.</value>
+  </data>
+  <data name="DoctorAppVoiceRecordingErrorMessage" xml:space="preserve">
+    <value>Error on recording voice</value>
+  </data>
+  <data name="DoctorAppMedicalTestReplyTextPlaceholder" xml:space="preserve">
+    <value>Type your text reply here</value>
+  </data>
+  <data name="DoctorAppMedicalTestSubmitReply" xml:space="preserve">
+    <value>Send reply</value>
+  </data>
+  <data name="DoctorAppMedicalTestYourReply" xml:space="preserve">
+    <value>Your reply:</value>
+  </data>
+  <data name="VoiceRecording" xml:space="preserve">
+    <value>Voice recording</value>
+  </data>
+  <data name="DoctorAppSendingMedicalTestReplyIsInProgress" xml:space="preserve">
+    <value>Sending reply...</value>
+  </data>
+  <data name="DoctorAppMedicalTestSuccessfulSubmitReplyMessage" xml:space="preserve">
+    <value>Your replies to this medical test were sent successfully.</value>
+  </data>
+  <data name="DoctorAppShowNextMedicalTest" xml:space="preserve">
+    <value>Show next medical test</value>
+  </data>
+  <data name="ResaDoctorApp" xml:space="preserve">
+    <value>Resa Doctor App</value>
+  </data>
+  <data name="DoctorAppAboutDescriptionOmaniVersion" xml:space="preserve">
+    <value>RESA has been created to provide an effective and purposeful solution to connect patients and physicians. Your feedbacks are highly appreciated for us.</value>
+  </data>
+  <data name="DoctorAppPatientCreditInMinutes" xml:space="preserve">
+    <value>Patient credit</value>
+  </data>
+  <data name="InvalidVsinMessage" xml:space="preserve">
+    <value>Vsin is invalid</value>
+  </data>
+  <data name="ResaFullNameOmaniVersion" xml:space="preserve">
+    <value>Resa</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="InstallUpdatedVersion" xml:space="preserve">
+    <value>Install updated version</value>
+  </data>
+  <data name="ResaNewVersionDownloadedmessage" xml:space="preserve">
+    <value>New version of Resa downloaded. Click here to install.</value>
+  </data>
+  <data name="OneHundredFiftyThousandTomans" xml:space="preserve">
+    <value>OneHundredFiftyThousandTomans</value>
+  </data>
+  <data name="OneHundredThousandTomans" xml:space="preserve">
+    <value>OneHundredThousandTomans</value>
+  </data>
+  <data name="ThreeHundredThousandTomans" xml:space="preserve">
+    <value>ThreeHundredThousandTomans</value>
+  </data>
+  <data name="TwoHundredFiftyThousandTomans" xml:space="preserve">
+    <value>TwoHundredFiftyThousandTomans</value>
+  </data>
+  <data name="TwoHundredThousandTomans" xml:space="preserve">
+    <value>TwoHundredThousandTomans</value>
+  </data>
+  <data name="SixtyThousandTomans" xml:space="preserve">
+    <value>SixtyThousandTomans</value>
+  </data>
+  <data name="SeventyThousandTomans" xml:space="preserve">
+    <value>SeventyThousandTomans</value>
+  </data>
+  <data name="EightyThousandTomans" xml:space="preserve">
+    <value>EightyThousandTomans</value>
+  </data>
+  <data name="NinetyThousandTomans" xml:space="preserve">
+    <value>NinetyThousandTomans</value>
+  </data>
+  <data name="OneHundredTenThousandTomans" xml:space="preserve">
+    <value>OneHundredTenThousandTomans</value>
+  </data>
+  <data name="OneHundredTwentyThousandTomans" xml:space="preserve">
+    <value>OneHundredTwentyThousandTomans</value>
+  </data>
+  <data name="OneHundredThirtyThousandTomans" xml:space="preserve">
+    <value>OneHundredThirtyThousandTomans</value>
+  </data>
+  <data name="OneHundredFortyThousandTomans" xml:space="preserve">
+    <value>OneHundredFortyThousandTomans</value>
+  </data>
+  <data name="OneHundredSixtyThousandTomans" xml:space="preserve">
+    <value>OneHundredSixtyThousandTomans</value>
+  </data>
+  <data name="OneHundredSeventyThousandTomans" xml:space="preserve">
+    <value>OneHundredSeventyThousandTomans</value>
+  </data>
+  <data name="OneHundredEightyThousandTomans" xml:space="preserve">
+    <value>OneHundredEightyThousandTomans</value>
+  </data>
+  <data name="OneHundredNinetyThousandTomans" xml:space="preserve">
+    <value>OneHundredNinetyThousandTomans</value>
+  </data>
+  <data name="TwoHundredTenThousandTomans" xml:space="preserve">
+    <value>TwoHundredTenThousandTomans</value>
+  </data>
+  <data name="TwoHundredTwentyThousandTomans" xml:space="preserve">
+    <value>TwoHundredTwentyThousandTomans</value>
+  </data>
+  <data name="TwoHundredThirtyThousandTomans" xml:space="preserve">
+    <value>TwoHundredThirtyThousandTomans</value>
+  </data>
+  <data name="TwoHundredFortyThousandTomans" xml:space="preserve">
+    <value>TwoHundredFortyThousandTomans</value>
+  </data>
+  <data name="TwoHundredSixtyThousandTomans" xml:space="preserve">
+    <value>TwoHundredSixtyThousandTomans</value>
+  </data>
+  <data name="TwoHundredSeventyThousandTomans" xml:space="preserve">
+    <value>TwoHundredSeventyThousandTomans</value>
+  </data>
+  <data name="TwoHundredEightyThousandTomans" xml:space="preserve">
+    <value>TwoHundredEightyThousandTomans</value>
+  </data>
+  <data name="TwoHundredNinetyThousandTomans" xml:space="preserve">
+    <value>TwoHundredNinetyThousandTomans</value>
+  </data>
+  <data name="NoAnyCategoriesIsSelected" xml:space="preserve">
+    <value>No Any Categories Is Selected</value>
+  </data>
+  <data name="DuplicateCategoryIsForbidden" xml:space="preserve">
+    <value>Duplicate Category Is Forbidden</value>
+  </data>
+  <data name="DuplicateSpecialtiesIsForbidden" xml:space="preserve">
+    <value>Duplicate Specialties Is Forbidden</value>
+  </data>
+  <data name="NoAnySpecialtiesIsSelected" xml:space="preserve">
+    <value>No Any Specialties Is Selected</value>
+  </data>
+  <data name="SpecialtiesCreatedSuccessfuly" xml:space="preserve">
+    <value>Specialties Created Successfuly</value>
+  </data>
+  <data name="XCategoryShouldSelect" xml:space="preserve">
+    <value>Category ShouldSelect</value>
+  </data>
+  <data name="XSpecialtiesShouldSelect" xml:space="preserve">
+    <value>Specialties Should Select</value>
+  </data>
+  <data name="PricingPolicyType" xml:space="preserve">
+    <value>Pricing Policy Type</value>
+  </data>
+  <data name="ResaaCommissionType" xml:space="preserve">
+    <value>Resaa commission type</value>
+  </data>
+  <data name="ResaCommission" xml:space="preserve">
+    <value>Commission for Resaa</value>
+  </data>
+  <data name="SpecificSimcard" xml:space="preserve">
+    <value>Specific simcard</value>
+  </data>
+  <data name="PricingPerMinuteFixedCommissionPolicy" xml:space="preserve">
+    <value>Per Minute Fixed Commission</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PricingPerSessionFixedCommissionPolicy" xml:space="preserve">
+    <value>Per session fixed commission policy</value>
+  </data>
+  <data name="PricingPerSessionPercentCommissionPolicy" xml:space="preserve">
+    <value>Per session percent commission policy</value>
+  </data>
+  <data name="DoctorAppPatientsCallBlockerService" xml:space="preserve">
+    <value>Patients call blocker service</value>
+  </data>
+  <data name="PracticedMedicineSince" xml:space="preserve">
+    <value>Practiced medicine since</value>
+  </data>
+  <data name="DoctorAppChangingDoctorStatusFailedMessage" xml:space="preserve">
+    <value>Failed to change the state.</value>
+  </data>
+  <data name="DOCTOR_RECOMMENDATIONS" xml:space="preserve">
+    <value>Doctor Recommendations</value>
+  </data>
+  <data name="RecommendationDate" xml:space="preserve">
+    <value>Recommendation Date</value>
+  </data>
+  <data name="Recommender" xml:space="preserve">
+    <value>Recommender</value>
+  </data>
+  <data name="Joined" xml:space="preserve">
+    <value>Joined</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NotJoined" xml:space="preserve">
+    <value>Not Joined</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Spam" xml:space="preserve">
+    <value>Spam</value>
+  </data>
+  <data name="ChargeDiscountCardNotFound" xml:space="preserve">
+    <value>Charge discount card not found</value>
+  </data>
+  <data name="CallDiscountCardNotFound" xml:space="preserve">
+    <value>Call discount card not found</value>
+  </data>
+  <data name="ChargeRequestNotFound" xml:space="preserve">
+    <value>Charge request not found.</value>
+  </data>
+  <data name="ChargeRequestNotFoundOrAlreadyProcessed" xml:space="preserve">
+    <value>charge request not found or has been already processed.</value>
+  </data>
+  <data name="DiscountCode" xml:space="preserve">
+    <value>Discount Code</value>
+  </data>
+  <data name="EffectedDate" xml:space="preserve">
+    <value>Effected date</value>
+  </data>
+  <data name="UsedCount" xml:space="preserve">
+    <value>Used Count</value>
+  </data>
+  <data name="DiscountCardNotFound" xml:space="preserve">
+    <value>Discount card not found</value>
+  </data>
+  <data name="CallDiscountCard" xml:space="preserve">
+    <value>Call discount card</value>
+  </data>
+  <data name="ChargeDiscountCard" xml:space="preserve">
+    <value>Charge discount card</value>
+  </data>
+  <data name="ExpiredDate" xml:space="preserve">
+    <value>Expired Date</value>
+  </data>
+  <data name="Fixed" xml:space="preserve">
+    <value>Fixed</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="DiscountAmount" xml:space="preserve">
+    <value>Discount amount</value>
+  </data>
+  <data name="DiscountCardCalculationMethod" xml:space="preserve">
+    <value>Discount card calculation method</value>
+  </data>
+  <data name="DiscountCardType" xml:space="preserve">
+    <value>Discount card type</value>
+  </data>
+  <data name="DiscountPercent" xml:space="preserve">
+    <value>Discount percent</value>
+  </data>
+  <data name="DiscountUsedCount" xml:space="preserve">
+    <value>Discount used count</value>
+  </data>
+  <data name="MaximumChargeAmount" xml:space="preserve">
+    <value>Maximum charge amount</value>
+  </data>
+  <data name="MinimumChargeAmount" xml:space="preserve">
+    <value>Minimum charge amount</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="DiscountCard" xml:space="preserve">
+    <value>Discount card</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="MaxUsedCount" xml:space="preserve">
+    <value>Maximum used count</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="DiscountCardActivatedSuccessfully" xml:space="preserve">
+    <value>Discount card activated successfully</value>
+  </data>
+  <data name="DiscountCardDeactivatedSuccessfully" xml:space="preserve">
+    <value>Discount card deactivated successfully</value>
+  </data>
+  <data name="ChargeDenominationNotFound" xml:space="preserve">
+    <value>charge denomination not found.</value>
+  </data>
+  <data name="SubscriberCantBeCharged" xml:space="preserve">
+    <value>subscriber can't be charged.</value>
+  </data>
+  <data name="SubscriberCantUseDiscountCode" xml:space="preserve">
+    <value>subscriber cannot be use this discount code.</value>
+  </data>
+  <data name="SubscriberNotFound" xml:space="preserve">
+    <value>Subscriber not found.</value>
+  </data>
+  <data name="CreateDiscountCardSuccessfully" xml:space="preserve">
+    <value>Create discount card successfully</value>
+  </data>
+  <data name="InValidChargeDiscountCardForUse" xml:space="preserve">
+    <value>charge discount card is invalid for use</value>
+  </data>
+  <data name="DiscountCeiling" xml:space="preserve">
+    <value>Discount ceiling</value>
+  </data>
+  <data name="ExclusiveNumberNotFound" xml:space="preserve">
+    <value>Exclusive number not found</value>
+  </data>
+  <data name="ExclusiveNumber" xml:space="preserve">
+    <value>Exclusive number</value>
+  </data>
+  <data name="ExclusiveNumberState" xml:space="preserve">
+    <value>Exclusive number state</value>
+  </data>
+  <data name="CreateExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>Create exclusive number successfully</value>
+  </data>
+  <data name="DeleteExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>Delete exclusive number successfully</value>
+  </data>
+  <data name="ResetExclusiveNumberSuccessfully" xml:space="preserve">
+    <value>Reset exclusive number successfully</value>
+  </data>
+  <data name="ExclusiveNumberIsInUse" xml:space="preserve">
+    <value>Exclusive number is in use</value>
+  </data>
+  <data name="ExclusiveNumbers" xml:space="preserve">
+    <value>Exclusive Numbers</value>
+  </data>
+  <data name="HomePageContent" xml:space="preserve">
+    <value>Home Page Content</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Failed_To_Retrieve_Accessible_Periods" xml:space="preserve">
+    <value>Failed to retrieve accessible periods</value>
+  </data>
+  <data name="AccountNotFound" xml:space="preserve">
+    <value>Account Not Found</value>
+  </data>
+  <data name="FailedToProccessDroppedHealthcareCall" xml:space="preserve">
+    <value>Failed To Process Dropped Healthcare Call ({0} - {1})</value>
+  </data>
+  <data name="NotifyCallRequestToDoctor" xml:space="preserve">
+    <value>NotifyCallRequestToDoctor</value>
+  </data>
+  <data name="NotifyPatientToBeReadyTemplate" xml:space="preserve">
+    <value>NotifyPatientToBeReady</value>
+  </data>
+  <data name="UnknownCallerMessageTemplate" xml:space="preserve">
+    <value>UnknownCallerMessage</value>
+  </data>
+  <data name="CardNotFound" xml:space="preserve">
+    <value>کارت موردنظر یافت نشد</value>
+  </data>
+  <data name="PhoneNumberNotFound" xml:space="preserve">
+    <value>Phone number not found.</value>
+  </data>
+  <data name="EndedCallRequestsQueueProcessing" xml:space="preserve">
+    <value>Ended callRequests queue processing</value>
+  </data>
+  <data name="StartedCallRequestsQueueProcessing" xml:space="preserve">
+    <value>Started callRequests queue processing</value>
+  </data>
+  <data name="AccessiblePeriod_CREATE_SUCCESSFULLY" xml:space="preserve">
+    <value>Accessible Period added successfully</value>
+  </data>
+  <data name="ErrorOnParsingDoctorRecommendationState" xml:space="preserve">
+    <value>Error on parsing doctor recommendation state</value>
+  </data>
+  <data name="ErrorOnUpdaingDoctorRecommendationRecord" xml:space="preserve">
+    <value>Error on updaing doctor recommendation record</value>
+  </data>
+  <data name="WebSiteTestimonials" xml:space="preserve">
+    <value>WebSite Testimonials</value>
+  </data>
+  <data name="YearsOfPractice" xml:space="preserve">
+    <value>Years of practice</value>
+  </data>
+  <data name="Hospitals" xml:space="preserve">
+    <value>Hospitals</value>
+  </data>
+  <data name="Insurances" xml:space="preserve">
+    <value>Insurances</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="CommunityMemberships" xml:space="preserve">
+    <value>Community Memberships</value>
+  </data>
+  <data name="Reward" xml:space="preserve">
+    <value>Reward</value>
+  </data>
+  <data name="ScientificHistory" xml:space="preserve">
+    <value>Scientific History</value>
+  </data>
+  <data name="Biography" xml:space="preserve">
+    <value>Biography</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="SurveyLikeSuccessfully" xml:space="preserve">
+    <value>Survey Like Successfully</value>
+  </data>
+  <data name="CallId" xml:space="preserve">
+    <value>Call Id</value>
+  </data>
+  <data name="Dislike" xml:space="preserve">
+    <value>Dislike</value>
+  </data>
+  <data name="Like" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="SurveyUpdatedSuccessfully" xml:space="preserve">
+    <value>Survey Updated Successfully</value>
+  </data>
+  <data name="SurveyFieldCreateSuccessfully" xml:space="preserve">
+    <value>Survey reason create successfully</value>
+  </data>
+  <data name="SurveyFieldDeleteSuccessfully" xml:space="preserve">
+    <value>Survey reason delete successfully</value>
+  </data>
+  <data name="SurveyFieldUpdateSuccessfully" xml:space="preserve">
+    <value>Survey reason update successfully</value>
+  </data>
+  <data name="AddedSuccessfully" xml:space="preserve">
+    <value>Added Successfully</value>
+  </data>
+  <data name="UpdatedSuccessfully" xml:space="preserve">
+    <value>Updated Successfully</value>
+  </data>
+  <data name="Angry" xml:space="preserve">
+    <value>Angry</value>
+  </data>
+  <data name="Happy" xml:space="preserve">
+    <value>Happy</value>
+  </data>
+  <data name="NotCheckedSurveyStatus" xml:space="preserve">
+    <value>Not Checked</value>
+  </data>
+  <data name="RejectSurveyStatus" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="PricePolicyType" xml:space="preserve">
+    <value>Price Type</value>
+  </data>
+  <data name="Seconds" xml:space="preserve">
+    <value>Seconds</value>
+  </data>
+  <data name="Kurdish" xml:space="preserve">
+    <value>Kurdish</value>
+  </data>
+  <data name="Persian" xml:space="preserve">
+    <value>Persian</value>
+  </data>
+  <data name="Turkish" xml:space="preserve">
+    <value>Turkish</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Tooman</value>
+  </data>
+  <data name="FixedResaCommissionIsPositive" xml:space="preserve">
+    <value>Resaa commission must greater or equal to zero</value>
+  </data>
+  <data name="RequiredFieldValidationMessage" xml:space="preserve">
+    <value>The field {0} is required</value>
+  </data>
+  <data name="PricingPerMinutePercentCommissionPolicy" xml:space="preserve">
+    <value>Per minute percentage commission policy</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Packages</value>
+  </data>
+  <data name="PolicyActivated" xml:space="preserve">
+    <value>Policy activated successfully</value>
+  </data>
+  <data name="PolicyActivateError" xml:space="preserve">
+    <value>Error in activating policy</value>
+  </data>
+  <data name="PolicyCreated" xml:space="preserve">
+    <value>Policy created successfully</value>
+  </data>
+  <data name="PolicyDeactivated" xml:space="preserve">
+    <value>Policy deactivated successfully</value>
+  </data>
+  <data name="PolicyDeactivateError" xml:space="preserve">
+    <value>Error in deactivating policy</value>
+  </data>
+  <data name="DisplayOrder" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="DuplicatePhoneNumberError" xml:space="preserve">
+    <value>Phone already exist</value>
+  </data>
+  <data name="PatientSuccessfullyRegistered" xml:space="preserve">
+    <value>Patient successfully registered</value>
+  </data>
+  <data name="BlockedCredit" xml:space="preserve">
+    <value>Reserved credit</value>
+  </data>
+  <data name="CallBookingId" xml:space="preserve">
+    <value>CallBooking Id</value>
+  </data>
+  <data name="QueueProcessing" xml:space="preserve">
+    <value>Queue processing</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="Travel" xml:space="preserve">
+    <value>Traveling</value>
+  </data>
+  <data name="EnglishTitle" xml:space="preserve">
+    <value>English Title</value>
+  </data>
+  <data name="MedicalSpecialtyPageActicatedSuccessfuly" xml:space="preserve">
+    <value>Medical Specialty Page Acticated Successfuly</value>
+  </data>
+  <data name="MedicalSpecialtyPageDeacticatedSuccessfuly" xml:space="preserve">
+    <value>Medical Specialty Page Deacticated Successfuly</value>
+  </data>
+  <data name="TimeBasedChargePackageMedicalSpecialty" xml:space="preserve">
+    <value>Medical Specialty</value>
+  </data>
+  <data name="RejectedSurveyAlert" xml:space="preserve">
+    <value>The comment provided dose not meet the policies of our website, thus it has been rejected.</value>
+  </data>
+</root>

@@ -1,0 +1,178 @@
+﻿<customControls:BaseContentPage x:Class="BSN.Resa.DoctorApp.Views.HelpPage"
+                                xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:HelpPageViewModel"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                Title="{utilities:Translate Help}"
+                                BackgroundImageSource="Assets/background.png">
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="DescriptionTextBackgroundColor">
+                <x:Arguments>
+                    <x:Double>1</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>0.75</x:Double>
+                </x:Arguments>
+            </Color>
+            <Color x:Key="DescriptionIconBackgroundColor">
+                <x:Arguments>
+                    <x:Double>1</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>1</x:Double>
+                    <x:Double>0.85</x:Double>
+                </x:Arguments>
+            </Color>
+            <Style x:Key="HelpSectionStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Spacing" Value="2" />
+            </Style>
+            <Style x:Key="TitleContentViewStyle" TargetType="ContentView">
+                <Setter Property="Padding" Value="10, 15, 10, 15" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#1C9791" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="DescriptionStackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Spacing" Value="0" />
+            </Style>
+            <Style x:Key="DescriptionTextContentViewStyle" TargetType="ContentView">
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DescriptionTextBackgroundColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+            <Style x:Key="DescriptionTextLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#1B847F" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="DescriptionIconContentViewStyle" TargetType="ContentView">
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="BackgroundColor" Value="{StaticResource DescriptionIconBackgroundColor}" />
+            </Style>
+            <Style x:Key="DescriptionIconImageStyle" TargetType="Image">
+                <Setter Property="WidthRequest" Value="40" />
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+
+    <customControls:BaseContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0" />
+
+                <customControls:DoctorStateToolbarItem Grid.Row="0" Grid.Column="1" />
+
+                <Label Grid.Row="0" Grid.Column="2" Text="{utilities:Translate Help}" FontSize="Large"
+                       LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+            </Grid>
+
+            <ScrollView>
+                <StackLayout Spacing="15">
+                    <StackLayout Style="{StaticResource HelpSectionStackLayoutStyle}">
+                        <ContentView Style="{StaticResource TitleContentViewStyle}">
+                            <Label Style="{StaticResource TitleLabelStyle}"
+                                   Text="{utilities:Translate AddResaAsBlocker}" />
+                        </ContentView>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/ios_settings.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate GoToDeviceSettings}" />
+                            </ContentView>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}" Source="Assets/ios_phone.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate GoToPhoneSection}" />
+                            </ContentView>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/resa_app_logo_rounded.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate GoToCallBlockingSectionAndEnableResa}" />
+                            </ContentView>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Style="{StaticResource HelpSectionStackLayoutStyle}">
+                        <ContentView Style="{StaticResource TitleContentViewStyle}">
+                            <Label Style="{StaticResource TitleLabelStyle}"
+                                   Text="{utilities:Translate ContactsSharingWithResa}" />
+                        </ContentView>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/ios_recent_calls.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate GoToRecentsSection}" />
+                            </ContentView>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/ios_recent_calls_details.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate ClickDetailsIconNearCall}" />
+                            </ContentView>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/ios_share_more.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate TapShareContactThenMoreAndEnableSharing}" />
+                            </ContentView>
+                        </StackLayout>
+                        <StackLayout Style="{StaticResource DescriptionStackLayoutStyle}">
+                            <ContentView Style="{StaticResource DescriptionIconContentViewStyle}">
+                                <Image Style="{StaticResource DescriptionIconImageStyle}"
+                                       Source="Assets/resa_app_logo_rounded.png" />
+                            </ContentView>
+                            <ContentView Style="{StaticResource DescriptionTextContentViewStyle}">
+                                <Label Style="{StaticResource DescriptionTextLabelStyle}"
+                                       Text="{utilities:Translate FromNowOnYouCanAddPatientsToResa}" />
+                            </ContentView>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <customControls:ResaBottomNavigationBar />
+
+        </StackLayout>
+
+    </customControls:BaseContentPage.Content>
+</customControls:BaseContentPage>

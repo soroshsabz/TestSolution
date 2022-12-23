@@ -1,0 +1,37 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                                x:Class="BSN.Resa.DoctorApp.Views.PermissionsPage"
+                                xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+                                x:DataType="viewModels:PermissionsPageViewModel"
+                                xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                                prism:ViewModelLocator.AutowireViewModel="True"
+                                xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+                                xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                                BackgroundImageSource="Assets/background.png">
+
+    <ScrollView>
+        <StackLayout IsVisible="{Binding IsMainContentVisible, FallbackValue=False}" Padding="10"
+                     VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Label Text="{utilities:Translate ResaApplication}"
+                   TextColor="White" FontSize="Large" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="0, 0, 0, 0"/>
+
+            <Image Source="Assets/resa_white_logo_small_trimmed.png" Aspect="AspectFit" WidthRequest="96"
+                   HeightRequest="96" Margin="0, 5"/>
+
+            <Label Text="{utilities:Translate DoctorAppPermissionsGeneralRationaleDescription}" VerticalOptions="FillAndExpand"
+                   HorizontalOptions="CenterAndExpand" Margin="10, 20, 10, 10" TextColor="White" FontSize="Medium"/>
+
+            <Button Text="{utilities:Translate DoctorAppSettingsPage}"
+                    IsVisible="{Binding IsOpenAppSettingsPageButtonVisible}"
+                    Command="{Binding OpenAppSettingsPageCommand}"
+                    VerticalOptions="End" Margin="20, 5, 20, 10" TextColor="Black"/>
+
+            <Button Text="{utilities:Translate DoctorAppEnterResa}" Command="{Binding GoToHomeCommand}"
+                    VerticalOptions="End" Margin="20, 5, 20, 10" TextColor="Black"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</customControls:BaseContentPage>

@@ -1,0 +1,116 @@
+﻿<customControls:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+             xmlns:customControls="clr-namespace:BSN.Resa.DoctorApp.Views.Controls;assembly=BSN.Resa.DoctorApp"
+             x:Class="BSN.Resa.DoctorApp.Views.DoctorStatePage"
+             xmlns:viewModels="clr-namespace:BSN.Resa.DoctorApp.ViewModels;assembly=BSN.Resa.DoctorApp"
+             x:DataType="viewModels:DoctorStatePageViewModel"
+             Icon="Assets/change_state" Title="{utilities:Translate MyState}"
+             BackgroundImageSource="Assets/background.png">
+
+    <customControls:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StateSection" TargetType="ContentView">
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style x:Key="StateButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="24" />
+            </Style>
+            <Style x:Key="StateImage" TargetType="Image">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="WidthRequest" Value="100" />
+            </Style>
+            <Style x:Key="StateLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="30" />
+            </Style>
+            <Style x:Key="DoctorInformation" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="UpdateButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="{StaticResource AppPrimaryColor}" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="BorderRadius" Value="0" />
+            </Style>
+        </ResourceDictionary>
+    </customControls:BaseContentPage.Resources>
+
+    <customControls:BaseContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Grid VerticalOptions="Start" HorizontalOptions="FillAndExpand" ColumnSpacing="10" RowSpacing="0"
+                  BackgroundColor="Transparent" FlowDirection="RightToLeft" Margin="5, 5, 5, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <customControls:HamburgerIcon Grid.Row="0" Grid.Column="0"/>
+
+
+                <Label Grid.Row="0" Grid.Column="1"  Text="{utilities:Translate MyState}" FontSize="Large" LineBreakMode="TailTruncation"
+                       TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+            </Grid>
+
+            <ScrollView>
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#77000000" Padding="10" IsVisible="{Binding IsConnectingToServer}"
+                             x:Name="WaitingLayout">
+                        <Label Text="{utilities:Translate ConnectingToResa}" VerticalOptions="Center" HorizontalOptions="Center"
+                           TextColor="White" FontSize="24" />
+                        <ActivityIndicator IsRunning="true" Color="White" VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                    </StackLayout>
+                    <ContentView Style="{StaticResource StateSection}">
+                        <Grid ColumnSpacing="0" RowSpacing="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="60" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50*" />
+                                <ColumnDefinition Width="50*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding DoctorState}"
+                               Style="{StaticResource StateLabel}" />
+                            <Image Grid.Row="0" Grid.Column="1" Source="{Binding DoctorStateImageUrl}"
+                               Style="{StaticResource StateImage}" />
+                            <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="{utilities:Translate ChangeState}"
+                                Style="{StaticResource StateButton}" Command="{Binding ChangeDoctorStateCommand}"
+                                IsEnabled="{Binding IsConnectingToServer, Converter={StaticResource Not}}" />
+                        </Grid>
+                    </ContentView>
+                    <StackLayout Spacing="10" Padding="10">
+                        <Label Text="{Binding DoctorFullName}" Style="{StaticResource DoctorInformation}" />
+                        <Label Text="{Binding DoctorVsin, StringFormat={utilities:Translate ResaCodeXamlSpecialVersion}}"
+                           Style="{StaticResource DoctorInformation}" />
+                    </StackLayout>
+                    <Button
+                    Style="{StaticResource UpdateButton}"
+                    Text="{utilities:Translate Update}"
+                    IsVisible="{Binding IsUpdateButtonVisible}"
+                    Command="{Binding UpdateCommand}" />
+                </StackLayout>
+            </ScrollView>
+
+            <customControls:ResaBottomNavigationBar/>
+        </StackLayout>
+
+    </customControls:BaseContentPage.Content>
+
+</customControls:BaseContentPage>

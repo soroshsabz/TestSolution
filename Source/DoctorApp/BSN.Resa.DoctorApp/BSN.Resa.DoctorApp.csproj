@@ -1,0 +1,118 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\SharedAssemblyInfo\Resa.DoctorApp.Global.AssemblyInfo.cs" Link="Properties\Resa.DoctorApp.Global.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="BSN.Common.Xam.Plugins.Messaging" Version="5.3.0" />
+    <PackageReference Include="CardsView" Version="2.5.1" />
+    <PackageReference Include="MD.PersianDateTime.Standard" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
+    <PackageReference Include="MrAdvice" Version="2.9.9" />
+    <PackageReference Include="Plugin.DeviceOrientation" Version="1.0.7" />
+    <PackageReference Include="Plugin.SimpleLogger" Version="1.1.0" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.ObjectModel" Version="4.3.0" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.5.0" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
+    <PackageReference Include="Xamarin.Badge.Plugin" Version="2.0.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\BSN.Resa.Core.Commons\BSN.Resa.Core.Commons.csproj" />
+    <ProjectReference Include="..\BSN.Resa.DoctorApp.Commons\BSN.Resa.DoctorApp.Commons.csproj" />
+    <ProjectReference Include="..\BSN.Resa.DoctorApp.Data\BSN.Resa.DoctorApp.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CallbackRequests\CallbackRequestsPage.xaml.cs">
+      <DependentUpon>CallbackRequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AppSettingsPage.xaml.cs">
+      <DependentUpon>AppSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CallbackRequests\CallbackRequestsHistoryPage.xaml.cs">
+      <DependentUpon>CallbackRequestsHistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\FlyoutPage.xaml.cs">
+      <DependentUpon>FlyoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MedicalTests\MedicalTestPage.xaml.cs">
+      <DependentUpon>MedicalTestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MedicalTests\ActiveMedicalTestsPage.xaml.cs">
+      <DependentUpon>ActiveMedicalTestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PermissionsPage.xaml.cs">
+      <DependentUpon>PermissionsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AppSettingsAdvancedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CallbackRequests\CallbackRequestsHistoryPageListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CallbackRequests\CallbackRequestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CallbackRequests\CallbackRequestsHistoryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CallbackRequests\CallbackRequestsPageListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Controls\ResaBottomNavigationBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DoctorStatePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AppSettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MedicalTests\MedicalTestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PermissionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Compile Remove="ViewModels\TestPageViewModel.cs" />
+    <Compile Remove="Views\TestPage.xaml.cs" />
+    <Compile Remove="Views\TestPage.xaml" />
+    <EmbeddedResource Remove="Views\TestPage.xaml" />
+  </ItemGroup>
+
+</Project>

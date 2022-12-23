@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:utilities="clr-namespace:BSN.Resa.DoctorApp.Views.Utilities;assembly=BSN.Resa.DoctorApp"
+                    x:Class="BSN.Resa.DoctorApp.Views.Controls.ContactsListResources">
+
+    <FileImageSource x:Key="AddToolbarItemIcon">Assets/add.png</FileImageSource>
+    <x:String x:Key="AddToolbarItemText">افزودن</x:String>
+
+    <FileImageSource x:Key="StartSearchToolbarItemIcon">Assets/search.png</FileImageSource>
+    <x:String x:Key="StartSearchToolbarItemText">جستجو</x:String>
+
+    <FileImageSource x:Key="CancelSearchToolbarItemIcon">Assets/cancel.png</FileImageSource>
+    <x:String x:Key="CancelSearchToolbarItemText">بستن</x:String>
+
+</ResourceDictionary>
