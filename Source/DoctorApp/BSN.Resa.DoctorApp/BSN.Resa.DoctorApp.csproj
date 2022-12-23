@@ -22,27 +22,27 @@
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="BSN.Common.Xam.Plugins.Messaging" Version="5.3.0" />
-    <PackageReference Include="CardsView" Version="2.5.1" />
+    <PackageReference Include="CardsView" Version="2.8.1" />
     <PackageReference Include="MD.PersianDateTime.Standard" Version="1.0.0" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.5.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
-    <PackageReference Include="MrAdvice" Version="2.9.9" />
+    <PackageReference Include="MrAdvice" Version="2.10.1" />
     <PackageReference Include="Plugin.DeviceOrientation" Version="1.0.7" />
-    <PackageReference Include="Plugin.SimpleLogger" Version="1.1.0" />
-    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="Plugin.SimpleLogger" Version="1.1.1" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
     <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="System.ObjectModel" Version="4.3.0" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
-    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.5.0" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xam.Plugins.Notifier" Version="3.0.1" />
     <PackageReference Include="Xamarin.Badge.Plugin" Version="2.0.0" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
   </ItemGroup>
 
   <ItemGroup>

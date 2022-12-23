@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AaptTest.Android", "Source\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AaptTest.iOS", "Source\AaptTest\AaptTest.iOS\AaptTest.iOS.csproj", "{19DC5435-543D-4521-B392-84F1C397594B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AaptTest", "Source\AaptTest\AaptTest\AaptTest.csproj", "{0E703012-95EE-4446-9EC6-AFFFC8258006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AaptTest", "Source\AaptTest\AaptTest\AaptTest.csproj", "{0E703012-95EE-4446-9EC6-AFFFC8258006}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorApp", "DoctorApp", "{27363E49-5B53-47FC-8F64-DEFB69B6C4CF}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSN.Resa.DoctorApp.Data", "Source\DoctorApp\BSN.Resa.DoctorApp.Data\BSN.Resa.DoctorApp.Data.csproj", "{A509AD8F-F315-406E-B184-4CB7013F14DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSN.Resa.DoctorApp.Domain", "Source\DoctorApp\BSN.Resa.DoctorApp.Domain\BSN.Resa.DoctorApp.Domain.csproj", "{876287A7-44DE-4CB6-AA18-BCF69EA36642}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSN.Resa.DoctorApp", "Source\DoctorApp\BSN.Resa.DoctorApp\BSN.Resa.DoctorApp.csproj", "{7C749BCE-6BAA-4B77-9FE4-19795E870494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +153,18 @@ Global
 		{876287A7-44DE-4CB6-AA18-BCF69EA36642}.Release|iPhone.Build.0 = Release|Any CPU
 		{876287A7-44DE-4CB6-AA18-BCF69EA36642}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{876287A7-44DE-4CB6-AA18-BCF69EA36642}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|iPhone.Build.0 = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +181,7 @@ Global
 		{F5A77225-B81D-4608-B68C-986502187695} = {27363E49-5B53-47FC-8F64-DEFB69B6C4CF}
 		{A509AD8F-F315-406E-B184-4CB7013F14DD} = {27363E49-5B53-47FC-8F64-DEFB69B6C4CF}
 		{876287A7-44DE-4CB6-AA18-BCF69EA36642} = {27363E49-5B53-47FC-8F64-DEFB69B6C4CF}
+		{7C749BCE-6BAA-4B77-9FE4-19795E870494} = {27363E49-5B53-47FC-8F64-DEFB69B6C4CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BCD0E030-D448-4A31-B0DD-3070D3B4BDC0}
