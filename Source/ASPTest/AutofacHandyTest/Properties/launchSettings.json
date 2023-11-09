@@ -1,13 +1,13 @@
 {
   "profiles": {
-    "Autofac": {
+    "AutofacHandyTest": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5128"
+      "applicationUrl": "http://localhost:5083"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -27,7 +27,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:24204",
+      "applicationUrl": "http://localhost:7632",
       "sslPort": 0
     }
   }
