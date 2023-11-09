@@ -1,7 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 
-namespace AutofacHandyTest
+namespace AutofacHandyMVCTest
 {
     public class Program
     {

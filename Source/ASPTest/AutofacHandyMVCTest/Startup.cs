@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Autofac.Configuration;
 
-namespace AutofacHandyTest
+namespace AutofacHandyMVCTest
 {
     public class Startup
     {
@@ -14,7 +14,7 @@ namespace AutofacHandyTest
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddControllersWithViews();
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -31,7 +31,7 @@ namespace AutofacHandyTest
             // Configure the HTTP request pipeline.
             if (!env.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
 
@@ -39,7 +39,10 @@ namespace AutofacHandyTest
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
         }
     }
 }

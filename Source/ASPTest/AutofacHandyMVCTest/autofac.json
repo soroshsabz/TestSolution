@@ -1,0 +1,14 @@
+{
+  "components": [
+    {
+      "type": "AutofacHandyMVCTest.Models.DummyA, AutofacHandyMVCTest",
+      "services": [
+        {
+          "type": "AutofacHandyMVCTest.Models.IDummyModel, AutofacHandyMVCTest",
+          "key": "Home"
+        }
+      ],
+      "instanceScope": "per-lifetime-scope"
+    }
+  ]
+}
