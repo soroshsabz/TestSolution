@@ -29,9 +29,6 @@ namespace AutofacHandyMVCTest
 
             builder.RegisterModule(autoFacConfigurationModule);
 
-            //builder.RegisterType<DummyA>().Keyed<IDummyModel>(nameof(DummyA)).SingleInstance();
-            //builder.RegisterType<DummyB>().Keyed<IDummyModel>(nameof(DummyB)).SingleInstance();
-            //builder.RegisterType<HomeController>().WithAttributeFiltering();
             //var controllers = typeof(Startup).Assembly.GetTypes().Where(t => t.BaseType == typeof(ControllerBase)).ToArray(); // for api controller
             var controllers = typeof(Startup).Assembly.GetTypes().Where(t => t.BaseType == typeof(Controller)).ToArray(); // for mvc controller
             builder.RegisterTypes(controllers).WithAttributeFiltering();
