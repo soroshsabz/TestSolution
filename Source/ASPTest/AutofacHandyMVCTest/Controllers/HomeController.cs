@@ -1,4 +1,5 @@
-﻿using AutofacHandyMVCTest.Models;
+﻿using Autofac.Features.AttributeFilters;
+using AutofacHandyMVCTest.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -9,7 +10,7 @@ namespace AutofacHandyMVCTest.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IDummyModel _dummyModel;
 
-        public HomeController(ILogger<HomeController> logger, IDummyModel dummyModel)
+        public HomeController(ILogger<HomeController> logger, [KeyFilter(nameof(DummyA))]IDummyModel dummyModel)
         {
             _logger = logger;
             _dummyModel = dummyModel;

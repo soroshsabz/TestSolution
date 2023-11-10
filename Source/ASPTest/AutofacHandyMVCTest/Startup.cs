@@ -1,5 +1,9 @@
 ﻿using Autofac;
 using Autofac.Configuration;
+using Autofac.Features.AttributeFilters;
+using AutofacHandyMVCTest.Controllers;
+using AutofacHandyMVCTest.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AutofacHandyMVCTest
 {
@@ -14,7 +18,7 @@ namespace AutofacHandyMVCTest
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddMvc().AddControllersAsServices();
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
@@ -24,6 +28,13 @@ namespace AutofacHandyMVCTest
             var autoFacConfigurationModule = new ConfigurationModule(configurationBuilder.Build());
 
             builder.RegisterModule(autoFacConfigurationModule);
+
+            //builder.RegisterType<DummyA>().Keyed<IDummyModel>(nameof(DummyA)).SingleInstance();
+            //builder.RegisterType<DummyB>().Keyed<IDummyModel>(nameof(DummyB)).SingleInstance();
+            //builder.RegisterType<HomeController>().WithAttributeFiltering();
+            //var controllers = typeof(Startup).Assembly.GetTypes().Where(t => t.BaseType == typeof(ControllerBase)).ToArray(); // for api controller
+            var controllers = typeof(Startup).Assembly.GetTypes().Where(t => t.BaseType == typeof(Controller)).ToArray(); // for mvc controller
+            builder.RegisterTypes(controllers).WithAttributeFiltering();
         }
 
         public void ConfigureApp<App>(App app, IWebHostEnvironment env) where App : IApplicationBuilder, IEndpointRouteBuilder, IHost

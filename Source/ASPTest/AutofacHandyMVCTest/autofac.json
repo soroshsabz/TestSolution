@@ -1,17 +1,17 @@
 {
-  /*
   "components": [
     {
       "type": "AutofacHandyMVCTest.Models.DummyA, AutofacHandyMVCTest",
       "services": [
         {
-          "type": "AutofacHandyMVCTest.Models.IDummyModel, AutofacHandyMVCTest"
+          "type": "AutofacHandyMVCTest.Models.IDummyModel, AutofacHandyMVCTest",
+          "key": "DummyA"
         }
       ],
       "instanceScope": "per-lifetime-scope"
     }
-  ],
-  */
+  ]
+  /*
   "modules": [
     {
       "type": "AutofacHandyMVCTest.Modules.DummyModule, AutofacHandyMVCTest",
@@ -20,4 +20,5 @@
         }
     }
   ]
+  */
 }
