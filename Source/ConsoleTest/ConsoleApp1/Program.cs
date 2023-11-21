@@ -41,6 +41,17 @@ namespace ConsoleApp1
                 }
             }
 
+            using (var db = new TestDbContext())
+            {
+                var pool2 = db.Pools.FirstOrDefault();
+                if (pool2 != null)
+                {
+                    Console.WriteLine($"Pool2: {pool2.Id}");
+                    Console.WriteLine($"Pool2.Profile: {pool2.Profile?.Id}");
+                }
+
+            }
+
             string temp = StringTest.temp2;
             string temp2 = StringTest.temp;
 
@@ -87,8 +98,8 @@ namespace ConsoleApp1
             }
         }
 
-        internal virtual AProfile? ORMAProfileAccessor { get; set; }
-        internal virtual BProfile? ORMBProfileAccessor { get; set; }
+        public virtual AProfile? ORMAProfileAccessor { get; set; }
+        public virtual BProfile? ORMBProfileAccessor { get; set; }
     }
 
     public abstract class Profile
