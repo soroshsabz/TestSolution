@@ -9,6 +9,29 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Hello, World!");
 
+            // PolymorphicMultiRelationshipTest();
+
+            using (var db = new TestDbContext())
+            {
+                db.Database.EnsureDeleted();
+                db.Database.EnsureCreated();
+
+                db.Add(new Foo("salam"));
+                db.Add(new Foo());
+
+                db.SaveChanges();
+            }
+
+
+            using (var db = new TestDbContext())
+            {
+                List<Foo> foos = db.Foos.ToList();
+                foos.ForEach(F => Console.WriteLine($"foo Name: {F.Name}"));
+            }
+        }
+
+        private static void PolymorphicMultiRelationshipTest()
+        {
             using (var db = new TestDbContext())
             {
                 db.Database.EnsureDeleted();
@@ -52,9 +75,8 @@ namespace ConsoleApp1
 
             }
 
-            string temp = StringTest.temp2;
-            string temp2 = StringTest.temp;
 
+            throw new NotImplementedException();
         }
     }
 
@@ -126,6 +148,19 @@ namespace ConsoleApp1
         // CProfile does not have the Pool property
     }
 
+    public class Foo
+    {
+        public Foo(string name = DEFAULT_NAME)
+        {
+            Name = name ?? DEFAULT_NAME;
+        }
+
+        public int Id { get; set; }
+        public string Name { get; }
+
+        public const string DEFAULT_NAME = "Default";
+    }
+
     internal class TestDbContext : DbContext
     {
         public DbSet<Profile> Profiles { get; set; }
@@ -133,6 +168,7 @@ namespace ConsoleApp1
         public DbSet<BProfile> BProfiles { get; set; }
         public DbSet<CProfile> CProfiles { get; set; }
         public DbSet<Pool> Pools { get; set; }
+        public DbSet<Foo> Foos { get; set; }
 
         public string DbPath { get; }
 
@@ -151,6 +187,10 @@ namespace ConsoleApp1
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Foo>().HasKey(F => F.Id);
+            modelBuilder.Entity<Foo>().Property(F => F.Name);
+
 
 
             modelBuilder.Entity<AProfile>().HasOne(P => P.Pool).WithOne(Q => Q.ORMAProfileAccessor).HasForeignKey<Pool>("AProfileId").IsRequired(false);
