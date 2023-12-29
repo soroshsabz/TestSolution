@@ -224,17 +224,16 @@ namespace ConsoleApp1
     {
         public static void MapAllReadonlyProperty<T>(this EntityTypeBuilder<T> builder) where T : class
         {
-            var internalProperties = builder.Metadata.GetProperties();
             var ignores = builder.Metadata.GetIgnoredMembers();
-            var properties = typeof(T).GetProperties().Where(propertyInfo =>
-                propertyInfo.CanWrite == false
-                && propertyInfo.GetCustomAttribute<NotMappedAttribute>() == null
-                && !ignores.Any(ignoreProperty => ignoreProperty == propertyInfo.Name));
+            IEnumerable<PropertyInfo> properties = from property in typeof(T).GetProperties()
+                             where property.CanWrite == false
+                             && property.GetCustomAttribute<NotMappedAttribute>() == null
+                             && !ignores.Any(ignoreProperty => ignoreProperty == property.Name)
+                             select property;
             foreach (var property in properties)
             {
                 builder.Property(property.Name);
             }
-            internalProperties = builder.Metadata.GetProperties();
         }
     }
 }
