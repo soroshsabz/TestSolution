@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection;
 
 namespace ConsoleApp1
 {
@@ -16,8 +19,8 @@ namespace ConsoleApp1
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
 
-                db.Add(new Foo("salam"));
-                db.Add(new Foo());
+                db.Add(new Foo(name: "salam", lastName: nameof(Foo.LastName), nickName: nameof(Foo.NickName), iName: nameof(Foo.IName)));
+                db.Add(new Foo(name: "hh", nickName: "kk"));
 
                 db.SaveChanges();
             }
@@ -27,6 +30,9 @@ namespace ConsoleApp1
             {
                 List<Foo> foos = db.Foos.ToList();
                 foos.ForEach(F => Console.WriteLine($"foo Name: {F.Name}"));
+                foos.ForEach(F => Console.WriteLine($"foo LastName: {F.IName}"));
+                foos.ForEach(F => Console.WriteLine($"foo NickName: {F.NickName}"));
+                foos.ForEach(F => Console.WriteLine($"foo IName: {F.IName}"));
             }
         }
 
@@ -93,6 +99,7 @@ namespace ConsoleApp1
         public const string temp2 = "temp2";
     }
 
+    #region Pools
     public class Pool
     {
         public int Id { get; set; }
@@ -147,16 +154,26 @@ namespace ConsoleApp1
         public CProfile() { }
         // CProfile does not have the Pool property
     }
+    #endregion
 
     public class Foo
     {
-        public Foo(string name = DEFAULT_NAME)
+        public Foo(string name = DEFAULT_NAME, string nickName = DEFAULT_NAME)
+            : this(name, DEFAULT_NAME, nickName, DEFAULT_NAME)
+        { }
+        public Foo(string name = DEFAULT_NAME, string lastName = DEFAULT_NAME, string nickName = DEFAULT_NAME, string iName = DEFAULT_NAME)
         {
             Name = name ?? DEFAULT_NAME;
+            LastName = lastName ?? DEFAULT_NAME;
+            NickName = nickName ?? DEFAULT_NAME;
+            IName = iName ?? DEFAULT_NAME;
         }
 
         public int Id { get; set; }
         public string Name { get; }
+        public string LastName { get; private set; }
+        public string NickName { get; }
+        public string IName { get; }
 
         public const string DEFAULT_NAME = "Default";
     }
@@ -190,6 +207,9 @@ namespace ConsoleApp1
 
             modelBuilder.Entity<Foo>().HasKey(F => F.Id);
             modelBuilder.Entity<Foo>().Property(F => F.Name);
+            modelBuilder.Entity<Foo>().Ignore(F => F.LastName);
+            modelBuilder.Entity<Foo>().MapAllReadonlyProperty();
+            modelBuilder.Entity<Foo>().Ignore(F => F.IName);
 
 
 
@@ -197,6 +217,24 @@ namespace ConsoleApp1
             modelBuilder.Entity<BProfile>().HasOne(P => P.Pool).WithOne(Q => Q.ORMBProfileAccessor).HasForeignKey<Pool>("BProfileId").IsRequired(false);
 
             modelBuilder.Entity<Pool>().Ignore(P => P.Profile);
+        }
+    }
+
+    public static class ModelBuilderExtensions
+    {
+        public static void MapAllReadonlyProperty<T>(this EntityTypeBuilder<T> builder) where T : class
+        {
+            var internalProperties = builder.Metadata.GetProperties();
+            var ignores = builder.Metadata.GetIgnoredMembers();
+            var properties = typeof(T).GetProperties().Where(propertyInfo =>
+                propertyInfo.CanWrite == false
+                && propertyInfo.GetCustomAttribute<NotMappedAttribute>() == null
+                && !ignores.Any(ignoreProperty => ignoreProperty == propertyInfo.Name));
+            foreach (var property in properties)
+            {
+                builder.Property(property.Name);
+            }
+            internalProperties = builder.Metadata.GetProperties();
         }
     }
 }
