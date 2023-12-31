@@ -221,8 +221,8 @@ namespace ConsoleApp1
             B = b;
         }
 
-        public int A { get; set; }
-        public int B { get; set; }
+        public int A { get; }
+        public int B { get; }
 
         public override string ToString()
         {
@@ -260,7 +260,8 @@ namespace ConsoleApp1
             modelBuilder.Entity<Foo>().HasKey(F => F.Id);
             modelBuilder.Entity<Foo>().Property(F => F.Name);
             modelBuilder.Entity<Foo>().Ignore(F => F.LastName);
-            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar);
+            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).Property(B => B.A);
+            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).Property(B => B.B);
             modelBuilder.Entity<Foo>().MapAllReadonlyProperty();
             modelBuilder.Entity<Foo>().Ignore(F => F.IName);
 
