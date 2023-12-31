@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -224,6 +225,8 @@ namespace ConsoleApp1
         public int A { get; }
         public int B { get; }
 
+        public int C { get; set; }
+
         public override string ToString()
         {
             return $"A: {A}, B: {B}";
@@ -260,8 +263,8 @@ namespace ConsoleApp1
             modelBuilder.Entity<Foo>().HasKey(F => F.Id);
             modelBuilder.Entity<Foo>().Property(F => F.Name);
             modelBuilder.Entity<Foo>().Ignore(F => F.LastName);
-            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).Property(B => B.A);
-            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).Property(B => B.B);
+            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).MapAllReadonlyProperty();
+            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar).Ignore(B => B.C);
             modelBuilder.Entity<Foo>().MapAllReadonlyProperty();
             modelBuilder.Entity<Foo>().Ignore(F => F.IName);
 
@@ -276,10 +279,20 @@ namespace ConsoleApp1
 
     public static class ModelBuilderExtensions
     {
+        public static void MapAllReadonlyProperty<TOwnerEntity, TDependentEntity>(this OwnedNavigationBuilder<TOwnerEntity, TDependentEntity> builder) where TOwnerEntity : class where TDependentEntity : class
+        {
+            MapAllReadonlyProperty<TDependentEntity>(builder.Metadata.DeclaringEntityType, builder);
+        }
+
         public static void MapAllReadonlyProperty<T>(this EntityTypeBuilder<T> builder) where T : class
         {
-            var ignores = builder.Metadata.GetIgnoredMembers();
-            var navigations = builder.Metadata.GetNavigations().Select(n => n.Name);
+            MapAllReadonlyProperty<T>(builder.Metadata, builder);
+        }
+
+        private static void MapAllReadonlyProperty<T>(IMutableEntityType entityType, Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure<IConventionEntityTypeBuilder> builder)
+        {
+            var ignores = entityType.GetIgnoredMembers();
+            var navigations = entityType.GetNavigations().Select(n => n.Name);
             IEnumerable<PropertyInfo> properties = from property in typeof(T).GetProperties()
                                                    where property.CanWrite == false
                                                    && property.GetCustomAttribute<NotMappedAttribute>() == null
@@ -288,7 +301,7 @@ namespace ConsoleApp1
                                                    select property;
             foreach (var property in properties)
             {
-                builder.Property(property.Name);
+                builder.Instance.Property(property.PropertyType, property.Name);
             }
         }
     }
