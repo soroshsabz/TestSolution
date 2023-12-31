@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
 namespace ConsoleApp1
@@ -19,8 +20,8 @@ namespace ConsoleApp1
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
 
-                db.Add(new Foo(name: "salam", lastName: nameof(Foo.LastName), nickName: nameof(Foo.NickName), iName: nameof(Foo.IName)));
-                db.Add(new Foo(name: "hh", nickName: "kk"));
+                db.Add(new Foo(bar: new Bar(10, 12), name: "salam", lastName: nameof(Foo.LastName), nickName: nameof(Foo.NickName), iName: nameof(Foo.IName)) );
+                db.Add(new Foo(bar: new Bar(55, 65), name: "hh", nickName: "kk") );
 
                 db.SaveChanges();
             }
@@ -33,7 +34,10 @@ namespace ConsoleApp1
                 foos.ForEach(F => Console.WriteLine($"foo LastName: {F.IName}"));
                 foos.ForEach(F => Console.WriteLine($"foo NickName: {F.NickName}"));
                 foos.ForEach(F => Console.WriteLine($"foo IName: {F.IName}"));
+                foos.ForEach(F => Console.WriteLine($"foo Bar: {F.Bar}"));
             }
+
+            TestViewModel testViewModel = new TestViewModel();
         }
 
         private static void PolymorphicMultiRelationshipTest()
@@ -84,6 +88,20 @@ namespace ConsoleApp1
 
             throw new NotImplementedException();
         }
+    }
+
+    public class TestViewModel
+    {
+        [SetsRequiredMembers]
+        public TestViewModel(string myProperty = "", string myProperty1 = "")
+        {
+            MyProperty = myProperty;
+            MyProperty1 = myProperty1;
+        }
+
+        public required string MyProperty { get; set; }
+
+        public required string MyProperty1 { get; set; }
     }
 
     public class StringTest
@@ -159,10 +177,25 @@ namespace ConsoleApp1
     public class Foo
     {
         public Foo(string name = DEFAULT_NAME, string nickName = DEFAULT_NAME)
-            : this(name, DEFAULT_NAME, nickName, DEFAULT_NAME)
+            : this(null, name, DEFAULT_NAME, nickName, DEFAULT_NAME)
         { }
+
+
         public Foo(string name = DEFAULT_NAME, string lastName = DEFAULT_NAME, string nickName = DEFAULT_NAME, string iName = DEFAULT_NAME)
         {
+            Name = name ?? DEFAULT_NAME;
+            LastName = lastName ?? DEFAULT_NAME;
+            NickName = nickName ?? DEFAULT_NAME;
+            IName = iName ?? DEFAULT_NAME;
+        }
+
+        public Foo(Bar bar, string name = DEFAULT_NAME, string nickName = DEFAULT_NAME)
+            : this(bar, name, DEFAULT_NAME, nickName, DEFAULT_NAME)
+        { }
+
+        public Foo(Bar bar, string name = DEFAULT_NAME, string lastName = DEFAULT_NAME, string nickName = DEFAULT_NAME, string iName = DEFAULT_NAME)
+        {
+            Bar = bar;
             Name = name ?? DEFAULT_NAME;
             LastName = lastName ?? DEFAULT_NAME;
             NickName = nickName ?? DEFAULT_NAME;
@@ -175,7 +208,26 @@ namespace ConsoleApp1
         public string NickName { get; }
         public string IName { get; }
 
+        public virtual Bar Bar { get; }
+
         public const string DEFAULT_NAME = "Default";
+    }
+
+    public class Bar
+    {
+        public Bar(int a, int b)
+        {
+            A = a;
+            B = b;
+        }
+
+        public int A { get; set; }
+        public int B { get; set; }
+
+        public override string ToString()
+        {
+            return $"A: {A}, B: {B}";
+        }
     }
 
     internal class TestDbContext : DbContext
@@ -208,6 +260,7 @@ namespace ConsoleApp1
             modelBuilder.Entity<Foo>().HasKey(F => F.Id);
             modelBuilder.Entity<Foo>().Property(F => F.Name);
             modelBuilder.Entity<Foo>().Ignore(F => F.LastName);
+            modelBuilder.Entity<Foo>().OwnsOne(F => F.Bar);
             modelBuilder.Entity<Foo>().MapAllReadonlyProperty();
             modelBuilder.Entity<Foo>().Ignore(F => F.IName);
 
@@ -225,11 +278,13 @@ namespace ConsoleApp1
         public static void MapAllReadonlyProperty<T>(this EntityTypeBuilder<T> builder) where T : class
         {
             var ignores = builder.Metadata.GetIgnoredMembers();
+            var navigations = builder.Metadata.GetNavigations().Select(n => n.Name);
             IEnumerable<PropertyInfo> properties = from property in typeof(T).GetProperties()
-                             where property.CanWrite == false
-                             && property.GetCustomAttribute<NotMappedAttribute>() == null
-                             && !ignores.Any(ignoreProperty => ignoreProperty == property.Name)
-                             select property;
+                                                   where property.CanWrite == false
+                                                   && property.GetCustomAttribute<NotMappedAttribute>() == null
+                                                   && !ignores.Any(ignoreProperty => ignoreProperty == property.Name)
+                                                   && !navigations.Contains(property.Name)
+                                                   select property;
             foreach (var property in properties)
             {
                 builder.Property(property.Name);
