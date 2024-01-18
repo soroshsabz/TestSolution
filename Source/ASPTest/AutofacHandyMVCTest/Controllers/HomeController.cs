@@ -16,6 +16,7 @@ namespace AutofacHandyMVCTest.Controllers
             _dummyModel = dummyModel;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View(_dummyModel);
