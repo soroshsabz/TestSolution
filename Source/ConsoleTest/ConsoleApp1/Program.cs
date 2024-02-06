@@ -4,14 +4,83 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Metrics;
 using System.Reflection;
 
 namespace ConsoleApp1
 {
+    internal class MyMeter : Meter
+    {
+        public MyMeter(MeterOptions options) : base(options)
+        {
+        }
+
+        public MyMeter(string name) : base(name)
+        {
+        }
+
+        public MyMeter(string name, string? version) : base(name, version)
+        {
+        }
+
+        public MyMeter(string name, string? version, IEnumerable<KeyValuePair<string, object?>>? tags, object? scope = null) : base(name, version, tags, scope)
+        {
+        }
+        
+
+        //
+        // Summary:
+        //     Create a metrics Counter object.
+        //
+        // Parameters:
+        //   name:
+        //     The instrument name. Cannot be null.
+        //
+        //   unit:
+        //     Optional instrument unit of measurements.
+        //
+        //   description:
+        //     Optional instrument description.
+        //
+        // Type parameters:
+        //   T:
+        //     The numerical type of the measurement.
+        //
+        // Returns:
+        //     A new counter.
+        public MyUpDownCounter<T> CreateMyCounter<T>(string name, string? unit = null, string? description = null) where T : struct
+        {
+            return new MyUpDownCounter<T>(this, name, unit, description);
+        }
+    }
+
+    internal class MyUpDownCounter<T> : Instrument<T> where T : struct
+    {
+        internal MyUpDownCounter(Meter meter, string name, string? unit, string? description) : base(meter, name, unit, description)
+        {
+            _counters = new Dictionary<long, UpDownCounter<T>>();
+        }
+
+        public void Add(long ndc, T value)
+        {
+            _counters[ndc].Add(value);
+        }
+
+        private Dictionary<long, UpDownCounter<T>> _counters;
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            var m = new MyMeter(new MeterOptions("test"));
+            var incommingCallCounter = m.CreateMyCounter<int>("testCounter");
+            incommingCallCounter.Add(123, 1);
+
+            var outgoingCallCounter = m.CreateMyCounter<int>("testCounter");
+            outgoingCallCounter.Add(123, 1);
+
+
             Console.WriteLine("Hello, World!");
 
             // PolymorphicMultiRelationshipTest();

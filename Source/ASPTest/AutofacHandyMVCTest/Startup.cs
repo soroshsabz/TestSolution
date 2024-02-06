@@ -3,6 +3,7 @@ using Autofac.Configuration;
 using Autofac.Features.AttributeFilters;
 using AutofacHandyMVCTest.Controllers;
 using AutofacHandyMVCTest.Models;
+using ClassLibraryTestMVC;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
@@ -58,7 +59,7 @@ namespace AutofacHandyMVCTest
             services.ConfigureOptions<ConfigureSwaggerOptions>();
 
             // based on https://github.com/mattfrear/Swashbuckle.AspNetCore.Filters?tab=readme-ov-file#installation
-            services.AddSwaggerExamplesFromAssemblyOf<Startup>();
+            services.AddSwaggerExamplesFromAssemblyOf<TestDataViewModelResponseErrorExample>();
         }
 
         /// <summary>

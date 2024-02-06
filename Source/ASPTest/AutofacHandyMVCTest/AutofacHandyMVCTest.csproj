@@ -21,6 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryTestMVC\ClassLibraryTestMVC.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="autofac.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
