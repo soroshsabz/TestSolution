@@ -1,0 +1,10 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+POST http://localhost:47718/Home/OverloadInsert
+Content-Type: application/json
+Accept-Language: en-US
+
+{
+    "BName": "salam"
+}
+
+###

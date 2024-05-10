@@ -1,4 +1,4 @@
-﻿namespace AutofacHandyMVCTest.Controllers.V1
+﻿namespace ClassLibraryTestMVC
 {
     /// <summary>
     /// Test request

@@ -42,7 +42,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPTest", "ASPTest", "{6830
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacHandyMVCTest", "Source\ASPTest\AutofacHandyMVCTest\AutofacHandyMVCTest.csproj", "{A381651B-2A63-4395-88D1-872CD12E70B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTestMVC", "Source\ASPTest\ClassLibraryTestMVC\ClassLibraryTestMVC.csproj", "{5E5743AF-3283-44B6-B58C-2D74E7B48713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibraryTestMVC", "Source\ASPTest\ClassLibraryTestMVC\ClassLibraryTestMVC.csproj", "{5E5743AF-3283-44B6-B58C-2D74E7B48713}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

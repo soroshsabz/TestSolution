@@ -71,6 +71,37 @@ namespace ConsoleApp1
 
     internal class Program
     {
+        static TProfile SwtichTest<TProfile>(TProfile profile) where TProfile : Profile
+        {
+            return profile switch
+            {
+                AProfile aProfile => (TProfile)(object)aProfile.GenerateAProfile(),
+                BProfile bProfile => (TProfile)(object)bProfile.GenerateBProfile(),
+                CProfile cProfile => (TProfile)(object)cProfile.GenerateCProfile(),
+                _ => throw new InvalidCastException("Invalid profile type")
+            };
+        }
+        static void Foo(Bar b, Barrier barrier, Meter meter)
+        {
+            object o = null;
+            if (o is int)
+            {
+                int i = (int)o;
+                Console.WriteLine($"{i}");
+            }
+
+            if (b == null)
+                Console.WriteLine("bb2 is null");
+            else if (barrier == null)
+                Console.WriteLine("fosh");
+
+            Console.WriteLine("bb2 is null");
+            Bar bb2 = b ?? new Bar(12, 34);
+            Bar bb = b ?? throw new Exception("b is null");
+            _ = b?.A;
+            _ = barrier?.CurrentPhaseNumber;
+            _ = meter?.Name;
+        }
         static void Main(string[] args)
         {
             var m = new MyMeter(new MeterOptions("test"));
@@ -90,7 +121,6 @@ namespace ConsoleApp1
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
 
-                db.Add(new Foo(bar: new Bar(10, 12), name: "salam", lastName: nameof(Foo.LastName), nickName: nameof(Foo.NickName), iName: nameof(Foo.IName)) );
                 db.Add(new Foo(bar: new Bar(55, 65), name: "hh", nickName: "kk") );
 
                 db.SaveChanges();
@@ -229,18 +259,33 @@ namespace ConsoleApp1
     {
         public AProfile() { }
         public virtual Pool? Pool { get; set; }
+
+        public AProfile GenerateAProfile()
+        {
+            return new AProfile();
+        }
     }
 
     public class BProfile : Profile
     {
         public BProfile() { }
         public virtual Pool? Pool { get; set; }
+
+        public BProfile GenerateBProfile()
+        {
+            return new BProfile();
+        }
     }
 
     public class CProfile : Profile
     {
         public CProfile() { }
         // CProfile does not have the Pool property
+
+        public CProfile GenerateCProfile()
+        {
+            return new CProfile();
+        }
     }
     #endregion
 
